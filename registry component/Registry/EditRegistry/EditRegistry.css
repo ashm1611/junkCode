@@ -1,0 +1,179 @@
+@import '@bbb-app/styles/variables.css';
+
+.details {
+  composes: inline-block from global;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.overCashfunds {
+  width: 388px;
+  height: 360px;
+}
+
+.editSubmit {
+  width: 108%;
+}
+
+::placeholder {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.overGuest {
+  margin-top: 40px;
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #1a4e8a;
+}
+
+.guestLinks {
+  margin-top: 25px;
+  background: #1377c9;
+  border-radius: 4px;
+  width: 290px;
+  height: 60px;
+}
+
+.guestText {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+}
+
+.noCash {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+}
+
+.numberField {
+  box-sizing: border-box;
+  width: 304px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #d6d6d6;
+  border-radius: 4px;
+}
+
+.detailsValue {
+  color: var(--color-font-light);
+  font-weight: var(--font-weight-small);
+  margin: 0 5px;
+}
+
+.editModalHeading {
+  font: var(--theme-h2-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.editFormAccordionWrapper {
+  background-color: var(--color-primary-scale-4);
+  padding-left: var(--space-15);
+  padding-right: var(--space-15);
+}
+
+.fieldsetMinWidth {
+  min-width: 100%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.editFormAccordion {
+  & :global(.rclAccordionItem) {
+    & :global(.rclAccordionBody) {
+      padding-top: 0;
+    }
+
+    & :global(.rclExpandCollapseExtIcon) {
+      padding-right: 0;
+    }
+  }
+}
+
+.fieldsHeading {
+  composes: relative from global;
+  font: var(--theme-h2-sans-font) !important;
+  border: none !important;
+}
+
+.iconStyle {
+  composes: absolute from global;
+  bottom: 20%;
+  margin-left: var(--space-1);
+}
+
+.paddingMobile {
+  font-size: var(--font-size-text-large);
+}
+
+@media screen and (--breakpoint-md) {
+  .editRegistryModal {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  .buttonClass {
+    margin-left: 5%;
+  }
+
+  .overCashfunds {
+    width: 375px;
+    height: 360px;
+  }
+
+  .fieldsHeading {
+    font: var(--theme-h3-sans-font);
+  }
+
+  .editModalHeading {
+    font: var(--theme-h2-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  .paddingMobile {
+    padding: var(--space-3) 0;
+  }
+
+  .editFormAccordionWrapper {
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+}
+
+@media print {
+  .details {
+    display: none;
+  }
+}
+
+.deactivateRegistryMessageContainer p {
+  margin: 0;
+}
+
+.editLinkGG {
+  margin: 0;
+  composes: inline from global;
+}

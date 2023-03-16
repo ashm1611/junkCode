@@ -1,0 +1,68 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --cell-gutter: 8px;
+  --small-view-margin: 5%;
+}
+
+.base {
+  margin: 0 calc(var(--cell-gutter));
+}
+
+.cell {
+  display: flex; /* needed for Safari 10 bug */
+}
+
+.cell > * {
+  /* ensures a tile in the grid takes up entire space provided */
+  width: 100%;
+}
+
+.color {
+  background-color: var(--color-background);
+}
+
+@media (min-width: 480px) {
+  .base {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/** grid & list views only ever show <768px */
+@media (max-width: 767px) {
+  /* for 1up/2up views, 5% margins go away in favor of 8px margins */
+  .base {
+    margin-left: calc((var(--small-view-margin) * -1));
+    margin-right: calc((var(--small-view-margin) * -1));
+  }
+
+  .cell {
+    padding: calc(var(--cell-gutter) / 2);
+  }
+}
+
+/** >=768px the grid adapts to space provided */
+@media (min-width: 768px) {
+  .cell {
+    width: calc(100% / 3);
+    padding: var(--cell-gutter);
+  }
+
+  .cell > * {
+    padding-bottom: calc(var(--cell-gutter) * 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cell {
+    width: calc(100% / 4);
+  }
+}
+
+@media print {
+  .cell {
+    width: calc(100% / 4);
+  }
+}

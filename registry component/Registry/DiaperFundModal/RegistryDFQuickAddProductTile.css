@@ -1,0 +1,33 @@
+@import "@bbb-app/styles/variables.css";
+
+.quickAddToRegistryBtn {
+  height: var(--line-height-2) !important;
+  padding: var(--space-1) !important;
+}
+
+.quickAddToRegistryBtnDisabledState {
+  height: var(--line-height-2) !important;
+  padding: var(--space-1) !important;
+  background-color: var(--theme-color-white);
+}
+
+.marginTop {
+  margin-top: auto;
+}
+
+.quickAddToRegistryButton {
+  pointer-events: none;
+}
+
+.priceStyle {
+  color: var(--color-blue);
+  font-family: "Montserrat";
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+}
+
+.titleStyle {
+  width: 160px;
+  font: var(--theme-b3-lg-sans-font-light);
+  padding-bottom: 1.5rem;
+}

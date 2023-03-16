@@ -1,0 +1,491 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --color-light-border-grey: #e4e4e4;
+  --color-registry-black: #222;
+  --photo-registry-owner-mobile: 98px;
+  --photo-registry-owner-desktop: 150px;
+  --registry-wrapper-min-height: 150px;
+  --no-margin: 0;
+  --min-width-circle: 66px;
+  --min-height-circle: 66px;
+  --min-height-dsk: 40%;
+}
+
+.newRegistryLayout {
+  display: flex;
+}
+
+.alignIcon {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 18px;
+}
+
+.alignIconNewDashboard {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  height: 36px;
+}
+
+.registryInfo {
+  margin-bottom: 24px;
+  margin-right: 0;
+}
+
+.resetMargin {
+  margin: 10px 0 0 !important;
+}
+
+.photoGuestViewWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 140px;
+}
+
+.photoGuestViewWrapper img {
+  max-width: inherit;
+}
+
+.detailsValue {
+  color: var(--color-font-dark);
+  font-weight: var(--font-weight-small);
+  margin: 0 5px;
+}
+
+.regDetailsDL {
+  line-height: unset;
+  composes: inline-block from global;
+  margin-bottom: auto;
+  list-style-position: unset;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: auto;
+}
+
+.regDetailsDL :global(dt),
+.regDetailsDL :global(dd) {
+  display: inline-block;
+}
+
+.accessDenied {
+  color: var(--color-alert);
+  font-size: var(--font-size-text-largest);
+}
+
+.uploadPhotoRegistryOwner {
+  margin-top: 0 !important;
+  max-width: var(--photo-registry-owner-desktop);
+}
+
+.uploadPhotoRegistryOwner {
+  & :global(#sa_s22_instagram) {
+    margin: 0;
+  }
+
+  & :global(#socialannex) {
+    margin: 0;
+  }
+}
+
+.editLink {
+  color: var(--color-font-brand);
+}
+
+.myFundGiftContainer {
+  border: solid 2px var(--color-light-border-grey);
+  border-radius: var(--border-radius-thin);
+  composes: inline-block from global;
+  background-color: var(--color-white);
+  margin-top: 55px;
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.giftContainer {
+  border: solid 2px var(--color-light-border-grey);
+  border-radius: var(--border-radius-thin);
+  composes: inline-block from global;
+  background-color: var(--color-white);
+
+  & :global(span) {
+    display: block;
+  }
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.details {
+  composes: inline-block from global;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.daysToGoLabel {
+  display: block;
+  font-size: var(--font-size-text-extra-small);
+  letter-spacing: 1px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.daysToGoNumber {
+  color: var(--color-white);
+}
+
+.registryStats {
+  border-bottom: solid 2px var(--color-light-border-grey);
+}
+
+.giftsLabel {
+  font-size: 13px;
+  font-weight: var(--font-weight-small);
+  color: var(--theme-color-black);
+  margin-bottom: 5px;
+  margin-left: 6px;
+}
+
+@media only screen and (--breakpoint-xlg-md) {
+  .giftsLabel {
+    font-size: var(--theme-small-font-size);
+    font-weight: var(--font-weight-small);
+    color: var(--theme-color-black);
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .giftsLabel {
+    font-size: 14px;
+  }
+
+  .alignIcon {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (--breakpoint-tablet-max) {
+  .alignIcon {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+}
+
+.tnGiftsPurchased {
+  color: #8d8d8d !important;
+}
+
+.giftsNumber {
+  color: var(--color-registry-black);
+}
+
+.giftRegistered {
+  composes: relative from global;
+
+  &::after {
+    content: ' ';
+    height: 100%;
+    display: inline-block;
+    border: 1px solid var(--color-primary-scale-3);
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+:global(.registryOwnerMain .grid-margin-x > .large-6) {
+  width: calc(50% - 1rem);
+}
+
+:global(.registryOwnerMainThreeCells .grid-margin-x > .large-6) {
+  width: calc(32.3% - 1rem);
+}
+
+@media only screen and (--breakpoint-sm) {
+  :global(.registryOwnerMainThreeCells .grid-margin-x > .large-6) {
+    width: calc(35.3% - 1rem);
+  }
+}
+
+.breakWord {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.registryWrapper {
+  composes: inline-block from global;
+  margin-top: var(--space-35);
+  margin-bottom: var(--space-35);
+}
+
+.imageWrapper {
+  composes: relative from global;
+  width: auto;
+  height: 9%;
+  min-height: 94px;
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.newImageWrapper {
+  position: relative;
+}
+
+.registrantImage {
+  border-radius: 50%;
+}
+
+.newRegistantImage {
+  border-radius: 50%;
+  height: 108px;
+  width: 108px;
+}
+
+.daysToGo {
+  background: var(--theme-color-black);
+  width: 54px;
+  color: var(--color-white);
+  position: absolute;
+  right: -12%;
+  bottom: -8px;
+  border-radius: 50%;
+  padding: 7px;
+  text-align: center;
+  height: 54px;
+}
+
+.registryNames {
+  composes: flex justify-center items-center flex-none nowrap overflow-hidden from global;
+  font: var(--theme-h3-lg-sans-font);
+  width: 150px;
+  height: 150px;
+  border: solid 2px var(--color-light-grey6);
+  border-radius: 50%;
+}
+
+.registryNames h3 {
+  color: var(--color-light-grey5);
+}
+
+.detailsWrapper {
+  align-self: center;
+  composes: inline-block from global;
+  padding-left: var(--space-4);
+}
+
+.registryContainer {
+  min-height: var(--registry-wrapper-min-height);
+}
+
+.h2Serif {
+  font: var(--theme-h2-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.h3Serif {
+  font: var(--theme-h3-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.daysToGo .daysToGoNumber {
+  font: var(--theme-l0-serif-font);
+  top: 3px;
+}
+
+@media screen and (--breakpoint-md) {
+  .imgHold {
+    min-width: 148px;
+  }
+
+  .regWithFunds {
+    & > :global(.large-6) {
+      width: calc(27.7% + 1rem);
+    }
+  }
+
+  .h2Serif {
+    font: var(--theme-h2-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  .h3Serif {
+    font: var(--theme-h3-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}
+
+@media only screen and (--breakpoint-lg-md) {
+  .daysToGoNumber {
+    composes: relative from global;
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .registryWrapper {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
+  .registryNames h3 {
+    font: var(--theme-h4-lg-sans-font);
+  }
+
+  .regWithFunds {
+    & > :global(.small-6) {
+      width: calc(27.7% + 1rem);
+    }
+  }
+
+  .registryNames {
+    height: var(--photo-registry-owner-mobile);
+    width: var(--photo-registry-owner-mobile);
+  }
+
+  .imageWrapper {
+    margin: 0 auto;
+    max-height: none;
+  }
+
+  .detailsWrapper {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .visibilityLink {
+    display: none;
+  }
+
+  .userName {
+    padding-top: var(--space-1);
+  }
+
+  .details {
+    font-size: var(--theme-small-font-size);
+
+    &::after {
+      content: '';
+      height: 12px;
+      width: 1px;
+      position: absolute;
+      margin: 3px 0 0 4px;
+    }
+  }
+
+  .details:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  .giftsLabel {
+    composes: inline-block from global;
+  }
+
+  .giftsNumber {
+    font-weight: normal;
+    margin-right: 0;
+  }
+
+  .visibilityText {
+    margin: 0;
+  }
+
+  .uploadPhotoRegistryOwner {
+    width: var(--photo-registry-owner-mobile);
+  }
+
+  .daysToGo {
+    right: -30%;
+  }
+
+  .registryContainer {
+    min-height: none;
+  }
+
+  .registryInfo {
+    margin-bottom: 10px;
+  }
+
+  .mobilePhotoGuestViewWrapper {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .mobilePhotoGuestViewWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (--breakpoint-md-lg-nav) {
+  .regWithFunds {
+    & > :global(.small-6) {
+      width: calc(25.5% + 1rem);
+    }
+  }
+}
+
+@media only screen and (--breakpoint-lg) {
+  .regWithFunds {
+    & > :global(.small-6) {
+      width: calc(27.2% + 1rem);
+    }
+  }
+}
+
+@media print {
+  .printStyle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .giftContainer,
+  .myFundGiftContainer {
+    min-width: 300px;
+  }
+
+  .regWithFunds {
+    & > :global(.large-6) {
+      width: calc(27.7% + 1rem);
+    }
+  }
+
+  .registryWrapper {
+    max-width: 400px;
+    margin-bottom: var(--space-3);
+  }
+
+  .imageWrapper {
+    display: none;
+  }
+
+  .detailsWrapper {
+    padding-left: 0;
+  }
+
+  .breakWord,
+  .giftsNumber {
+    font: var(--theme-h3-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}
+
+@media print, screen and (--breakpoint-md-lg) {
+  .registryWrapper > :global(.grid-x) > .detailsWrapper {
+    width: 75%;
+  }
+}

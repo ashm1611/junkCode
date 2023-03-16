@@ -1,0 +1,63 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.mBContainer {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.imgDefault {
+  height: 300px;
+  width: 512px;
+}
+
+.leftContainer {
+  padding: var(--space-35) var(--space-15);
+  width: 46%;
+}
+
+.rightContainer {
+  width: 54%;
+}
+
+.title {
+  font: var(--theme-h2-serif-font);
+  color: var(--color-refresh-header);
+  line-height: 30px;
+}
+
+.clickHere {
+  font: var(--theme-p2-font-medium);
+  position: relative;
+  top: 6rem;
+}
+
+@media screen and (--breakpoint-xs) {
+  .mBContainer {
+    margin: 0 4%;
+  }
+
+  .imgDefault {
+    height: 180px;
+    width: 200px;
+  }
+
+  .leftContainer {
+    padding: var(--space-075) var(--space-075) var(--space-125);
+    width: 52%;
+  }
+
+  .rightContainer {
+    width: 48%;
+  }
+
+  .title {
+    font-size: var(--font-size-text-large);
+    line-height: var(--space-125);
+  }
+
+  .clickHere {
+    font-size: var(--font-size-text-medium);
+    top: var(--space-03);
+  }
+}

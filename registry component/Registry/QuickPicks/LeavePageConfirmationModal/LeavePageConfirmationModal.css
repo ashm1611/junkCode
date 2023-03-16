@@ -1,0 +1,57 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.base {
+  composes: flex justify-center flex-column p2 from global;
+  align-items: center;
+}
+
+.leavePageConfirmationMessage {
+  composes: center mx3 mb3 from global;
+  font: var(--theme-p1-lg-font-medium);
+}
+
+.buttonPanel {
+  composes: flex justify-center nowrap p2 from global;
+  width: 100%;
+}
+
+.button {
+  composes: flex-auto mx1 from global;
+}
+
+.buttonLeavePage {
+  order: 1;
+}
+
+.buttonStayPage {
+  order: 2;
+}
+
+@media screen and (--breakpoint-sm) {
+  .buttonPanel {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .leavePageConfirmationMessage {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .buttonLeavePage {
+    order: 2;
+  }
+
+  .buttonStayPage {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .base {
+    align-items: stretch;
+  }
+}

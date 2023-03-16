@@ -1,0 +1,67 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.quiz {
+  width: 236px !important;
+  height: 50px !important;
+  margin-top: 17px;
+  padding: 15px 21px 17px 20px !important;
+  border-radius: 83px !important;
+  border: solid 2px #148483 !important;
+}
+
+.quizButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.csContentWrapper {
+  margin-left: 10px;
+}
+
+.quizButton {
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.getAdd {
+  margin: 72px 0 0 66px;
+}
+
+.rightImage {
+  text-align: right;
+}
+
+.closeBtn {
+  text-align: right;
+  margin-right: var(--space-2);
+}
+
+.closeBtnColor {
+  color: var(--theme-color-black) !important;
+}
+
+@media all and (min-width: 375px) and (max-width: 812px) {
+  .quiz {
+    margin-bottom: 18px !important;
+  }
+
+  .quizPrimaryLink {
+    margin-top: 0;
+  }
+
+  .csContentWrapper {
+    margin-bottom: var(--space-15);
+    margin-top: var(--space-25);
+  }
+
+  .confPosition {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .confQnAPosition {
+    padding: 40px 0 0;
+  }
+}

@@ -1,0 +1,286 @@
+@import '@bbb-app/styles/variables.css';
+@import 'theme';
+
+.shareModalWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shareCopy {
+  text-align: center;
+  width: 80%;
+}
+
+.clickable {
+  cursor: pointer;
+  margin-left: -0.4rem;
+}
+
+.copyURLSection {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  width: 80%;
+}
+
+.headingNew {
+  font: var(--registry-newdashboard-menushare);
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: var(--color-plp-filter);
+}
+
+.headingBaby {
+  font: var(--registry-newdashboard-menushare);
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: var(--color-primary-brand);
+}
+
+.subHeading {
+  line-height: 19px;
+  color: var(--color-email-acquisition);
+}
+
+.registryURLInput {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.copyURLInputField {
+  width: 350px;
+  margin-right: 10px;
+
+  & .registryURLInput:optional {
+    padding: 0 10px;
+  }
+}
+
+.CombinedLayout {
+  width: 224px;
+  height: 111px;
+  padding: 1.5rem 0 0 1rem;
+  box-shadow: 0 2px 4px 0 rgba(150, 150, 150, 0.5);
+  background-color: var(--color-white);
+}
+
+.shareRegIcon {
+  width: 17px;
+  height: 19px;
+  margin: 6px 0;
+}
+
+.shareRegText {
+  width: 164px;
+  height: 19px;
+  font: var(--theme-body-font);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--theme-color-black);
+}
+
+.collaborateIcon {
+  width: 17px;
+  height: 19px;
+  margin: 1px 15px 0 2px;
+}
+
+.invitetoCollaborate {
+  width: 190px;
+  height: 19px;
+  font: var(--theme-body-font);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--theme-color-black);
+  margin-top: 0.5rem;
+}
+
+.labelText {
+  margin-left: 2%;
+}
+
+.collaborationFlyout {
+  position: relative;
+  display: block;
+  margin-left: -11.5rem;
+  margin-top: 0.5rem;
+}
+
+.menuOpt {
+  padding: 0 2px;
+}
+
+.showLink {
+  color: var(--color-pdp-zip);
+}
+
+@media only screen and (--breakpoint-sm) {
+  .heading,
+  .shareCopy {
+    text-align: left;
+    width: 100%;
+  }
+
+  .subHeading {
+    word-spacing: 8px;
+  }
+
+  .copyURLSection {
+    flex-direction: column;
+  }
+
+  .copyURLInputField {
+    width: 100%;
+  }
+
+  .collaborationFlyout {
+    margin-left: -11.9rem;
+  }
+
+  .CombinedLayout {
+    height: 102px;
+  }
+}
+
+.socialShareDisabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.errorPrompt {
+  color: var(--color-font-dark);
+  background-color: var(--color-alert-message-fill);
+  border: solid 2px var(--color-alert-message-border);
+  font: var(--theme-b1-font-light);
+  padding: 10px;
+  border-radius: 3px;
+
+  & div {
+    margin: 0;
+
+    & button {
+      margin: 0 0 0 10px;
+      text-decoration: underline;
+      color: var(--color-primary-brand);
+      background: none;
+      box-shadow: none;
+
+      &:hover {
+        background: none;
+        color: var(--color-primary-brand);
+      }
+
+      &:focus {
+        background: none;
+        color: var(--color-primary-brand);
+      }
+    }
+  }
+
+  & svg {
+    margin: 0 10px 0 5px;
+  }
+
+  & button {
+    border: none;
+    padding: 5px;
+    height: 36px;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  & .closeButton {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.messageWrapper {
+  composes: inline from global;
+}
+
+.showNotificationfalse {
+  display: none;
+}
+
+.showNotificationtrue {
+  display: block;
+}
+
+.showShareModalCTA {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.hideContent {
+  display: none !important;
+}
+
+.showContent {
+  display: flex;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .shareLabelMobile a {
+    font: var(--theme-b1-font-medium);
+    display: inline;
+  }
+
+  .showShareModalCTA {
+    margin-bottom: 24px;
+  }
+
+  .messageWrapper {
+    composes: inline from global;
+    width: 80%;
+
+    & > div {
+      display: inline;
+
+      & > a {
+        display: inline;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .errorPrompt {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .copyRegistryBtn,
+  .shareRegistryBtn {
+    width: 100%;
+  }
+}
+
+@media only screen and (--breakpoint-md) {
+  .copyURLButton {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  :global(ul.hideOnPrint > li) {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (--breakpoint-lg-md) {
+  .inputProWidth {
+    width: 210px;
+  }
+}

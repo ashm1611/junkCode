@@ -1,0 +1,161 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --blue-color: #c6f1ee;
+  --color-primary-button: #003bde;
+  --color-text-black: #000;
+  --color-border-grey: #d6d6d6;
+  --inline-block: inline-block;
+  --flex: flex;
+  --center: center;
+}
+
+.titleContainer {
+  display: block;
+  width: 100%;
+}
+
+.diaperFundModalTitle {
+  text-align: center;
+  font: 300 32px/1.21 var(--theme-family-serif);
+}
+
+.diaperFundModalSubTitle {
+  text-align: center;
+  font: var(--theme-paragraph-lg-font);
+}
+
+.featuresubTitle {
+  font: var(--theme-p1-lg-font-medium);
+  text-align: center;
+}
+
+.featureSubTitleDesc {
+  font: var(--theme-b1-lg-font-light);
+  color: var(--color-text-black);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.featureContainer {
+  width: 50%;
+}
+
+.disclaimerText {
+  width: 100%;
+  text-align: center;
+  font: var(--theme-b1-lg-font-light);
+  color: var(--color-text-black);
+  padding-top: 0;
+}
+
+.borderText {
+  width: 100%;
+  border: 1px solid var(--color-border-grey);
+  padding: 0;
+}
+
+.blueBannerPanel {
+  width: 100%;
+  background: var(--blue-color);
+  border-radius: var(--font-size-text-xsmall);
+  padding-top: 1rem;
+
+  & .head {
+    font: var(--theme-h2-sans-font);
+  }
+
+  & .subHead {
+    font: var(--theme-p2-font-light);
+  }
+
+  & .imagesSection {
+    display: var(--flex);
+    justify-content: var(--center);
+    text-align: var(--center);
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  & .middleImage {
+    margin: 19% 13%;
+  }
+
+  & .featuresubTitle {
+    margin-bottom: 3rem;
+  }
+
+  & label {
+    width: 95%;
+
+    & .span {
+      display: var(--inline-block);
+      margin-left: 6%;
+    }
+  }
+}
+
+.OptInButtonContainer {
+  text-align: center;
+}
+
+.OptInButton {
+  width: 50%;
+}
+
+@media all and (--breakpoint-md-lg) {
+  .blueBannerPanel {
+    & .imagesSection {
+      & .middleImage {
+        margin: 37% 9%;
+      }
+    }
+  }
+}
+
+@media all and (--breakpoint-sm) {
+  .featureContainer {
+    width: auto;
+  }
+
+  .OptInButtonContainer {
+    padding: 2rem;
+    margin-top: 0;
+  }
+
+  .diaperFundModalSubTitle {
+    margin-bottom: 0;
+  }
+
+  .OptInButton {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .blueBannerPanel {
+    border-radius: 0;
+    text-align: center;
+
+    & .imagesSection {
+      display: block;
+      justify-content: var(--center);
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & .middleImage {
+      margin: 0 2rem 2rem;
+    }
+
+    & .featuresubTitle {
+      margin-bottom: 1rem;
+    }
+
+    & .featureSubTitleDesc {
+      padding: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}

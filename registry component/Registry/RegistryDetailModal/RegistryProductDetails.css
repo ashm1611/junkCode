@@ -1,0 +1,106 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --section-padding: 58px;
+}
+
+.productDetails {
+  & .qty {
+    font-weight: lighter;
+    color: var(--color-black);
+  }
+
+  & .errorField {
+    border-color: var(--theme-color-important);
+  }
+
+  & .notAvailableOnline {
+    font-size: var(--theme-medium-font-size);
+  }
+}
+
+.imageContainer {
+  height: 100%;
+}
+
+.ratingsAndReview {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+p.description {
+  font: var(--theme-b1-lg-font-light);
+  display: block;
+  margin: 0 0 var(--space-15);
+
+  @media screen and (--breakpoint-sm) {
+    display: none;
+  }
+}
+
+.price {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: inherit;
+
+  & a {
+    font: var(--theme-h2-sans-font);
+    color: var(--color-primary-scale-0);
+    font-weight: var(--font-weight-small);
+  }
+}
+
+.small {
+  & .title {
+    font: var(--theme-h4-lg-sans-font);
+    font-weight: 300;
+  }
+}
+
+@media only screen and (--breakpoint-md) {
+  .price {
+    margin-bottom: var(--space-1);
+  }
+
+  .productDetails {
+    padding-bottom: var(--section-padding);
+  }
+}
+
+@media only screen and (--breakpoint-sm-nav) {
+  .imageContainer :global(.slick-list) {
+    min-height: 280px;
+  }
+}
+
+.favoriteBanner {
+  width: max-content;
+  top: 0;
+  display: block;
+  background-color: var(--tile-banner-color);
+  border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+  left: 0;
+  max-height: var(--space-3);
+  z-index: 100;
+  padding: 5px 0;
+
+  & > span {
+    color: var(--theme-color-white);
+    font: var(--theme-b1-lg-font-medium);
+  }
+}
+
+.favText {
+  margin-left: 4px;
+  margin-right: 4px;
+  font-family: Effra;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--color-white);
+}

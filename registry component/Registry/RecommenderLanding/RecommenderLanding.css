@@ -1,0 +1,71 @@
+@import "@bbb-app/styles/variables.css";
+
+.eyebrowText {
+  font: var(--theme-eyebrow-font);
+  color: var(--color-primary-brand);
+}
+
+.heading {
+  font: var(--theme-h1-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.description {
+  font: var(--theme-paragraph-lg-font);
+}
+
+.setPadding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.setPaddingForContent {
+  padding: 10rem 0 5%;
+}
+
+.setAlignMentForImg {
+  padding-top: 4.5rem;
+  margin-left: 8.3%;
+  margin-bottom: 3.5rem;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.imageWidth {
+  width: 100%;
+}
+
+@media screen and (--breakpoint-sm) {
+  .setPadding {
+    padding: 0;
+  }
+
+  .alignCenter {
+    text-align: center;
+  }
+
+  .setPaddingForContent {
+    padding: 4rem 5%;
+  }
+
+  .description {
+    font: var(--theme-body-font);
+  }
+
+  .heading {
+    font: var(--theme-h1-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  .setAlignMentForImg {
+    margin-right: -6%;
+    width: calc(100% + 12%);
+    margin-left: -6%;
+  }
+
+  .alignRight {
+    text-align: unset;
+  }
+}

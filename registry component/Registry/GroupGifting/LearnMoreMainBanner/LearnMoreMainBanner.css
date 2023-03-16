@@ -1,0 +1,46 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --closeButtonTop: 12px;
+  --closeButtonRight: 16px;
+}
+
+.blueWidget {
+  background: var(--color-success-message-fill);
+  border: 2px solid var(--color-success-message-border);
+  border-radius: var(--theme-border-radius);
+  padding: 12px 15px;
+  font-size: var(--theme-medium-font-size);
+  composes: relative from global;
+
+  & p {
+    display: inline;
+    margin: 10px 0;
+  }
+
+  & .closeBtn {
+    position: absolute;
+    padding-bottom: 1.3125rem;
+    border: none;
+    top: var(--closeButtonTop);
+    right: var(--closeButtonRight);
+    margin: 0;
+  }
+}
+
+@media (--breakpoint-sm) {
+  .blueWidget {
+    margin: 0;
+    composes: relative from global;
+    text-align: center;
+    padding: 12px 35px;
+
+    & .closeBtn {
+      padding-bottom: 0;
+      position: absolute;
+      top: 2px;
+      right: 5px;
+    }
+  }
+}

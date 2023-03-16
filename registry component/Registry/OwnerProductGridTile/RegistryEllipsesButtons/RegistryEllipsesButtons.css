@@ -1,0 +1,106 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.container {
+  top: 0;
+}
+
+:global(#customTooltipellpises) {
+  display: block;
+  left: auto;
+  right: 17%;
+  transform: translateX(25%) translateY(11.7rem);
+  z-index: 1;
+}
+
+:global(#customTooltipellpisesWrapper) {
+  padding: 0;
+  height: 99px;
+  transform: translateX(-28%) translateY(-22%);
+
+  &::after {
+    top: auto;
+    bottom: 99%;
+    left: 61.7%;
+    border-bottom: 7px solid var(--color-primary-scale-5);
+    border-top: none;
+  }
+
+  &::before {
+    top: auto;
+    left: 58.3%;
+    bottom: 100%;
+    border-bottom: var(--border-width-medium) solid
+      var(--color-stroke-registry-tooltip);
+    border-top: none;
+  }
+}
+
+.mainEditcontainer {
+  width: 239px;
+  height: 99px;
+}
+
+.EditIcon {
+  margin-left: 12px;
+  margin-bottom: 2px;
+}
+
+li .editCTA {
+  border: 0;
+  padding: 0 1rem;
+}
+
+.RemoveContainer {
+  width: 235px;
+  height: 49px;
+}
+
+li .RemoveCTA {
+  border: 0;
+  padding-left: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+.edittext {
+  font: var(--theme-b1-lg-font-medium);
+  color: var(--primary-button-background-color);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :global(#customTooltipellpises) {
+    transform: translateX(11%) translateY(11.7rem);
+  }
+
+  :global(#customTooltipellpisesWrapper) {
+    &::after {
+      left: 76.3%;
+    }
+
+    &::before {
+      left: 72.8%;
+    }
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  :global(#customTooltipellpises) {
+    transform: translateX(-7%) translateY(10.5rem);
+  }
+
+  :global(#customTooltipellpisesWrapper) {
+    &::after {
+      left: 90.6%;
+    }
+
+    &::before {
+      left: 87.3%;
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  :global(#customTooltipellpises) {
+    transform: translateX(24.5%) translateY(11.7rem);
+  }
+}

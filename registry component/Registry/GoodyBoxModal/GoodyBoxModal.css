@@ -1,0 +1,154 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.heading {
+  margin: 14px 0 13px;
+  font: var(--theme-h3-lg-serif-font);
+  color: var(--color-black);
+}
+
+.subHeading {
+  font: var(--theme-p1-lg-font-light);
+  line-height: var(--line-height-xx-large);
+  color: var(--color-black);
+}
+
+.text {
+  font: var(--theme-l2-sans-font);
+  color: var(--color-black);
+  margin-top: var(--font-size-text-inter-medium);
+}
+
+.title {
+  font-family: var(--theme-family-serif);
+  font-size: var(--h1);
+  font-weight: 300;
+  color: var(--color-black);
+  padding: var(--font-size-text-medium);
+  line-height: normal;
+}
+
+.ProgressOuterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.initialItem {
+  font: var(--theme-b1-font-light);
+  font-weight: bold;
+  color: var(--color-black);
+  margin-right: 15px;
+  margin-top: auto;
+}
+
+.progressContainer {
+  max-width: 435px;
+  height: var(--font-size-text-inter-medium);
+  border-radius: var(--theme-border-radius);
+  background-color: var(--theme-color-white);
+  box-shadow: inset 0 0 0 var(--border-width-thin) var(--color-dark-grey-5);
+  margin-top: 6px;
+}
+
+.backgroundbox {
+  background-color: rgba(216, 216, 216, 0.25);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--font-size-text-xsmall);
+  position: relative;
+}
+
+.maxItems {
+  font: var(--theme-b1-font-light);
+  font-weight: bold;
+  color: var(--secondary-text-button-color);
+  margin-left: 15px;
+  margin-top: var(--focus-outline-offset);
+}
+
+.bottomAmount {
+  float: right;
+}
+
+.progressBar {
+  border-radius: var(--theme-border-radius);
+  background-color: var(--secondary-text-button-color);
+  height: var(--font-size-text-inter-small);
+  margin-top: 1px;
+}
+
+.claimCTA {
+  display: block;
+  margin: 2rem auto;
+  width: 230px;
+  background: var(--color-dark-grey-5);
+  border: solid 2px var(--color-primary-scale-2);
+}
+
+.dailogClass {
+  width: 881px;
+  margin: 120px auto;
+}
+
+.twoColumnLayout {
+  display: flex;
+
+  & .goodyBoxImage {
+    width: 375px;
+    height: 350px;
+    margin-top: var(--space-1);
+  }
+
+  & .detailWrapper {
+    width: 338px;
+    margin-left: var(--space-15);
+  }
+}
+
+.faqContent {
+  margin-top: 38px;
+}
+
+@media screen and (max-width: 70rem) {
+  .twoColumnLayout {
+    display: block;
+
+    & .goodyBoxImage {
+      margin-top: var(--space-1);
+    }
+
+    & .detailWrapper {
+      width: auto;
+      margin-left: var(--space-1);
+    }
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: var(--font-size-text-medium);
+    line-height: 1.79;
+  }
+
+  .subHeading {
+    font-size: 20px;
+    line-height: var(--line-height-xx-large);
+    margin-top: var(--space-3);
+  }
+
+  .dailogClass {
+    width: 100%;
+    margin: 0;
+  }
+
+  .progressContainer {
+    width: 170px;
+    height: 12px;
+  }
+
+  .backgroundbox {
+    border-radius: 8px;
+  }
+}

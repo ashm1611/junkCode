@@ -1,0 +1,234 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.article {
+  font: var(--theme-body-font);
+  min-width: 150px;
+  background-color: var(--theme-color-white);
+  border-radius: var(--border-radius-medium);
+  position: relative;
+}
+
+.recommendArticle {
+  font: var(--theme-body-font);
+  min-width: 150px;
+  border-radius: var(--border-radius-medium);
+  position: relative;
+}
+
+.imageContainer {
+  margin-top: 45px;
+}
+
+.recommendTileImageContainer {
+  margin-top: 45px;
+}
+
+.icon {
+  display: block;
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regTitle {
+  font: var(--theme-h2-sans-font);
+  text-align: center;
+  color: #7896b5;
+  margin-top: var(--font-size-text-extra-medium);
+}
+
+.regBabyTitle {
+  font: var(--theme-h4-lg-sans-font);
+  text-align: center;
+  color: var(--color-black);
+  padding: 24px 10px 0;
+}
+
+.recommendTileBabyBGColor {
+  background-color: #dff6f5;
+}
+
+.recommendTileBGColor {
+  background-color: var(--theme-color-white);
+}
+
+.collaborateTitle {
+  font: var(--theme-pdp-cta-font);
+  text-align: center;
+  color: #7896b5;
+  margin-top: 0;
+}
+
+.RecommendTile {
+  font: var(--theme-h2-serif-font);
+  text-align: center;
+  padding: var(--font-size-text-small);
+  word-wrap: break-word;
+}
+
+.NeedMoreOptionsbaby {
+  font: var(--theme-h3-lg-serif-font);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+  color: var(--color-black);
+  padding: var(--font-size-text-small);
+  word-wrap: break-word;
+}
+
+.NeedMoreOptions {
+  font: var(--theme-xLarge-title-font-TAB);
+  line-height: 1.33;
+  text-align: center;
+  color: var(--color-black);
+  word-wrap: break-word;
+}
+
+.exploreCommon {
+  min-height: 170px;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.explore {
+  font: var(--theme-p1-font-light);
+}
+
+.exploreBaby {
+  font: var(--theme-h4-sans-font-light);
+}
+
+.buttonContainer {
+  width: 100%;
+  padding: 0 15px 51px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.buttonContainerNew {
+  position: relative;
+  min-height: 170px;
+}
+
+.showAllCTA {
+  text-transform: capitalize;
+  width: 240px;
+  color: #147bd1;
+}
+
+.babyCTA {
+  text-transform: capitalize;
+  width: 240px;
+  color: #068488;
+}
+
+@media only screen and (--breakpoint-xs) {
+  .common {
+    display: inline-block;
+  }
+
+  .imageContainer {
+    padding-top: var(--font-size-text-extra-medium);
+    height: auto;
+    margin-top: 0;
+  }
+
+  .recommendTileImageContainer {
+    padding-top: var(--space-3);
+    height: auto;
+    margin-top: 0;
+  }
+
+  .icon {
+    padding-left: var(--font-size-text-extra-small);
+  }
+
+  .explore,
+  .exploreBaby,
+  .exploreCommon {
+    display: none;
+  }
+
+  .NeedMoreOptions {
+    font-size: var(--font-size-text-extra-medium);
+    padding: 0 0 0 var(--font-size-text-extra-small);
+    text-align: left;
+  }
+
+  .NeedMoreOptionsbaby {
+    font-weight: 300;
+    font-size: var(--font-size-text-xxx-medium);
+    padding: 0 0 0 10px;
+    text-align: left;
+  }
+
+  .regTitle {
+    line-height: 2.29;
+    text-align: left;
+    font-size: var(--font-size-text-medium);
+    margin-top: var(--font-size-text-extra-small);
+    padding-left: var(--font-size-text-extra-small);
+  }
+
+  .regBabyTitle {
+    text-align: left;
+    font-size: var(--font-size-text-small);
+    padding: 20px 0 0 10px;
+    margin-top: 0;
+  }
+
+  .collaborateTitle {
+    text-align: left;
+    font-size: var(--font-size-text-medium);
+    padding-left: var(--font-size-text-extra-small);
+  }
+
+  .RecommendTile {
+    font-size: var(--font-size-text-extra-medium);
+    padding: 0 0 0 var(--font-size-text-extra-small);
+    text-align: left;
+  }
+
+  .primaryContainer {
+    margin-left: var(--font-size-text-extra-small);
+    margin-bottom: var(--font-size-text-large);
+    margin-top: var(--border-radius-thin);
+  }
+
+  .primary {
+    color: #147bd1;
+  }
+
+  .babyCTA {
+    color: #068488;
+    padding: 0;
+  }
+}
+
+.NeedMoreOptions span,
+.NeedMoreOptionsbaby span {
+  font: var(--theme-b5-font-medium);
+  color: var(--color-font-mobile-nav);
+}
+
+@media (max-width: 320px) {
+  .giftNeedMoreOptions {
+    font-size: var(--font-size-text-medium);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .giftNeedMoreOptions {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .NeedMoreOptions span,
+  .NeedMoreOptionsbaby span {
+    color: var(--color-font-dark);
+  }
+}

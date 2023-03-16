@@ -1,0 +1,38 @@
+@import "@bbb-app/styles/variables.css";
+
+.imageContainer {
+  width: 375px;
+  height: 375px;
+}
+
+.diaperFundHeading {
+  font: var(--theme-h1-serif-font);
+  text-align: center;
+}
+
+.description {
+  font: var(--theme-h4-sans-font-light);
+  padding-left: 24px;
+  line-height: 26px;
+}
+
+.imageStyle {
+  text-align: left;
+}
+
+.faqlabel {
+  font: var(--theme-h3-lg-serif-font) !important;
+  font-weight: 300 !important;
+}
+
+@media (max-width: 1023px) {
+  .description {
+    font: var(--theme-b1-lg-font-light);
+    padding-left: 4px;
+    line-height: 21px;
+  }
+
+  .imageStyle {
+    text-align: center;
+  }
+}

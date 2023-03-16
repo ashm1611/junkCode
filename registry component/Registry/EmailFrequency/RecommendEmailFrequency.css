@@ -1,0 +1,49 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --height-desktop: 360px;
+  --height-mobile: 400px;
+}
+
+.container {
+  background-color: var(--color-light-grey4);
+}
+
+.mainContainer {
+  border: var(--border-width-medium) solid var(--color-black);
+  padding: var(--space-3);
+  height: var(--height-mobile);
+  background-color: var(--color-white);
+}
+
+.headingContainer {
+  font-family: var(--primaryFont);
+  font-size: var(--font-size-text-xx-large);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-large);
+  text-align: center;
+  color: var(--color-black);
+}
+
+.description {
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-small);
+  line-height: var(--line-height-extra-large);
+  text-align: center;
+  color: var(--color-black);
+}
+
+@media (--breakpoint-md) {
+  .mainContainer {
+    height: var(--height-desktop);
+    padding: var(--space-2) var(--space-15);
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .mainContainer {
+    border: 6px solid;
+    padding: 46px 46px 54px;
+  }
+}

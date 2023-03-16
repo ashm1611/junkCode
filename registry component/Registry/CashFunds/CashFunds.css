@@ -1,0 +1,167 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.cfWrapper {
+  padding: 0;
+}
+
+.cfSignInContainer {
+  padding: var(--space-2) var(--space-03);
+}
+
+.header {
+  font: var(--theme-h3-lg-serif-font-light);
+  font-family: var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  text-align: center;
+}
+
+.subHeader {
+  font: 400 16px/1.3 Montserrat;
+  color: var(--theme-color-black);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.cfSucHeader {
+  font: var(--theme-serif-font-order-confirmation-heading);
+  font-family: var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  padding: var(--space-375) 6rem 0;
+}
+
+.subCopy {
+  font: 300 14px/1.3 Montserrat;
+  padding: 0 18%;
+}
+
+.confSubCopy {
+  font: var(--theme-paragraph-font);
+}
+
+.venmoCopy {
+  font: var(--theme-paragraph-font);
+  margin: var(--space-1) 0 var(--space-2);
+  padding: 0 3.5rem;
+  text-align: center;
+}
+
+.ventoFont {
+  font-size: var(--font-size-text-medium);
+}
+
+.dntKnow {
+  font: var(--theme-b1-font-medium);
+  font-weight: var(--font-weight-medium);
+}
+
+.headerWidth {
+  width: 50%;
+}
+
+.flexCell {
+  display: flex;
+  width: 100%;
+  padding: var(--space-3) 0;
+}
+
+.renderContent {
+  font: var(--theme-body-font);
+  margin-top: var(--space-025);
+}
+
+.bold {
+  font-weight: var(--font-weight-medium);
+  display: inline;
+  margin: 0 var(--space-1);
+  color: var(--color-font-link);
+}
+
+.CFContentImg {
+  height: 220px;
+  width: 100%;
+}
+
+.cfSuccessImg {
+  border-radius: 50%;
+}
+
+.inputfield {
+  padding-top: var(--space-075);
+  text-align: left;
+}
+
+.cfSucWrapper {
+  text-align: center;
+  padding: 11% 8%;
+}
+
+.viewBtn {
+  padding: 8rem var(--space-15) 0;
+}
+
+.confWrapper {
+  text-align: center;
+  padding: 4% 8%;
+}
+
+.cashfundInput {
+  font: var(--theme-p2-font-medium) !important;
+}
+
+@media screen and (--breakpoint-xs) {
+  .cfWrapper {
+    padding: 0 !important;
+  }
+
+  .cfSignInContainer {
+    padding: var(--space-2);
+  }
+
+  .cfSucWrapper {
+    padding: 20% 12%;
+  }
+
+  .cfSucHeader {
+    padding: var(--space-3) 0 0;
+  }
+
+  .subCopy {
+    padding: 0;
+  }
+
+  .viewBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: var(--space-03) var(--space-125);
+    width: 100%;
+  }
+
+  .venmoCopy {
+    padding: 0 var(--space-2);
+  }
+
+  .headerWidth {
+    width: 100%;
+  }
+
+  .cashfundInput {
+    font: var(--theme-p3-font-medium) !important;
+  }
+
+  .confWrapper {
+    text-align: center;
+    padding: 13% 4.5%;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .viewBtn {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 0;
+    margin-top: 504px;
+  }
+}

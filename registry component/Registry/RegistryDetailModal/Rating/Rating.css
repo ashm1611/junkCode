@@ -1,0 +1,81 @@
+@import "theme";
+
+:root {
+  --gap: 5px; /** Add a margin between the stars and label */
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.base {
+  composes: flex items-center from global;
+}
+
+.label {
+  font: var(--theme-b2-font-light);
+  margin-left: var(--gap);
+}
+
+.front {
+  fill: var(--refresh-star-color);
+}
+
+.rear {
+  fill: var(--color-primary-scale-2);
+}
+
+.ratingContainer {
+  composes: relative from global;
+  height: 15px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.displayInherit {
+  display: inherit;
+}
+
+.reviewCount {
+  composes: absolute from global;
+  left: 80px;
+  top: -2px;
+}
+
+.border {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid var(--theme-color-stroke);
+}
+
+.reviewsContainer {
+  text-decoration: underline;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: Effra;
+  letter-spacing: normal;
+  color: var(--color-black);
+  margin-top: 3px;
+}
+
+.textUnderline {
+  text-decoration: underline;
+}
+
+.ratings {
+  width: 120px;
+  height: 20px;
+  margin-left: -7px;
+}
+
+.facet {
+  margin: 0;
+  display: inline-flex;
+}

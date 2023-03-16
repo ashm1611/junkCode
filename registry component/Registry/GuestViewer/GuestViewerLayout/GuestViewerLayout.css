@@ -1,0 +1,166 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --facet-width: 160px;
+  --color-blue-changeCTA: #147bd1;
+  --color-Easternblue-changeCTA: #068488;
+}
+
+.facetContainer {
+  composes: relative from global;
+  float: right;
+  display: flex;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+}
+
+.freePickUpMsg {
+  composes: relative from global;
+  margin-top: -6px;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-small);
+}
+
+.storeName {
+  position: relative;
+  font-size: var(--font-size-text-large);
+  font-weight: var(--font-weight-medium);
+}
+
+.facetCheckbox {
+  margin: 0.25rem 0 0.6rem;
+  width: 50%;
+}
+
+.storepickup {
+  font-weight: var(--font-weight-medium);
+}
+
+.babychangeStoreLink {
+  font: var(--theme-b2-font-medium);
+  color: var(--color-Easternblue-changeCTA);
+}
+
+.changeStoreLink {
+  font: var(--theme-b2-font-medium);
+  color: var(--color-blue-changeCTA);
+}
+
+:global(#storePickUp) {
+  &:disabled + label {
+    font-weight: normal;
+    color: var(--color-light-grey13);
+  }
+
+  &:enabled + label {
+    font-weight: normal;
+    color: var(--theme-color-success);
+  }
+}
+
+:global(#store-not-exists + label) {
+  font-weight: normal;
+  color: var(--theme-color-success);
+}
+
+.changeStorePadding {
+  padding-left: 0;
+}
+
+.selectAStore {
+  color: var(--color-light-grey5);
+  font-size: var(--font-size-text-large);
+  margin-top: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .mrbottom {
+    margin-bottom: 20px;
+  }
+
+  .freePickUpMsg {
+    display: block;
+    margin-top: -6px;
+    padding-top: 0;
+  }
+
+  .changeStorePadding {
+    padding-left: 0;
+  }
+}
+
+@media screen and (--breakpoint-tablet-max) {
+  .facetContainer {
+    width: 100%;
+    margin: 0;
+    float: none;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .mobileWidth {
+    width: 100% !important;
+  }
+
+  .pdleft {
+    padding-left: 8px;
+  }
+}
+
+:global(#storePickUp + label > span) {
+  display: none;
+}
+
+:global(#store-not-exists + label > span) {
+  display: none;
+}
+
+.storepickup {
+  color: var(--theme-color-success);
+}
+
+@media screen and (width: 1024px) {
+  .pdleft {
+    padding-left: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .autowidth {
+    width: auto !important;
+  }
+
+  :global(#storePickUp + label) {
+    margin-left: 0;
+  }
+
+  :global(#store-not-exists + label) {
+    margin-left: 0;
+  }
+
+  .storepickupbox {
+    margin-right: 10px;
+  }
+
+  .mrright {
+    margin-right: 24px;
+  }
+}
+
+:global(#instockOnline + label > span) {
+  font-size: var(--font-size-text-large);
+}
+
+@media screen and (--breakpoint-lg) {
+  .storeName {
+    display: block;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

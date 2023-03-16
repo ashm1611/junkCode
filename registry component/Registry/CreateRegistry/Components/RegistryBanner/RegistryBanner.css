@@ -1,0 +1,270 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --registry-banner-text-font: var(--theme-b2-font-medium);
+  --registry-banner-text-color: var(--color-primary-scale-1);
+  --registry-banner-heading-font-lg: var(--theme-h1-lg-serif-font);
+  --registry-banner-heading-font-sm: var(--theme-h3-lg-serif-font);
+  --registry-banner-heading-text-sm: 300 14px/0.04 var(--theme-family-sans);
+  --registry-wedding-banner-heading-font-lg: var(--theme-h1-lg-serif-font);
+  --registry-wedding-banner-heading-font-md: var(--theme-h3-lg-serif-font);
+  --registry-wedding-banner-heading-color: #1c4f8a;
+  --registry-wedding-banner-heading-text-sm: 300 18px/0.04
+    var(--theme-family-sans);
+  --registry-wedding-container-height-lg: 188px;
+  --registry-wedding-container-height-sm: 222px;
+  --registry-wedding-bannerSubText-width: 194px;
+  --registry-wedding-confettiLeft-alignLeft-sm: -11vw;
+  --registry-wedding-confettiLeft-alignTop-sm: -25vw;
+  --registry-wedding-confettiRight-alignLeft-sm: 64%;
+  --registry-wedding-confettiRight-alignTop-sm: 50%;
+  --registry-wedding-confettiRight-rotate-sm: 76deg;
+  --registry-wedding-homeBtn-alignLeft: 15%;
+  --registry-wedding-homeBtn-alignTop: 75%;
+  --registry-wedding-homeBtn-alignLeft-sm: 4%;
+  --registry-wedding-homeBtn-alignTop-sm: 85%;
+  --registry-wedding-mainContainer-margin: 0;
+  --registry-wedding-mainContainer-padding: 0;
+  --registry-wedding-mainContainer-maxwidth: 100%;
+  --registry-baby-homeBtn-alignLeft-tablet: 8%;
+}
+
+.bannerText {
+  color: var(--registry-banner-text-color);
+  font: var(--registry-banner-text-font);
+}
+
+.mainContainer {
+  margin: var(--registry-wedding-mainContainer-margin);
+  padding: var(--registry-wedding-mainContainer-padding);
+  max-width: var(--registry-wedding-mainContainer-maxwidth);
+}
+
+.bannerContainer {
+  composes: relative from global;
+  display: block;
+}
+
+.bannerHeading {
+  font: var(--registry-banner-heading-font-lg);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.homeCaret {
+  transform: rotate(90deg);
+  color: var(--color-light-grey5);
+}
+
+.homeButton {
+  composes: absolute from global;
+  left: 0;
+  bottom: var(--space-3);
+}
+
+.bannerHeadingLowerCase {
+  font: var(--registry-banner-heading-font-lg);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  text-transform: lowercase;
+}
+
+.extraButtonCls {
+  left: 15%;
+  top: 70%;
+  bottom: var(--space-1);
+}
+
+.babyRegbannerText {
+  color: var(--registry-banner-text-color);
+  font: var(--theme-b1-font-medium);
+  margin-bottom: var(--space-2);
+}
+
+.registrySmallTextHeading {
+  font: var(--registry-banner-heading-text-sm);
+  margin-top: var(--space-3);
+  text-align: center;
+  color: var(--color-black);
+}
+
+.babyregbannerContainer {
+  composes: relative from global;
+  display: flex;
+}
+
+.bannerTextContainer {
+  z-index: 1;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.weddingRegBannerHeading {
+  font: var(--registry-wedding-banner-heading-font-lg);
+  color: var(--registry-wedding-banner-heading-color);
+}
+
+.weddingRegBannerContainer {
+  composes: relative from global;
+  height: var(--registry-wedding-container-height-lg);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weddingRegSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wedRegHomeBtn {
+  composes: absolute from global;
+  left: var(--registry-wedding-homeBtn-alignLeft);
+  top: var(--registry-wedding-homeBtn-alignTop);
+}
+
+.weddingRegistrySmallTextHeading {
+  font: var(--registry-wedding-banner-heading-text-sm);
+  margin: var(--space-15);
+  color: var(--color-black);
+}
+
+.confettiLeft {
+  position: absolute;
+  bottom: 0;
+}
+
+.confettiRight {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.babyRegBannerHeading {
+  letter-spacing: var(--theme-serif-letter-spacing);
+  color: var(--color-black);
+  font-family: var(--theme-family-serif);
+  font-size: var(--font-size-text-largest);
+  font-weight: var(--font-weight-small);
+  line-height: normal;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .bannerHeading {
+    font: var(--registry-banner-heading-font-sm);
+    letter-spacing: var(--theme-serif-letter-spacing);
+    text-align: center;
+  }
+
+  .homeButton {
+    display: none;
+  }
+
+  .babyRegbannerText {
+    margin-bottom: 0;
+  }
+
+  .extraButtonCls {
+    left: 45px;
+    top: 80%;
+    bottom: var(--space-1);
+  }
+
+  .babyRegBannerHeading {
+    letter-spacing: var(--theme-serif-letter-spacing);
+    color: var(--color-black);
+    font: var(--theme-h1-serif-font);
+    line-height: var(--line-height-extra-large);
+  }
+
+  .registrySmallTextHeading {
+    font: var(--registry-banner-heading-text-sm);
+    margin-top: 1px;
+    margin-bottom: var(--space-2);
+    text-align: center;
+    color: var(--color-black);
+    line-height: normal;
+  }
+
+  .weddingRegBannerContainer {
+    composes: relative from global;
+    height: var(--registry-wedding-container-height-sm);
+    margin: 0;
+    padding: 0;
+  }
+
+  .weddingRegBannerHeading {
+    font: var(--registry-wedding-banner-heading-font-md);
+    color: var(--registry-wedding-banner-heading-color);
+    margin-top: var(--space-3);
+  }
+
+  .wedRegHomeBtn {
+    left: var(--registry-wedding-homeBtn-alignLeft-sm);
+    top: var(--registry-wedding-homeBtn-alignTop-sm);
+  }
+
+  .weddingRegistrySmallTextHeading {
+    margin-top: var(--space-1);
+    width: var(--registry-wedding-bannerSubText-width);
+    line-height: normal;
+    font-size: var(--font-size-text-large);
+    align-self: center;
+  }
+
+  .confettiLeft {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 120px;
+    overflow: hidden;
+  }
+
+  .confettiRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 120px;
+  }
+
+  .confettiLeftBaby {
+    bottom: 0;
+  }
+
+  .confettiLeftBaby,
+  .confettiLeftBaby img,
+  .confettiRightBaby,
+  .confettiRightBaby img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media only screen and (--breakpoint-tablet-max) {
+  .extraButtonCls {
+    left: var(--registry-baby-homeBtn-alignLeft-tablet);
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .confettiRight,
+  .confettiLeft {
+    height: 55px;
+  }
+
+  .confettiLeftBaby,
+  .confettiLeftBaby img,
+  .confettiRightBaby,
+  .confettiRightBaby img {
+    height: 112px;
+  }
+
+  .confettiLeftBaby {
+    top: auto;
+  }
+
+  .bannerTextContainerBaby {
+    margin: 0 50px;
+    z-index: 1;
+  }
+}

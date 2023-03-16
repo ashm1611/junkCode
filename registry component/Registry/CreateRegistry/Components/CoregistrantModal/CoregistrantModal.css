@@ -1,0 +1,35 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --co-registrant-modal-button-padding: 20px;
+  --co-registrant-modal-content-padding: 45px;
+  --co-registrant-modal-heading-padding: 20px;
+  --co-registrant-modal-heading-font-lg: var(--theme-h2-sans-font);
+  --co-registrant-modal-heading-font-sm: var(--theme-h3-sans-font);
+  --co-registrant-modal-content-font: var(--theme-b1-font-light);
+}
+
+.okButton {
+  padding-bottom: var(--co-registrant-modal-button-padding);
+}
+
+.content {
+  padding-bottom: var(--co-registrant-modal-content-padding);
+  font: var(--co-registrant-modal-content-font);
+}
+
+.heading {
+  padding-bottom: var(--co-registrant-modal-heading-padding);
+  font: var(--co-registrant-modal-heading-font-lg);
+}
+
+@media only screen and (--breakpoint-sm) {
+  .heading {
+    font: var(--co-registrant-modal-heading-font-sm);
+  }
+
+  .coRegistrantDialog {
+    padding: 36px 16px;
+  }
+}

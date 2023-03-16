@@ -1,0 +1,9 @@
+@import "@bbb-app/styles/variables.css";
+
+.replacefromRegistryBtn {
+  composes: relative from global;
+}
+
+.chooseOptionBtn button {
+  padding: var(--space-1);
+}

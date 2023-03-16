@@ -1,0 +1,77 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --background-color: var(--theme-color-black);
+  --background-color-urgent: var(--theme-color-important);
+  --border-radius: 8px 8px 0 0;
+  --color: var(--theme-color-white);
+  --font-size: 14px;
+  --font-size-icon: 11px;
+  --font-weight: inherit;
+  --line-height: calc(30 / 14);
+  --min-height: 30px;
+  --padding: 0 14px;
+  --text-transform: capitalize;
+  --tooltip-icon-background-color: #888;
+  --tooltip-icon-size: 14px;
+  --tooltip-font-size: var(--theme-small-font-size);
+  --tooltip-line-height: 16px;
+}
+
+.base {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  color: var(--color);
+  composes: inline-block from global;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  overflow: hidden;
+  padding: var(--padding);
+  text-overflow: ellipsis;
+  text-transform: var(--text-transform);
+  user-select: none;
+  white-space: nowrap;
+  min-height: var(--min-height);
+}
+
+.tooltipIcon {
+  composes: inline-block relative ml1 from global;
+  width: var(--font-size);
+  height: var(--font-size);
+  border-radius: 7px;
+  font-size: var(--font-size-icon);
+  color: var(--color);
+  vertical-align: middle;
+  line-height: var(--font-size);
+  text-align: center;
+  background-color: var(--tooltip-icon-background-color);
+
+  &:hover + .showToolTip {
+    display: block;
+  }
+}
+
+.tooltip {
+  color: var(--theme-color-black);
+  font-size: var(--tooltip-font-size);
+  line-height: var(--tooltip-line-height);
+  text-transform: initial;
+  white-space: initial;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.tooltipInnerClass {
+  top: -74px;
+  left: 29%;
+  height: auto;
+
+  &::after {
+    top: 38px;
+  }
+
+  &::before {
+    top: 39px;
+  }
+}

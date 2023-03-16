@@ -1,0 +1,26 @@
+@import "@bbb-app/styles/variables.css";
+@import "theme";
+
+:root {
+  --min-width: 150px;
+}
+
+.base {
+  composes: flex flex-column relative from global;
+  font: var(--theme-body-font);
+  min-width: var(--min-width);
+  padding: 20px;
+  background-color: var(--theme-color-white);
+  border-radius: var(--border-radius-medium);
+}
+
+.personalizationMessage {
+  font: var(--theme-b1-lg-font-medium);
+  color: var(--color-info);
+}
+
+@media print {
+  .personalizationMessage {
+    font-size: 10px;
+  }
+}

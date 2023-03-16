@@ -1,0 +1,13 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.newRegistryLayout {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .newRegistryLayout {
+    margin: 12px 0 0;
+  }
+}

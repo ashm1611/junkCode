@@ -1,0 +1,46 @@
+@import '@bbb-app/styles/variables.css';
+
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.baseDirection {
+  flex-direction: column;
+}
+
+.isPrice {
+  font: var(--theme-h4-sans-font);
+  color: var(--color-primary-scale-0);
+}
+
+.wasPrice {
+  font: var(--theme-h4-lg-sans-font);
+  color: var(--color-light-grey5);
+}
+
+.newWasPrice {
+  font: var(--theme-b3-font-medium);
+  font-weight: 300;
+  color: #767676;
+}
+
+.discountedCart {
+  composes: inline-block from global;
+  font: var(--theme-h4-lg-sans-font);
+  color: var(--theme-color-important);
+}
+
+.discountedPrice {
+  font: var(--theme-h4-lg-sans-font);
+  color: var(--color-sale-price);
+  margin-right: 5px;
+}
+
+@media print {
+  .isPrice,
+  .wasPrice {
+    font-size: var(--theme-small-font-size) !important;
+  }
+}

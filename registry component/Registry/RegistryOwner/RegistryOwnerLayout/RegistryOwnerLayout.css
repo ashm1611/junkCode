@@ -1,0 +1,347 @@
+@import '@bbb-app/styles/variables.css';
+
+.registryHeading {
+  color: var(--color-black);
+}
+
+.accordianContainer {
+  background-color: var(--color-background);
+  padding-left: 0;
+}
+
+.accordianContainerNew {
+  background-color: #f7f7f8;
+  padding-left: 0;
+}
+
+.warrantyInfo {
+  > * {
+    margin-top: 0;
+  }
+}
+
+.registryActionButton {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.undoDeletedMessage {
+  text-align: var(--text-align-left);
+  width: 640px;
+}
+
+.smallActiveImage {
+  width: 2.5rem;
+}
+
+.welcomeSubTextSize {
+  font-size: 16px;
+}
+
+.welComeTextMargin {
+  margin: 0;
+}
+
+@media screen and (--breakpoint-md) {
+  .registryActionButton,
+  .registryActionButtonWithFacets {
+    border-bottom: solid 2px var(--color-light-grey6);
+    min-height: 4rem;
+  }
+
+  .actionBtnWithFacets {
+    float: right;
+  }
+
+  .qvModalRegistry {
+    margin: 120px auto;
+    width: 564px;
+  }
+
+  .qvModalContentRegistry {
+    padding: var(--space-25) var(--space-15) var(--space-25) var(--space-3);
+  }
+}
+
+.newLay {
+  width: 555px;
+  margin-top: 127px;
+}
+
+.ctaNew {
+  margin-top: 32px;
+}
+
+.privateReg {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #1b1b1b;
+  width: 170px;
+}
+
+.registryActionButtonContainer {
+  background-color: var(--color-background);
+}
+
+.filtersTopSpacing {
+  padding-bottom: 0;
+}
+
+@media screen and (--breakpoint-sm) {
+  .registryHeading {
+    display: none;
+  }
+
+  .undoDeletedMessage {
+    width: auto;
+  }
+
+  .registryActionButtonContainer {
+    border-bottom: solid 2px var(--color-primary-scale-3);
+  }
+
+  .filtersTopSpacing {
+    padding-bottom: var(--space-1);
+  }
+
+  .moreInfoSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcomeText {
+    font-weight: var(--font-weight-normal);
+    color: var(--color-black);
+    font-size: var(--font-size-text-x-large) !important;
+    padding-bottom: 1rem;
+  }
+
+  .welcomeSubText {
+    font-size: var(--font-size-text-large);
+    margin-right: 7px;
+    padding-bottom: 5px;
+  }
+
+  .welcomeText__wedding {
+    font-size: var(--font-size-text-extra-medium) !important;
+    padding-bottom: 10px !important;
+  }
+
+  .editRegistryButton__baby {
+    padding-top: 5px;
+  }
+}
+
+.warrantyInfo {
+  > * {
+    margin-top: 0;
+  }
+}
+
+@media print {
+  .registryActionButton:global(.pt25) {
+    padding-top: var(--space-3);
+  }
+
+  .registryActionButton:global(.pb15) {
+    padding-bottom: var(--space-2);
+  }
+}
+
+.containerForNoResult {
+  background: var(--color-light-grey14);
+  padding-top: 70px;
+  padding-bottom: 139px;
+}
+
+.noResultFilter {
+  font: var(--theme-b1-font-medium);
+  color: var(--color-font-light);
+  text-align: center;
+}
+
+.noSelectedFilter {
+  font: var(--theme-hero-1-2-title);
+  color: var(--theme-color-black);
+  text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+  .cell {
+    padding: 0 var(--space-1);
+  }
+}
+
+.cell > * {
+  height: 100%;
+}
+
+.welcomeText {
+  font-size: var(--font-size-text-x-large);
+  font-weight: var(--font-weight-normal) !important;
+  font-family: Effra;
+  color: var(--color-black);
+  padding-bottom: 5px;
+}
+
+.welcomeSubText {
+  display: inline-block;
+  font-family: Effra, Helvetica, Arial, sans-serif;
+  font-weight: var(--font-weight-small);
+  padding-right: var(--space-1);
+}
+
+.moreInfoSection {
+  display: flex;
+}
+
+.editRegistryButton,
+.registryButtonModal,
+.babyRegistryStyle {
+  margin-top: 3px;
+  display: block;
+  font-family: Effra;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  position: sticky;
+}
+
+.editRegistryButton__baby {
+  font: var(--theme-b1-font-medium);
+  display: flex;
+  align-items: center;
+}
+
+.welcomeSubText__baby {
+  font: var(--theme-p2-font-light);
+  padding-right: var(--space-1);
+}
+
+.welcomeText__wedding {
+  font-family: Effra, Helvetica, Arial, sans-serif;
+  font-size: var(--font-size-text-x-large);
+  font-weight: bold;
+  letter-spacing: 0.02px;
+  padding-bottom: var(--space-075);
+}
+
+.registryButtonModal,
+.babyRegistryStyle {
+  text-align: center;
+  padding-top: 26px;
+  padding-bottom: 0;
+}
+
+.registryButtonModal {
+  color: var(--color-white);
+  padding-bottom: var(--font-size-text-xsmall);
+
+  &:hover {
+    color: var(--color-white);
+  }
+}
+
+.startAddingCta {
+  background-color: var(--color-white) !important;
+  color: #1a4e8a !important;
+}
+
+.seeYourRegCta {
+  width: 500px;
+}
+
+.startAddingCta,
+.startAddBabyCta {
+  width: var(--tool-tip-width-large);
+}
+
+.desktopImageModal,
+.regImagedesktop {
+  width: 134px;
+  height: 160px;
+  position: absolute;
+  margin-top: -40px;
+}
+
+.mobileImageModal,
+.regImageMobile {
+  width: 87px;
+  position: absolute;
+}
+
+@media screen and (--breakpoint-lg) {
+  :global(.registryNewModal) {
+    width: 648px !important;
+    margin-left: 0.5rem !important;
+  }
+
+  :global(.registryModalHeading) {
+    font-size: 34px;
+  }
+
+  :global(.registryBbbHeading) {
+    font-size: var(--font-size-text-xx-large);
+  }
+
+  :global(.regHeader) {
+    width: 468px;
+  }
+
+  .desktopImageModal {
+    margin-left: -427px;
+  }
+
+  .regImagedesktop {
+    margin-left: 294px;
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  :global(.registryBbbHeading) {
+    font-size: var(--font-size-text-x-large);
+  }
+
+  :global(.registryModalHeading) {
+    font-size: 29px;
+  }
+
+  :global(.regHeader) {
+    width: 250px;
+  }
+
+  .mobileImageModal {
+    padding-top: 48px;
+    margin-left: -196px;
+  }
+
+  .regImageMobile {
+    padding-top: 55px;
+    margin-left: 109px;
+  }
+}
+
+.modalOverlayNew {
+  & :global(.rclModal) {
+    border: none !important;
+
+    & :global(.rclCloseBtnWrapper) {
+      color: var(--color-white);
+    }
+
+    & :global(.rclModalContent) {
+      background-color: #01244a;
+    }
+  }
+}
+
+.registryAddInfoSection {
+  display: block;
+  border-bottom: solid 2px var(--color-light-grey6);
+}

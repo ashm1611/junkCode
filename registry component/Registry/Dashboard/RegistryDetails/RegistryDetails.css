@@ -1,0 +1,87 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.userNameStyle {
+  font: var(--theme-h2-serif-font);
+}
+
+.header {
+  display: flex;
+}
+
+.wedRegHeaderColor {
+  color: var(--color-navy-blue);
+}
+
+.toggleText {
+  font: var(--theme-b1-font-medium);
+  margin-left: 9px;
+}
+
+.toggleSection {
+  display: flex;
+  margin-top: 10px;
+}
+
+.regDetail {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details {
+  composes: inline-block from global;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+}
+
+.pt2 {
+  padding-top: 1rem;
+}
+
+.regText {
+  white-space: nowrap;
+}
+
+@media screen and (--breakpoint-md) {
+  .registryActionButton {
+    & ul > li {
+      padding: 5px 16px 0 0;
+    }
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .toggleSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .registryActionButton {
+    display: flex;
+    justify-content: space-around;
+
+    & ul > li {
+      padding: 10px 15px 0 0;
+    }
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .registryActionButton {
+    & ul {
+      display: inline-flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .details {
+    font-size: var(--theme-small-font-size);
+  }
+
+  .regDetail {
+    justify-content: center;
+  }
+}

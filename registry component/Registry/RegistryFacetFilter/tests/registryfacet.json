@@ -1,0 +1,55 @@
+[
+  {
+    "id":"status",
+    "items":[
+      {
+        "label":"Gifts Wanted"
+      },
+      {
+        "label":"Gifts PurchasedN"
+      }
+    ]
+  },
+  {
+    "id":"price",
+    "items":[
+      {
+        "label":"$1 - $25"
+      },
+      {
+        "label":"$25 - $50"
+      },
+      {
+        "label":"$150 - $200"
+      },
+      {"label":"$200+"}
+    ]
+  },
+  {
+    "id":"category",
+    "items":[
+      {"label":"BEDDING"},
+      {
+        "label":"CLEANING & ORGANIZATION"
+      },
+      {
+        "label":"FINE DINING & GIFTWARE"
+      },
+      {"label":"Bath"},
+      {
+        "label":"Experience"
+      },
+      {
+        "label":"Furniture"
+      }
+    ]
+  },
+  {
+    "id": "sort",
+    "items": [
+      {
+        "label": "recommended"
+      }
+    ]
+  }
+]

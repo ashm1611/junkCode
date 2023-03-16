@@ -1,0 +1,367 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --color-light-border-grey: #e4e4e4;
+  --color-registry-black: #222;
+  --photo-registry-owner-mobile: 94px;
+  --photo-registry-owner-desktop: 150px;
+  --registry-wrapper-min-height: 150px;
+  --no-margin: 0;
+  --min-width-circle: 66px;
+  --min-height-circle: 66px;
+  --min-height-dsk: 40%;
+}
+
+.photoGuestViewWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 140px;
+}
+
+.photoGuestViewWrapper img {
+  max-width: inherit;
+}
+
+.detailsValue {
+  color: var(--color-font-dark);
+  font-weight: var(--font-weight-small);
+  margin: 0 5px;
+}
+
+.regDetailsDL {
+  line-height: unset;
+  composes: inline-block from global;
+  margin-bottom: auto;
+  list-style-position: unset;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: auto;
+}
+
+.regDetailsDL :global(dt),
+.regDetailsDL :global(dd) {
+  display: inline-block;
+}
+
+.accessDenied {
+  color: var(--color-alert);
+  font-size: var(--font-size-text-largest);
+}
+
+.editLink {
+  color: var(--color-font-brand);
+}
+
+.giftContainer {
+  border: solid 2px var(--color-light-border-grey);
+  border-radius: var(--border-radius-thin);
+  composes: inline-block from global;
+  background-color: var(--color-white);
+
+  & :global(span) {
+    display: block;
+  }
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.details {
+  composes: inline-block from global;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.daysToGoLabel {
+  display: block;
+  font-size: var(--font-size-text-extra-small);
+  letter-spacing: 1px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.daysToGoNumber {
+  color: var(--color-white);
+}
+
+.registryStats {
+  border-bottom: solid 2px var(--color-light-border-grey);
+}
+
+.giftsLabel {
+  font-size: 13px;
+  font-weight: var(--font-weight-small);
+  color: var(--theme-color-black);
+  margin-bottom: 5px;
+  margin-left: 6px;
+}
+
+@media only screen and (--breakpoint-xlg-md) {
+  .giftsLabel {
+    font-size: var(--theme-small-font-size);
+    font-weight: var(--font-weight-small);
+    color: var(--theme-color-black);
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .giftsLabel {
+    font-size: 14px;
+  }
+}
+
+.tnGiftsPurchased {
+  color: #8d8d8d !important;
+}
+
+.giftsNumber {
+  color: var(--color-registry-black);
+}
+
+.giftGiverRegistered {
+  composes: relative from global;
+
+  &::after {
+    content: " ";
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--color-primary-scale-3);
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+}
+
+.giftRegistered {
+  composes: relative from global;
+
+  &::after {
+    content: " ";
+    height: 100%;
+    display: inline-block;
+    border: 1px solid var(--color-primary-scale-3);
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.breakWord {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.registryWrapper {
+  composes: inline-block from global;
+  margin-top: var(--space-35);
+  margin-bottom: var(--space-35);
+}
+
+.imageWrapper {
+  composes: relative from global;
+  width: auto;
+  height: 9%;
+  min-height: 94px;
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.registrantImage {
+  border-radius: 50%;
+}
+
+.daysToGo {
+  background: var(--theme-color-black);
+  min-width: 66px;
+  color: var(--color-white);
+  position: absolute;
+  right: -7%;
+  bottom: 0;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  min-height: 66px;
+}
+
+.registryNames {
+  composes: flex justify-center items-center flex-none nowrap overflow-hidden from global;
+  font: var(--theme-h3-lg-sans-font);
+  width: 150px;
+  height: 150px;
+  border: solid 2px var(--color-light-grey6);
+  border-radius: 50%;
+}
+
+.registryNames h3 {
+  color: var(--color-light-grey5);
+}
+
+.detailsWrapper {
+  align-self: center;
+  composes: inline-block from global;
+  padding-left: var(--space-4);
+}
+
+.registryContainer {
+  min-height: var(--registry-wrapper-min-height);
+}
+
+.h2Serif {
+  font: var(--theme-h2-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.h3Serif {
+  font: var(--theme-h3-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.daysToGo .daysToGoNumber {
+  font: var(--theme-h3-serif-font);
+  top: 3px;
+}
+
+.userNameStyle {
+  font: var(--theme-h2-serif-font);
+}
+
+@media screen and (--breakpoint-md) {
+  .imgHold {
+    min-width: 148px;
+  }
+
+  .h2Serif {
+    font: var(--theme-h2-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  .h3Serif {
+    font: var(--theme-h3-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}
+
+@media only screen and (--breakpoint-lg-md) {
+  .daysToGoNumber {
+    composes: relative from global;
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .registryWrapper {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
+  .registryNames h3 {
+    font: var(--theme-h4-lg-sans-font);
+  }
+
+  .registryNames {
+    height: var(--photo-registry-owner-mobile);
+    width: var(--photo-registry-owner-mobile);
+  }
+
+  .imageWrapper {
+    margin: 0 auto;
+    max-height: none;
+  }
+
+  .detailsWrapper {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .visibilityLink {
+    display: none;
+  }
+
+  .userName {
+    padding-top: var(--space-1);
+  }
+
+  .details {
+    font-size: var(--theme-small-font-size);
+
+    &::after {
+      content: "";
+      height: 12px;
+      width: 1px;
+      background-color: var(--color-black);
+      position: absolute;
+      margin: 3px 0 0 4px;
+    }
+  }
+
+  .details:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  .giftsLabel {
+    composes: inline-block from global;
+  }
+
+  .giftsNumber {
+    font-weight: normal;
+    margin-right: 0;
+  }
+
+  .visibilityText {
+    margin: 0;
+  }
+
+  .daysToGo {
+    right: -15%;
+  }
+
+  .registryContainer {
+    min-height: none;
+  }
+}
+
+@media print {
+  .printStyle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .giftContainer {
+    min-width: 300px;
+  }
+
+  .registryWrapper {
+    max-width: 400px;
+    margin-bottom: var(--space-3);
+  }
+
+  .imageWrapper {
+    display: none;
+  }
+
+  .detailsWrapper {
+    padding-left: 0;
+  }
+
+  .breakWord,
+  .giftsNumber {
+    font: var(--theme-h3-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}
+
+@media print, screen and (--breakpoint-md-lg) {
+  .registryWrapper > :global(.grid-x) > .detailsWrapper {
+    width: 75%;
+  }
+}

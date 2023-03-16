@@ -1,0 +1,209 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --font-color: var(--theme-color-black);
+  --no-results-color: var(--color-alert);
+  --change-mode-color: var(--color-primary-brand);
+  --background-color: var(--color-primary-scale-4);
+  --event-bg-color: var(--color-primary-scale-5);
+  --thumb-border-color: var(--color-primary-scale-3);
+  --thumb-font-color: var(--color-primary-scale-1);
+  --thumb-image-mobile: 65px;
+  --vertical-spacing: 16px;
+  --registry-name-top: 8px;
+  --veiw-registry-button-top: 24px;
+}
+
+.base {
+  color: var(--font-color);
+  background-color: var(--background-color);
+}
+
+.events {
+  composes: flex flex-column my3 from global;
+}
+
+.event {
+  composes: flex justify-between mb15 px3 py2 from global;
+  background-color: var(--event-bg-color);
+  border-radius: var(--border-radius-medium);
+  margin-bottom: 5px;
+}
+
+.gridHeight {
+  height: 92px;
+}
+
+.gridDisplay {
+  display: flex;
+  width: 100%;
+}
+
+.gridEventDisplay {
+  display: flex;
+  width: 100%;
+}
+
+.event:last-child {
+  margin-bottom: 0; /* composition likes simple selectors */
+}
+
+.thumbnailWrapper {
+  composes: flex justify-center items-center flex-none nowrap overflow-hidden from global;
+  width: 60px;
+  height: 60px;
+  border: solid 1px var(--thumb-border-color);
+  border-radius: 50px;
+}
+
+.thumbnail {
+  color: var(--thumb-font-color);
+  border-color: var(--thumb-border-color);
+  font: var(--theme-p1-lg-font-medium);
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  & > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.thumbnailRegistrySearchedItems {
+  text-align: center;
+
+  & > img {
+    height: auto;
+    width: auto;
+    max-width: max-content;
+  }
+}
+
+.thumbnailContainer {
+  composes: flex justify-center flex-column from global;
+}
+
+.registryNames {
+  composes: flex mx2 pl1 justify-center flex-column from global;
+  width: 42%;
+  font: var(--theme-h4-sans-font);
+}
+
+.registryNames h3 {
+  font: var(--theme-h4-sans-font);
+  line-height: var(--line-height-7);
+}
+
+.eventType {
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.eventDescDsk {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--space-15);
+}
+
+.eventDesc {
+  & div:nth-child(n + 2) {
+    font: var(--theme-b1-lg-font-light);
+    margin: 0 12px;
+  }
+}
+
+.eventDetails {
+  composes: flex flex-column mx2 from global;
+  width: 52%;
+  font: var(--theme-b1-lg-font-light);
+  line-height: var(--line-height-4);
+}
+
+.viewRegistryWraper {
+  composes: flex items-center pl3 ml1 flex-none from global;
+  border-left: 2px solid var(--color-primary-scale-4);
+}
+
+.viewRegistryButton {
+  margin: 0; /* Override a stubborn style */
+}
+
+.skeletonStyles {
+  background-color: var(--theme-color-white);
+  border-radius: var(--border-radius-medium);
+}
+
+@media screen and (--breakpoint-sm) {
+  .events {
+    margin-top: 0;
+  }
+
+  .container {
+    padding-top: var(--space-15);
+  }
+
+  .event {
+    flex-direction: column;
+    padding: var(--space-2) var(--space-2) var(--space-15) var(--space-2);
+
+    & > * {
+      margin: 0;
+      padding: 0;
+    }
+
+    & .eventDetails {
+      width: 100%;
+
+      & .eventDesc {
+        & div:nth-child(n + 2) {
+          margin: 0 var(--space-1);
+        }
+      }
+
+      & .eventType {
+        margin: var(--space-2) var(--space-1) 0 var(--space-1);
+      }
+    }
+
+    & .registryNames {
+      width: 100%;
+
+      & h3 {
+        margin-top: var(--registry-name-top);
+        font: var(--theme-h4-sans-font);
+        line-height: var(--line-height-7);
+      }
+    }
+
+    & .thumbnailContainer {
+      display: block;
+      padding-top: var(--space-1);
+    }
+
+    & .thumbnailWrapper {
+      width: var(--thumb-image-mobile);
+      height: var(--thumb-image-mobile);
+
+      & .thumbnail {
+        font: var(--theme-b2-font-medium);
+      }
+    }
+
+    & .viewRegistryWraper {
+      border: none;
+      margin: var(--veiw-registry-button-top) 0 0;
+
+      & :global(span.babyPrimaryWrapper) {
+        width: 100%;
+      }
+
+      & .viewRegistryButton {
+        width: 100%;
+      }
+    }
+  }
+}

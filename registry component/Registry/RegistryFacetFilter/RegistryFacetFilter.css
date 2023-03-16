@@ -1,0 +1,143 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.filterFacetItems,
+.filterItemsHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 2px solid var(--color-background);
+  align-items: center;
+  min-height: 4rem;
+}
+
+.filterFacetItems button[aria-pressed='true'] {
+  border-color: #216dcb;
+  outline: 1px solid transparent;
+}
+
+.filterFacetItems button[aria-pressed='true']:focus {
+  outline-style: double;
+}
+
+.buttonwrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.appliedFiltersWrap {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.buttonaction {
+  height: 50px;
+}
+
+:global(#filterNSort) {
+  & button {
+    height: var(--space-3);
+    width: 112px;
+    border-radius: 15px;
+    border: solid 1px var(--color-dark-grey-5);
+    font: var(--theme-b3-lg-sans-font-light);
+    color: var(--color-grey6);
+    background-color: var(--theme-color-white);
+
+    & svg {
+      margin-bottom: var(--space-025);
+    }
+  }
+}
+
+.buttonLabel {
+  color: var(--color-primary-scale-1) !important;
+
+  &:hover {
+    color: var(--color-link-hover) !important;
+  }
+}
+
+.removeBottomBorder {
+  border-bottom: none;
+}
+
+.TYMfilterItems {
+  & li {
+    overflow-wrap: normal;
+  }
+}
+
+.filterFacetcolor,
+:global(#registry-facet-button) {
+  color: red;
+}
+
+@media print {
+  .filterItemsHeader {
+    padding-top: 1.5rem !important;
+  }
+
+  .filterFacetItems,
+  :global(#shareLinkButton) {
+    display: none;
+  }
+}
+
+.dangerIcon {
+  position: absolute;
+  top: var(--space-2);
+  z-index: var(--fixed-element-component-zindex);
+  margin: 0 var(--space-2);
+}
+
+.discontinuedLabel {
+  padding-left: var(--space-25) !important;
+}
+
+.sortBy {
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.filterBopisLine {
+  border-bottom: none;
+}
+
+@media screen and (--breakpoint-md) {
+  .filterFacetItems,
+  .filterItemsHeader {
+    padding-top: var(--space-025) !important;
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .filterBopisLine {
+    margin: 0 -25px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d8d8d8;
+  }
+
+  .filterBopisLineNotVisible {
+    margin: 0 -25px;
+    margin-bottom: 1rem;
+  }
+
+  .appliedFiltersWrap {
+    padding-bottom: 0;
+  }
+}
+
+.bgcolor {
+  padding: 0 8px;
+}
+
+.facetView {
+  display: flex;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .facetView {
+    display: block;
+  }
+}

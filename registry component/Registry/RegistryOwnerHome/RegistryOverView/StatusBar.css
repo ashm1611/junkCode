@@ -1,0 +1,78 @@
+.status {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.overCashfunds {
+  width: 388px;
+  height: 360px;
+  text-align: center;
+}
+
+.allLabels {
+  text-align: center;
+}
+
+.overcash {
+  margin-top: 100px;
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #1a4e8a;
+}
+
+.noCash {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+}
+
+.cashLinks {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #006fcb;
+  text-align: center;
+}
+
+.regLinks {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #147bd1;
+}
+
+.noPointer {
+  cursor: default;
+}
+
+.noLinks {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  color: #505050;
+}
+
+.regCash {
+  text-decoration: underline;
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #147bd1;
+}

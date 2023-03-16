@@ -1,0 +1,58 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.addedDot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  composes: inline-block from global;
+  background-color: #14a614;
+}
+
+.row {
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lineRow {
+  border: solid 1px #ececec;
+}
+
+.purchaseddDot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  composes: inline-block from global;
+  background-color: #003bde;
+}
+
+.toolTip {
+  font: 300 12px/1.33 var(--theme-family-sans);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+
+.customTooltipIncentives {
+  top: -137px;
+  height: 135px;
+  transform: translateX(-50%);
+  font: var(--theme-b2-font-light);
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 168px;
+
+  &::after {
+    top: 133px;
+  }
+
+  &::before {
+    top: 134px;
+  }
+}

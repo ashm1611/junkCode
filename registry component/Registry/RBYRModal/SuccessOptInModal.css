@@ -1,0 +1,14 @@
+@import "@bbb-app/styles/variables.css";
+
+.text {
+  color: black;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  font-size: var(--font-size-text-x-large);
+}
+
+.featureStyle {
+  padding: 10px;
+  width: 85%;
+  margin: auto;
+}

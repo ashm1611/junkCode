@@ -1,0 +1,9 @@
+@import "@bbb-app/styles/variables.css";
+
+.heading {
+  font: var(--theme-h1-lg-sans-font);
+}
+
+.description {
+  font: var(--theme-paragraph-lg-font);
+}

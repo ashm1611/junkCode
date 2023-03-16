@@ -1,0 +1,96 @@
+@import "@bbb-app/styles/variables.css";
+
+.container {
+  background-color: var(--color-light-grey4);
+}
+
+.recommenderContent {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.07);
+}
+
+.recommenderContent .header {
+  font: var(--theme-h2-lg-main-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  text-align: center;
+}
+
+.recommenderContent .table {
+  border: 0;
+  width: 100%;
+}
+
+.recommenderContent .tableHeaders {
+  background-color: var(--color-white);
+  font: var(--theme-b2-lg-sans-font-medium);
+  border-bottom: 4px solid var(--color-black);
+  text-align: left;
+}
+
+.recommenderContent .tableRows {
+  background-color: var(--color-white);
+  font: var(--theme-h4-lg-sans-font);
+  border-bottom: 2px solid var(--color-light-grey6);
+  padding-bottom: var(--space-2);
+  padding-top: var(--space-2);
+}
+
+.recommenderContent .recommenders {
+  font: var(--theme-h4-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.recommenderContent .blockedContent {
+  font: var(--theme-b1-lg-font-medium);
+  text-align: right;
+}
+
+.blocked {
+  opacity: 0.4;
+}
+
+.recommenderContentMob {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.07);
+}
+
+.recommenderContentMob .heading {
+  font: var(--theme-h2-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  text-align: center;
+  padding: 40px 26px 18px;
+}
+
+.recommenderContentMob .content {
+  border-top: 1px solid #ebebeb;
+}
+
+.recommenderContentMob .name {
+  font: var(--theme-h3-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  padding-top: 5px;
+  padding-bottom: 0;
+  border-bottom: 4px solid var(--color-black);
+}
+
+.recommenderContentMob .list {
+  font: var(--theme-b1-font-medium);
+  border-bottom: 2px solid var(--color-light-grey6);
+  padding-top: var(--space-2);
+  padding-bottom: 12px;
+}
+
+.recommenderContentMob .values {
+  float: right;
+}
+
+.recommenderContentMob .block {
+  font: var(--theme-b1-lg-font-medium);
+  border-bottom: 0;
+}
+
+.link {
+  color: var(--color-purple-2);
+}

@@ -1,0 +1,307 @@
+@import "@bbb-app/styles/variables.css";
+
+.collaborationContentMain {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.closeBtn {
+  left: 80rem;
+  position: absolute;
+  margin-top: 1rem;
+  color: #020303 !important;
+  z-index: 1;
+}
+
+.collaborationContentImage {
+  width: 1400px;
+  height: 690px;
+}
+
+.collaborationContentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  margin: 0 20%;
+  top: 8%;
+  z-index: 2;
+  background-color: var(--color-white);
+}
+
+.invite {
+  background-color: var(--theme-color-light-gray);
+  padding: 5rem var(--space-25);
+}
+
+.email {
+  padding: var(--font-size-text-largest) var(--space-25);
+  margin-top: var(--space-2);
+}
+
+.registryInviteFrnds {
+  font: var(--theme-h4-lg-serif-font);
+  line-height: 28px;
+  color: var(--registry-invite-frnds-heading-color);
+  text-transform: lowercase;
+  text-align: left;
+}
+
+.registryInviteFrndsDesc {
+  font-family: var(--theme-family-sans);
+  font-size: var(--font-size-text-large);
+  color: var(--color-black);
+  text-align: left;
+  font-weight: var(--font-weight-small);
+  line-height: 1.38;
+  margin-top: 1rem;
+}
+
+.registryHelp {
+  font-family: var(--theme-family-sans);
+  font-weight: bold;
+  color: var(--color-primary-brand);
+  text-align: left;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.regHelp {
+  font-size: var(--theme-button-font-size);
+}
+
+.regHelpBaby {
+  font-size: var(--font-size-text-medium);
+}
+
+.mailSentSection {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10rem 14rem 13rem;
+}
+
+.invitationSent {
+  width: 283px;
+  font: var(--theme-h1-serif-font);
+  font-size: var(--font-size-text-xx-large);
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.invitationHas {
+  width: 335px;
+  font: var(--theme-paragraph-font);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--color-black);
+  margin-top: 1rem;
+}
+
+.invitationButton {
+  width: 316px !important;
+  height: 50px;
+  font: var(--theme-b1-font-medium);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.invitationRegLink {
+  margin-top: 1.5rem;
+}
+
+.invitationBtnDiv {
+  margin-top: 2rem;
+}
+
+.registryReturn {
+  font: var(--theme-b1-font-medium);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--color-primary-brand);
+}
+
+.goBack {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 5rem;
+  left: 1rem;
+  position: relative;
+}
+
+.goBack svg {
+  transform: rotate(90deg);
+}
+
+.goBackText {
+  width: 39px;
+  height: 22px;
+  font: var(--theme-body-font);
+  line-height: 1.38;
+  color: var(--color-black);
+  position: relative;
+  top: 0.09rem;
+  left: 0.5rem;
+}
+
+@media screen and (--breakpoint-tablet-max), screen and (max-width: 768px) {
+  .collaborationContentMain {
+    position: static;
+  }
+
+  .collaborationContentWrapper {
+    z-index: 2;
+    background-color: var(--color-white);
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+  }
+
+  .invite {
+    background-color: var(--color-white);
+    padding: 0;
+    padding: var(--space-3) var(--space-125) 0;
+  }
+
+  .email {
+    margin-left: 0;
+    padding: 0 var(--space-125) var(--space-3);
+  }
+
+  .closeBtn {
+    margin-left: 44.5rem;
+    position: absolute;
+    margin-top: 2rem;
+    z-index: 3;
+  }
+
+  .registryHelp {
+    margin-left: 0;
+  }
+
+  .line {
+    height: 1px;
+    margin-top: 2rem;
+    border: solid 1px var(--color-dark-grey-5);
+  }
+
+  .invitationHas {
+    text-align: center;
+  }
+
+  .mailSentSection {
+    padding: 0;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .registryInviteFrnds {
+    font: var(--theme-h2-serif-font);
+  }
+
+  .closeBtn {
+    margin-left: 21rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  .collaborationContentWrapper {
+    margin: 0;
+    top: 0;
+    right: 0;
+    flex-flow: column;
+  }
+
+  .invite {
+    width: 100%;
+    background-color: var(--color-white);
+    margin-left: 0;
+    padding: 70px var(--space-125) 0;
+  }
+
+  .email {
+    margin-left: 0;
+    margin-top: var(--space-2);
+    padding: 0 var(--space-125) 70px;
+  }
+
+  .line {
+    height: 1px;
+    margin-top: 2rem;
+    border: solid 1px var(--color-dark-grey-5);
+  }
+
+  .registryHelp {
+    align-self: flex-start;
+    margin-left: 0%;
+  }
+
+  .invitationHas {
+    align-self: flex-start;
+    margin-left: 5%;
+    text-align: left;
+  }
+
+  .invitationSent {
+    align-self: flex-start;
+    margin-left: var(--space-2);
+    text-align: left;
+    font-size: var(--font-size-text-x-large);
+  }
+
+  .mailSentSection {
+    padding: 0;
+    margin: 5rem var(--space-3);
+  }
+
+  .invitationRegLink {
+    margin: 1.5rem 0 0 5%;
+    align-self: flex-start;
+  }
+
+  .invitationBtnDiv {
+    margin: 2rem 0 0 5%;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .closeBtn {
+    left: 76rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .closeBtn {
+    left: 80rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .closeBtn {
+    left: 82rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .closeBtn {
+    left: 88rem;
+  }
+}
+
+@media only screen and (min-width: 1790px) {
+  .closeBtn {
+    left: 93rem;
+  }
+}

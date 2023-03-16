@@ -1,0 +1,39 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.collectionItem {
+  composes: mx1 from global;
+
+  & .item {
+    width: 100%;
+  }
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  & .collectionItemLabel {
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+    font: var(--theme-h4-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  & .aspectRatio {
+    padding-top: calc(260 / 416 * 100%);
+    height: 0;
+    position: relative;
+  }
+
+  & .wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

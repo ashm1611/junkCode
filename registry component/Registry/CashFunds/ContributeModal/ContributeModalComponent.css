@@ -1,0 +1,67 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.sendMoney {
+  font-family: Effra;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cfWrapper {
+  padding: 0 !important;
+}
+
+.header {
+  font: var(--theme-h3-lg-serif-font-light);
+  font-family: var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  text-align: left;
+  margin-top: 15px;
+}
+
+.subHeader {
+  font: 400 16px/1.3 var(--theme-family-sans);
+  color: var(--theme-color-black);
+  margin-top: 18px;
+  text-align: left;
+}
+
+.imageBorder {
+  border-radius: 50%;
+}
+
+.flexCell {
+  display: flex;
+  width: 100%;
+  padding: 32px 0;
+}
+
+.renderContent {
+  font: var(--theme-body-font);
+  margin-top: 4px;
+}
+
+.tnc {
+  font-weight: 600;
+  display: inline;
+  margin: 0 8px;
+  color: var(--color-font-link);
+}
+
+.CFContentImg {
+  height: 244px;
+}
+
+.mainContainer {
+  padding: 22px 60px !important;
+}
+
+@media screen and (--breakpoint-xs) {
+  .sendMoney {
+    min-width: 84vw;
+  }
+
+  .mainContainer {
+    padding: 18px !important;
+  }
+}

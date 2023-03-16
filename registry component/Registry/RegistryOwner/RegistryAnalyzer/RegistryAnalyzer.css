@@ -1,0 +1,10 @@
+@import "theme";
+
+/******************************************************************
+********** Analyzer Text and Icon on Registry Owner Page **********
+*******************************************************************/
+
+/* `analyzeWrapper` on registryOwner view page */
+.analyzeWrapper {
+  justify-content: center;
+}

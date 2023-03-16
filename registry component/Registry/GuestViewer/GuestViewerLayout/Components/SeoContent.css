@@ -1,0 +1,23 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.heading {
+  font: var(--theme-h2-sans-font);
+
+  &.headingBaby {
+    font: var(--theme-h2-lg-sans-font);
+    font-family: var(--theme-family-serif);
+  }
+}
+
+:global(#seoContent) .paragraph {
+  color: var(--color-light-grey5);
+  font-size: var(--font-size-text-medium);
+}
+
+@media screen and (--breakpoint-xs) {
+  :global(#seoContent) .headingBaby {
+    font: var(--theme-h4-lg-serif-font);
+    font-weight: var(--font-weight-light);
+  }
+}

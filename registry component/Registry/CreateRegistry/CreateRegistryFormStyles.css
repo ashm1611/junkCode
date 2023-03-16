@@ -1,0 +1,372 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --create-registry-heading-font-lg: var(--theme-h2-sans-font);
+  --create-registry-heading-font-sm: var(--theme-h4-sans-font);
+  --create-registry-subheading-font: var(--theme-h4-sans-font);
+  --create-registry-formText-font-lg: var(--theme-b1-lg-font-light);
+  --create-registry-radio-font: var(--theme-b1-lg-font-medium);
+  --create-registry-px-l1: 12px;
+  --create-registry-em-l3: 1.5em;
+  --neg-margin: -4px;
+  --create-registry-px-l2: 20px;
+  --create-registry-px-l3: 22px;
+  --create-baby-registry-heading-font-md: 600 16px/1.25 var(--theme-family-sans);
+  --wedding_registry-label-font: var(--theme-family-serif);
+  --wedding_registry-color: #1c4f8a;
+}
+
+.fieldsHeadingBaby {
+  font: var(--create-baby-registry-heading-font-md);
+  margin-bottom: var(--create-registry-px-l2);
+}
+
+.pInfofieldsHeadingBaby {
+  font: var(--create-baby-registry-heading-font-md);
+  margin-bottom: var(--create-registry-px-l2);
+  padding-top: 8px;
+}
+
+.weddingFieldsLabel {
+  font: bold 16px/1.2 var(--wedding_registry-label-font);
+  color: var(--wedding_registry-color);
+  padding-bottom: 16px;
+}
+
+.packHoldDiv {
+  border-radius: 4px;
+  border: solid 2px var(--color-yellow-1);
+  background-color: var(--color-light-white-1);
+  padding: 8px var(--create-registry-px-l2);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.packHoldDiv h2 {
+  font: var(--theme-b1-lg-font-light);
+  color: var(--color-black);
+  margin: 0;
+}
+
+.mainContainer {
+  z-index: 1;
+  position: relative;
+}
+
+.bgColor {
+  background-color: #d9d9d9;
+}
+
+.formContainer {
+  z-index: 1;
+  position: relative;
+  padding-bottom: var(--space-4);
+  background-color: var(--color-background);
+}
+
+.fieldStyle input.formError,
+.formStyle input.formError {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.formInfoMsg {
+  color: var(--color-font-dark);
+}
+
+.textStyle {
+  composes: inline-block from global;
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.formLabel {
+  composes: inline-block from global;
+  font: var(--theme-paragraph-font);
+}
+
+.inputSetStyle {
+  margin: 0 auto;
+}
+
+.radiowrapper {
+  composes: inline-block from global;
+}
+
+.labelButton {
+  font: var(--create-registry-radio-font);
+  margin-left: 0 !important;
+  margin-right: 0.5rem;
+  padding: 11px 26px !important;
+  margin-top: 0;
+}
+
+.rowStyle {
+  padding-bottom: var(--space-2);
+}
+
+.skeletonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.fieldsHeading {
+  font: var(--create-registry-heading-font-lg);
+  border-bottom: 2px solid var(--color-primary-scale-3);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.fieldsLink {
+  display: block;
+  text-align: left;
+}
+
+.fieldsSubHeading {
+  font: var(--create-registry-subheading-font);
+  border-bottom: 2px solid var(--color-primary-scale-3);
+  margin-top: var(--create-registry-px-l3);
+  padding-bottom: var(--create-registry-px-l2);
+  margin-bottom: var(--space-2);
+  display: inline-block;
+}
+
+.fieldsFullWidth {
+  display: block;
+}
+
+.addressSubHeading {
+  font: var(--theme-p2-lg-font-medium);
+  border-bottom: 2px solid var(--color-primary-scale-3);
+}
+
+.formQuestion {
+  font: var(--create-registry-formText-font-lg);
+  font-weight: bold;
+}
+
+.formText {
+  font: var(--create-registry-formText-font-lg);
+}
+
+.fieldsContainer {
+  padding-bottom: var(--space-15);
+}
+
+.weddingEmailCheckBox {
+  padding-bottom: 0;
+}
+
+.WeddingFieldsContainer {
+  padding-bottom: 8px;
+}
+
+.genderStyle {
+  composes: inline-block from global;
+}
+
+.genderWhiteBg {
+  background: var(--theme-color-white);
+}
+
+.genderStyle li {
+  margin-top: 0;
+}
+
+.genderStyle button {
+  padding: var(--create-registry-px-l1);
+}
+
+.chatIcon {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.genderStyle label {
+  top: 0;
+  padding-left: 0;
+  transform: none;
+  position: relative;
+  margin-bottom: var(--create-registry-em-l3);
+  color: var(--color-font-dark);
+  font: var(--theme-p2-font-medium);
+}
+
+.editFormHeading {
+  border-bottom: 2px solid var(--color-primary-scale-3);
+}
+
+.editFormSection {
+  border-top: 2px solid var(--color-primary-scale-3);
+  padding-top: var(--space-2);
+}
+
+.privacySetting {
+  composes: inline-block from global;
+}
+
+.dateInputStyle {
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.liveChatIconSize {
+  width: var(--space-25);
+  height: var(--space-25);
+}
+
+.favoriteStoreTitle {
+  font: var(--theme-h4-lg-sans-font);
+  font-size: var(--font-size-text-large);
+  color: var(--color-font-dark);
+}
+
+.favoriteStoreList {
+  font: var(--theme-paragraph-font);
+  line-height: var(--line-height-4);
+}
+
+.phoneNumber {
+  color: var(--color-font-brand);
+}
+
+.findStoreLabel {
+  line-height: var(--line-height-normal);
+}
+
+.favoriteStoreIconButton {
+  color: var(--color-blue-6);
+  height: var(--space-2);
+  width: var(--space-2);
+}
+
+.shippingInfoStyle {
+  margin-top: var(--neg-margin);
+}
+
+.accordianIconStyle {
+  color: var(--color-font-link);
+}
+
+.mainContainer input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favoriteStoreButton {
+  font: var(--theme-b2-lg-sans-font-light);
+
+  &:hover {
+    color: var(--color-font-link);
+  }
+}
+
+.privacySettingSubHeading {
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.iconContainer {
+  composes: relative from global;
+}
+
+.iconStyle {
+  position: absolute;
+  top: 12%;
+  margin-left: var(--space-1);
+}
+
+.checkLabel {
+  margin-top: -var(--space-1);
+}
+
+.formLegend {
+  composes: relative from global;
+  width: 100%;
+}
+
+:global(.surveyComponentCard).babyMultiplesTile {
+  width: auto;
+  margin-right: var(--space-3);
+}
+
+.socialBtn {
+  width: 420px;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .formStyle {
+    padding-top: var(--space-2);
+    padding-bottom: 0;
+  }
+
+  .socialBtn {
+    width: 100%;
+  }
+
+  .fieldsHeading {
+    font: var(--create-registry-heading-font-sm);
+    padding-bottom: var(--space-15);
+    margin-bottom: var(--space-15);
+    composes: inline-block from global;
+    width: 100%;
+  }
+
+  .fieldsHeadingBaby {
+    font: var(--create-registry-heading-font-sm);
+  }
+
+  .pInfofieldsHeadingBaby {
+    font: var(--create-registry-heading-font-sm);
+    padding-top: 0;
+  }
+
+  .fieldsHeading1 {
+    font: var(--theme-p2-lg-font-light) var(--font-weight-small);
+    color: var(--color-black);
+  }
+
+  .fieldsContainer {
+    padding-bottom: var(--space-2);
+  }
+
+  .fieldsSubHeading {
+    padding-bottom: var(--space-2);
+    margin-top: var(--create-registry-px-l2);
+    display: inline-block;
+    width: 100%;
+  }
+
+  .rowStyle {
+    padding-right: 0;
+  }
+
+  .labelButton {
+    padding: 11px 16px;
+  }
+
+  .iconStyle {
+    position: absolute;
+    top: 5%;
+    margin-left: var(--space-1);
+  }
+}
+
+a[data-locator='signin-page-resetpassword-link'] {
+  color: var(--color-font-link3);
+
+  &:hover {
+    color: var(--color-font-link3);
+  }
+}
+
+svg[data-locator='calendar_icon'] {
+  color: var(--color-font-link);
+}
+
+input:checked + label[data-locator='label_check1']::before {
+  background-color: var(--color-font-link) !important;
+  border: solid 2px var(--color-font-link) !important;
+}

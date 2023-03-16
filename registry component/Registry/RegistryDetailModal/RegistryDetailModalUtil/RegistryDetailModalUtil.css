@@ -1,0 +1,176 @@
+@import "@bbb-app/styles/variables.css";
+
+.productPrice {
+  display: inline-block;
+  color: var(--color-sale-price);
+  font: var(--theme-h1-serif-font);
+  padding-right: 14px;
+}
+
+.isPrice {
+  color: var(--color-black);
+}
+
+.wasPrice {
+  display: inline-block;
+  font-family: var(--theme-family-serif);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.43;
+  letter-spacing: normal;
+  color: var(--color-was-price);
+  padding-right: 20px;
+}
+
+.productTitle {
+  font: var(--theme-h1-sans-font);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.22;
+  letter-spacing: -0.22px;
+  color: var(--color-black);
+}
+
+.upcText {
+  color: var(--color-grey1);
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 6px;
+  margin-bottom: 21px;
+
+  & span {
+    font-family: Effra;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-black);
+  }
+}
+
+.requestedPurchased {
+  font: var(--theme-h4-sans-font-light);
+  min-height: 35px;
+  color: var(--color-black);
+
+  & span {
+    font-weight: bold;
+  }
+}
+
+.purchasedTextStyle {
+  font-family: Effra;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 16.5px;
+  padding: 1px 10px;
+  border: solid 2px #147bd1;
+  background-color: #147bd1;
+}
+
+.productAttr {
+  font: var(--theme-b2-font-medium);
+  color: var(--color-info);
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.qtyDropDown {
+  margin-top: 21px;
+
+  & :global(.rclCustomSelectWrapper) {
+    & > button {
+      border: solid 2px var(--color-primary-scale-3);
+    }
+
+    & :global(.rclCustomSelectBtn) :global(.defaultLabel) {
+      font-weight: 300;
+    }
+  }
+}
+
+.qtySelectorStyle {
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.availableStatus {
+  width: 263px;
+  height: 22px;
+  font-family: Effra;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--color-black);
+
+  & span {
+    color: #008a00;
+  }
+}
+
+.plusColor {
+  color: var(--primary-button-background-color);
+}
+
+.oosATC {
+  color: var(--color-primary-scale-3);
+  background: none;
+  border: none;
+  height: auto;
+}
+
+.purchasedCheckMarkStyle {
+  padding-bottom: 4px;
+  padding-right: 2px;
+}
+
+.mobCtaHeight {
+  white-space: pre-wrap !important;
+  padding: 0 !important;
+}
+
+.staticSection {
+  float: right;
+}
+
+.addToCart {
+  margin-top: 11px;
+}
+
+.viewProductDetailsLink {
+  float: right;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.viewProductDetails {
+  font: var(--theme-b1-font-medium);
+  text-align: right;
+  color: var(--color-black);
+}
+
+@media only screen and (--breakpoint-xs) {
+  .mobCtaHeight {
+    height: var(--space-03) !important;
+    padding: 0;
+  }
+
+  .requestedPurchased {
+    margin-top: 20px;
+  }
+}
+
+.rlpMessage {
+  color: var(--color-info);
+  font: 600 14px/1.57 var(--theme-family-sans);
+}
+
+.paddingTop {
+  padding-top: var(--space-1);
+}

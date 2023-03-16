@@ -1,0 +1,45 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.needHelpBorder {
+  border: var(--theme-border-medium-width) var(--theme-border-style)
+    var(--theme-color-black);
+}
+
+.heading {
+  font: var(--theme-h3-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.description {
+  font: var(--theme-p2-font-light);
+
+  & p {
+    margin: 0;
+  }
+}
+
+.customerServiceNumber {
+  white-space: pre;
+}
+
+@media print {
+  .needHelpBorder {
+    display: none;
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .description {
+    & p {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media only screen and (--breakpoint-md) {
+  .heading {
+    font: var(--theme-h1-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}

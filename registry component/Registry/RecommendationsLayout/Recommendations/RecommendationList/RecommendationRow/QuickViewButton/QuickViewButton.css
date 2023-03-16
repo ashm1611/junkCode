@@ -1,0 +1,5 @@
+.quickViewWrapper {
+  composes: absolute bottom-0 mb1 xs-hide sm-hide md-hide fullWidth from global;
+  height: 36px;
+  text-align: center;
+}

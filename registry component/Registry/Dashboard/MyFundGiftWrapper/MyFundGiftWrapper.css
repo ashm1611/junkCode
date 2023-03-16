@@ -1,0 +1,66 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.giftAddedCount {
+  text-align: left;
+  margin-right: var(--space-1);
+  display: grid;
+}
+
+.h3Serif {
+  font: var(--theme-h3-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+  line-height: 1;
+}
+
+:global(#myFundCell) {
+  margin-right: 2px;
+}
+
+.giftsFundStyle {
+  margin-bottom: -28px;
+  text-align: left;
+}
+
+@media only screen and (--breakpoint-xlg-md) {
+  .giftsFundStyle {
+    margin-bottom: -28px;
+    margin-left: 30px !important;
+    text-align: left;
+  }
+}
+
+.purchasedbtn {
+  justify-content: center;
+  border-bottom: 2px solid #e4e4e4;
+  cursor: pointer;
+}
+
+:global(.registryOwnerMain .grid-margin-x > .large-6) {
+  width: calc(50% - 1rem);
+}
+
+:global(.registryOwnerMainThreeCells .grid-margin-x > .large-6) {
+  width: calc(32.3% - 1rem);
+}
+
+@media only screen and (--breakpoint-sm) {
+  :global(.registryOwnerMainThreeCells .grid-margin-x > .large-6) {
+    width: calc(35.3% - 1rem);
+  }
+}
+
+.giftsFundLabel {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: var(--font-weight-small);
+  composes: relative from global;
+  composes: inline-block from global;
+}
+
+.fundInfoTile {
+  margin-right: 1rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}

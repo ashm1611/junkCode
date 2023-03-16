@@ -1,0 +1,9 @@
+@import "@bbb-app/styles/variables.css";
+
+.modalTitle {
+  font: var(--theme-h3-sans-font);
+}
+
+.modalContent {
+  font: var(--theme-paragraph-font);
+}

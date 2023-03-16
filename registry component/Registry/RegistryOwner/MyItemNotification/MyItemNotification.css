@@ -1,0 +1,28 @@
+@import "@bbb-app/styles/variables.css";
+
+.accordianContainer {
+  background-color: var(--color-background);
+}
+
+.outOfStock {
+  padding-top: 1.5rem;
+}
+
+.outOfStockNotification {
+  margin: auto 0.5rem;
+}
+
+.iconspace {
+  margin-right: 1rem;
+}
+
+@media only screen and (--breakpoint-xs) {
+  .outOfStockNotification {
+    margin: unset;
+    padding: 1rem;
+  }
+
+  .iconspace {
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,110 @@
+@import '@bbb-app/styles/variables.css';
+@import 'theme';
+
+.rbyrPurchasedContainer {
+  composes: relative from global;
+
+  & .rbyrPurchased {
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--theme-medium-font-size);
+    font-family: var(--theme-family-sans);
+    display: inline-block;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: var(--font-size-text-small);
+    }
+  }
+
+  &:hover > .showToolTip,
+  & :global(.showToolTip.show) {
+    display: block;
+    z-index: 1;
+  }
+
+  & .showToolTip {
+    top: 0;
+    left: 0;
+    transform: inherit;
+
+    & .customTooltipRBYR {
+      width: 202px;
+      padding: 16px;
+      height: auto;
+      transform: translate(0, -100%);
+      top: -8px;
+      left: 24%;
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        left: -10%;
+      }
+
+      &::after {
+        top: calc(100%);
+        left: 30%;
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          left: 50%;
+        }
+      }
+
+      &::before {
+        top: calc(100% + 1px);
+        left: 26%;
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          left: 46%;
+        }
+      }
+
+      & .toolTip {
+        width: 100%;
+        font: var(--theme-b2-lg-sans-font-light);
+
+        & .heading {
+          font: var(--theme-b1-font-medium);
+        }
+
+        & .row {
+          vertical-align: middle;
+          margin-bottom: 0.5rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+
+        & .lineDark {
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+
+.fontStyle {
+  font-weight: 300 !important;
+}
+
+.commonColor {
+  color: var(--color-create-signin-header) !important;
+}
+
+.contributedAmountStyle {
+  color: var(--color-green-2);
+  font: var(--theme-b1-font-medium);
+  float: right;
+}
+
+.bottomAmount {
+  float: right;
+  padding-top: var(--space-025);
+  color: var(--color-black);
+}
+
+.tileHeadingColor {
+  color: var(--color-black);
+}
+
+.modalHeadingColor {
+  color: var(--color-black);
+}

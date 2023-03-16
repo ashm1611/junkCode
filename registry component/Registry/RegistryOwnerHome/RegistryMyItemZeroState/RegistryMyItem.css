@@ -1,0 +1,134 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.mBContainer {
+  background-color: white;
+  position: relative;
+}
+
+.myItemContainer {
+  margin-top: 46px;
+  margin-bottom: 46px;
+}
+
+.imgDefault {
+  height: 300px;
+  width: 910px;
+}
+
+.shopButton {
+  margin: 16px 140px;
+}
+
+.contentBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 8px;
+  width: 445px;
+  height: 240px;
+  margin: 33px 230px;
+}
+
+.heading {
+  font: 700 24px/1.25 var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  margin-bottom: 24px;
+}
+
+.leftContainer {
+  padding: var(--space-35) var(--space-15);
+  width: 46%;
+}
+
+.subHeading {
+  text-align: center;
+}
+
+.rightContainer {
+  width: 54%;
+}
+
+.title {
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  margin-top: 30px;
+  color: #1a4e8a;
+}
+
+.clickHere {
+  font: var(--theme-p2-font-medium);
+  position: relative;
+  top: 6rem;
+}
+
+@media screen and (--breakpoint-xs) {
+  .mBContainer {
+    margin: 0 4%;
+  }
+
+  .leftContainer {
+    padding: var(--space-075) var(--space-075) var(--space-125);
+    width: 52%;
+  }
+
+  .rightContainer {
+    width: 48%;
+  }
+
+  .title {
+    font-size: var(--font-size-text-large);
+    line-height: var(--space-125);
+  }
+
+  .clickHere {
+    font-size: var(--font-size-text-medium);
+    top: var(--space-03);
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .contentBox {
+    width: 228px !important;
+    height: 240px !important;
+    margin: 33px 14%;
+  }
+
+  .shopButton {
+    margin: 16px 30px !important;
+  }
+}
+
+@media screen and (--breakpoint-sm-md-nav) {
+  .contentBox {
+    width: 275px;
+    height: 240px;
+    margin: 33px 14%;
+  }
+
+  .shopButton {
+    margin: 16px 54px;
+  }
+
+  .heading {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 16/9) {
+  .contentBox {
+    width: 228px;
+    height: 240px;
+    margin: 33px 14%;
+  }
+
+  .shopButton {
+    margin: 16px 30px;
+  }
+}

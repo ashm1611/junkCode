@@ -1,0 +1,46 @@
+@import "@bbb-app/styles/variables.css";
+
+.emailCheck label > span,
+.text {
+  font-weight: 600;
+}
+
+.emailCheck label::before {
+  top: auto;
+}
+
+.noteText {
+  font: var(--theme-b2-font-light);
+  composes: inline from global;
+}
+
+.note {
+  font: var(--theme-b2-font-medium);
+}
+
+input.dateError {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.dateInput input {
+  width: 100%;
+}
+
+.emailCheckox label {
+  padding-right: var(--space-15);
+}
+
+@media screen and (--breakpoint-sm) {
+  .dateInput svg {
+    top: 30%;
+  }
+
+  .dateInput input {
+    -webkit-appearance: none;
+  }
+
+  .emailCheck label > span {
+    font-weight: 300;
+  }
+}

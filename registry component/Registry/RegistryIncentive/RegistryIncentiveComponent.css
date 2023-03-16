@@ -1,0 +1,85 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --text-right: right;
+  --text-left: left;
+  --padng-val: 5%;
+}
+
+.incentivesContainer {
+  background: var(--color-ic-background);
+
+  & .headSection {
+    padding: 0;
+    display: flex;
+
+    & .incentiveHeading {
+      font: var(--theme-h3-sans-font);
+    }
+
+    & .termsConditionsBlock {
+      font: var(--theme-b1-lg-font-medium);
+      text-align: var(--text-right);
+
+      & span {
+        display: block;
+      }
+
+      & .termsLink {
+        font-weight: var(--font-weight-medium);
+        color: var(--color-blue-6);
+      }
+    }
+  }
+}
+
+.ownerPageIncentivesContainer {
+  background: transparent;
+  padding: 0;
+  margin-top: 50px;
+
+  & .incentiveHeading {
+    font-size: var(--font-size-text-x-large);
+    color: var(--color-dark-grey);
+  }
+
+  & .subHead {
+    font: var(--theme-h4-sans-font);
+  }
+
+  & .incentiveText {
+    font: var(--theme-body-font);
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  .incentivesContainer {
+    padding: var(--space-3) var(--padng-val);
+
+    & .headSection {
+      display: block;
+
+      & .termsConditionsBlock {
+        text-align: var(--text-left);
+
+        & span {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .ownerPageIncentivesContainer {
+    margin-top: 1rem;
+  }
+
+  .ownerPageIncentivesContainer.incentivesContainer {
+    padding: 0 var(--padng-val);
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .ownerPageIncentivesContainer {
+    margin-top: 1rem;
+  }
+}

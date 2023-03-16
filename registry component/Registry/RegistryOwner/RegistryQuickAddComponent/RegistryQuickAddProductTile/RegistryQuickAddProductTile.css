@@ -1,0 +1,124 @@
+@import '@bbb-app/styles/variables.css';
+
+.quickAddToRegistryBtn {
+  height: var(--line-height-2) !important;
+  padding: var(--space-1) !important;
+}
+
+.quickAddToRegistryBtnDisabledState {
+  height: var(--line-height-2) !important;
+  padding: var(--space-1) !important;
+  background-color: var(--theme-color-white);
+}
+
+.productPrice {
+  font: var(--theme-p2-font-medium);
+}
+
+.marginTop {
+  margin-top: auto;
+}
+
+.quickAddToRegistryButton {
+  pointer-events: none;
+}
+
+.desc {
+  position: relative;
+  font-weight: bold;
+}
+
+.plusIcon {
+  margin-top: -132px;
+}
+
+.disabledIcon {
+  display: none;
+}
+
+.succColor {
+  color: var(--theme-color-success);
+  font: var(--theme-b2-font-medium);
+}
+
+.addToRegistryBtn {
+  text-transform: lowercase !important;
+  height: 40px !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+}
+
+.addedToRegistryBtn {
+  font-size: 14px !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  text-transform: lowercase;
+  margin: 0;
+  padding-top: 18px !important;
+}
+
+.imageProductTile {
+  width: 138px;
+  height: 138px;
+}
+
+.tileContainer {
+  margin: 0 var(--space-1);
+  padding: var(--space-1);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-grey-5);
+  border-radius: 8px;
+  height: 100%;
+}
+
+.newRegDesc {
+  margin-top: 10px;
+}
+
+.newRegGrid {
+  display: block;
+}
+
+.plusIconAddedItem {
+  background-color: var(--color-pdp-zip);
+  color: var(--global-nav-tab-color) !important;
+  position: absolute;
+  padding-left: 8px !important;
+  border: none !important;
+  bottom: 4px;
+  right: 6px;
+}
+
+@media screen and (--breakpoint-sm-md-nav) {
+  .imageProductTile {
+    width: 127px;
+    height: 127px;
+  }
+
+  .tileContainer {
+    margin: 0 4px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .productName {
+    font-size: 15px;
+  }
+
+  .productHeading {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (--breakpoint-lg-md-min) {
+  .imageProductTile {
+    width: 138px;
+    height: 138px;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .productName {
+    font: 600 18.5px/1.2 var(--theme-family-sans);
+  }
+}

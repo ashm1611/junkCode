@@ -1,0 +1,5 @@
+@import "@bbb-app/styles/variables.css";
+
+.bookAnAppointmentWrapper {
+  justify-content: center;
+}

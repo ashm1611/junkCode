@@ -1,0 +1,168 @@
+@import '@bbb-app/styles/variables.css';
+
+.rbWrapper {
+  margin: 48px 2px;
+}
+
+.rbHeading {
+  font: 300 28px/1.36 var(--theme-family-serif);
+  color: var(--color-global-nav-background);
+  margin: 0 0 16px;
+}
+
+.rbSubHeading {
+  font: var(--theme-paragraph-lg-font);
+  color: var(--theme-color-black);
+  margin: 0 0 32px;
+}
+
+.accordionWrapper {
+  background-color: var(--theme-color-white);
+}
+
+.rbAccordion {
+  border-bottom: 1px solid var(--color-primary-scale-3);
+}
+
+.contentWrapper {
+  padding: 16px 25px 0;
+}
+
+.contentChildWrapper {
+  padding: 0 36px;
+}
+
+.childTitle {
+  display: flex;
+  padding: 8px 20px;
+  align-items: center;
+}
+
+.expandCollapseIconClass {
+  margin: 28px 26px;
+}
+
+.expandCollapseIconClassChild {
+  margin: 24px 22px;
+}
+
+.categoryParentImg {
+  height: 80px;
+  width: 80px;
+}
+
+.categoryChildImg {
+  height: 60px;
+  width: 60px;
+}
+
+.borderTop {
+  border-top: 1px solid var(--color-primary-scale-3);
+}
+
+.parentTitle {
+  padding: 8px 16px;
+}
+
+.parentTitleHead {
+  font: var(--theme-h4-sans-font-light);
+  color: var(--theme-color-black);
+}
+
+.childTitleHead {
+  font: var(--theme-paragraph-lg-font);
+  color: var(--theme-color-black);
+}
+
+.getStarted {
+  margin-top: 2px;
+}
+
+.contentWrapperItem {
+  padding: 0 72px;
+}
+
+.categoryItem {
+  padding: 8px 0;
+}
+
+.right {
+  float: right;
+}
+
+.childAccordion {
+  & :global(.rclAccordionTitle) {
+    padding: 4px 0;
+  }
+}
+
+.greenLabel {
+  font: var(--theme-p2-lg-font-medium);
+  color: var(--theme-color-success);
+  margin: 4px 0;
+}
+
+.blueLabel {
+  font: var(--theme-p2-lg-font-medium);
+  color: var(--color-font-link);
+  margin: 4px 0;
+}
+
+.tickMark {
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.collapseSVGIcon {
+  & svg {
+    transform: rotate(-180deg);
+  }
+}
+
+.expandChildSVGIcon {
+  & svg {
+    transform: rotate(-90deg);
+  }
+}
+
+@media only screen and (--breakpoint-sm) {
+  .rbWrapper {
+    margin: 0;
+  }
+
+  .rbHeading {
+    margin: 0 0 12px;
+  }
+
+  .rbSubHeading {
+    margin: 0 0 28px;
+  }
+
+  .expandCollapseIconClass {
+    margin: 24px 12px;
+  }
+
+  .expandCollapseIconClassChild {
+    margin: 22px 8px;
+  }
+
+  .contentWrapper {
+    padding: 16px 6px 0;
+  }
+
+  .contentChildWrapper {
+    padding: 0 6px;
+  }
+
+  .contentWrapperItem {
+    padding: 0 36px;
+  }
+
+  .accordionWrapper {
+    border-top: 1px solid var(--color-primary-scale-3);
+  }
+}

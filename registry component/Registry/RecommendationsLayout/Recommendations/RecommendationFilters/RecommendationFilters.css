@@ -1,0 +1,44 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.socialRecFilters ul li:last-child {
+  padding-left: var(--space-3);
+  padding-top: var(--space-075);
+}
+
+.socialRecFilters ul li:nth-last-child(2) {
+  position: relative;
+  padding-right: var(--space-2);
+
+  &::after {
+    content: " ";
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--color-light-grey6);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.socialRecAll {
+  border-bottom: none;
+}
+
+.recommendationHeading {
+  border-bottom: 2px solid var(--color-primary-scale-3);
+}
+
+.recsForReviewHeading {
+  font: var(--theme-h1-serif-font);
+  font-size: var(--font-size-text-x-large);
+  color: var(--refresh-color-fsb-header);
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 375px) and (max-width: 812px) {
+  .recsForReviewHeading {
+    font-size: var(--font-size-text-extra-large);
+  }
+}

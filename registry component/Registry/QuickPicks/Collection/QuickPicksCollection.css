@@ -1,0 +1,131 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --collection-img-border: 8px;
+  --grid-header-rule: 2px solid var(--color-light-grey6);
+  --curved-arrow-desktop-vertical-shift: -60px;
+  --toast-items-link-min-width: 100px;
+}
+
+.collectionViewport {
+  background-color: var(--color-background);
+}
+
+.collectionHeader {
+  composes: py2 items-center from global;
+}
+
+.topRule {
+  border-top: var(--grid-header-rule);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.addMultipleItemsRegistry {
+  composes: flex justify-end mt3 mb2 from global;
+}
+
+.addMultipleItemsRegistryCurvedArrow {
+  width: 76px;
+  height: 76px;
+  composes: relative from global;
+  top: var(--curved-arrow-desktop-vertical-shift);
+  margin-bottom: var(--curved-arrow-desktop-vertical-shift);
+}
+
+.addMultipleItemsRegistryCurvedArrowMobile {
+  composes: addMultipleItemsRegistryCurvedArrow;
+  display: none;
+}
+
+.toastContentWrapper {
+  composes: flex items-center left-align from global;
+}
+
+.toastViewRegistryLinkWrapper {
+  composes: justify-end ml4 from global;
+}
+
+.toastItemsLink,
+.toastViewRegistryLink {
+  font: var(--theme-b1-lg-font-medium);
+  text-decoration: underline;
+  min-width: var(--toast-items-link-min-width);
+}
+
+.toastItemsLink:hover,
+.toastViewRegistryLink:hover {
+  color: var(--theme-color-white);
+}
+
+.quickPickFromRecommendation,
+.quickPicksItemsHeader {
+  font: var(--theme-h2-sans-font);
+}
+
+.collectionViewAll {
+  width: 100%;
+}
+
+.viewAllBtnContainer {
+  margin: auto;
+  width: 30%;
+}
+
+.quickPicksRecommendationHeader {
+  padding: 0;
+}
+
+@media screen and (--breakpoint-sm) {
+  .viewAllBtnContainer {
+    width: 100%;
+  }
+
+  .collectionHeader {
+    border-bottom: none;
+  }
+
+  .quickPicksItemsHeader {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--grid-header-rule);
+  }
+
+  .addMultipleItemsRegistry {
+    font: var(--theme-h4-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .collectionItemLabel {
+    font: var(--theme-h4-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+    font-size: 14px;
+  }
+
+  .toastContentWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toastViewRegistryLinkWrapper {
+    margin-left: 0;
+    margin-top: 1rem;
+    justify-self: start;
+  }
+
+  .addMultipleItemsRegistryCurvedArrow {
+    display: none;
+  }
+
+  .addMultipleItemsRegistryCurvedArrowMobile {
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    margin: 0 auto;
+    transform: rotate(-20deg);
+  }
+}

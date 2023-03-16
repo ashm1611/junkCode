@@ -1,0 +1,24 @@
+@import "@bbb-app/styles/variables.css";
+
+.rclModalContainer {
+  min-height: 500px;
+}
+
+:global(.parentContainer) {
+  overflow: hidden;
+}
+
+.rclMiniQuickViewModalContainer {
+  min-height: 300px;
+}
+
+@media screen and (--breakpoint-md) {
+  .qvModal {
+    margin: 120px auto;
+    min-width: 880px;
+  }
+
+  .mswpModal {
+    margin: 120px auto;
+  }
+}

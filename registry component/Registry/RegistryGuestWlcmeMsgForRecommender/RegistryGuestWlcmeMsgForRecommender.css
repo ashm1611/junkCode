@@ -1,0 +1,27 @@
+@import "@bbb-app/styles/variables.css";
+
+.alignCenter {
+  text-align: center;
+}
+
+.heading {
+  font: var(--theme-h2-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.description {
+  font: var(--theme-b1-lg-font-light);
+  width: 50%;
+}
+
+@media screen and (--breakpoint-sm) {
+  .description {
+    font: var(--theme-b1-font-light);
+    width: 100%;
+  }
+
+  .heading {
+    font: var(--theme-h2-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+}

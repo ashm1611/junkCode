@@ -1,0 +1,33 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --link-separator: "|";
+  --link-padding: 0 10px;
+  --theme-color-gray-3: var(--color-primary-scale-3);
+  --theme-weight-labels: 600;
+  --font-size-small: 12px;
+  --font-size: 14px;
+  --sm-margin-bottom: 6px;
+  --desktop-margin-bottom: 4px;
+  --sm-padding-top: 15px;
+}
+
+.registryLink a {
+  color: var(--crumblink-text-color);
+  text-transform: uppercase;
+  font: var(--theme-paragraph-font);
+  font-weight: var(--theme-weight-labels);
+  font-size: var(--font-size-small);
+  letter-spacing: 1px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.registryLink ~ .registryLink::before {
+  content: var(--link-separator);
+  color: var(--theme-color-gray-3);
+  padding: var(--link-padding);
+}

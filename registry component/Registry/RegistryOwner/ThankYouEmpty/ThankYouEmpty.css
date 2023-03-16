@@ -1,0 +1,148 @@
+@import "@bbb-app/styles/variables.css";
+
+.sendThankYouWrapper {
+  background: var(--color-background);
+  text-align: center;
+  padding: 120px 0 64px;
+}
+
+.makeRegistryPublic {
+  display: block;
+  width: 180px;
+  left: 150px;
+  composes: relative from global;
+  font: var(--theme-body-font);
+
+  & > div {
+    margin-right: 0;
+  }
+
+  & button {
+    box-shadow: none;
+    background: none;
+    border: none;
+    color: var(--color-primary-brand);
+    display: inline;
+    margin-right: 0;
+    text-decoration: none;
+    font: var(--theme-body-font);
+
+    &:hover {
+      background: none;
+      color: var(--color-primary-brand);
+    }
+
+    &:focus {
+      background: none;
+      color: var(--color-primary-brand);
+    }
+  }
+
+  & div {
+    display: inline;
+  }
+}
+
+.curvedArrow {
+  composes: absolute from global;
+  display: flex;
+  transform: rotate(300deg);
+  left: 60px;
+  top: -55px;
+}
+
+.subtitle {
+  max-width: 450px;
+  font: var(--theme-b1-font-light);
+  margin-top: 2rem;
+}
+
+.thankYouListText {
+  background: var(--color-background);
+
+  & h3 {
+    font: var(--theme-h3-lg-sans-font);
+    color: var(--color-font-dark);
+    border-bottom: 2px solid var(--color-light-grey6);
+    padding: 32px 0;
+  }
+}
+
+.giftTrackerText {
+  border-bottom: 2px solid var(--color-light-grey6);
+  padding: 32px 0 16px;
+  font: var(--theme-h3-serif-font);
+  color: var(--color-font-account-signin);
+}
+
+.gifttrackerImg {
+  border-radius: 50%;
+}
+
+.giftTrackerSuprise {
+  margin: 7rem 0 4rem;
+}
+
+.giftTrackerDescription {
+  font: var(--theme-h1-serif-font);
+  color: var(--color-font-account-signin);
+}
+
+.giftTrackerSubDescription {
+  font: var(--theme-p2-font-light);
+  color: var(--theme-color-black);
+  margin: 1.5rem 19.5rem;
+  line-height: 1.38;
+}
+
+.shareBtn {
+  max-width: 343px;
+  margin: auto;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .makeRegistryPublic {
+    font: var(--theme-b1-font-light);
+    position: relative;
+    left: 0;
+    width: 220px;
+  }
+
+  .sendThankYouWrapper {
+    padding: 48px 0;
+  }
+
+  .curvedArrow {
+    transform: rotate(350deg);
+    left: 200px;
+    top: -35px;
+  }
+
+  .headingText {
+    line-height: 30px;
+  }
+
+  .subtitle {
+    margin-top: 0;
+  }
+
+  .giftTrackerDescription {
+    font: var(--theme-h3-serif-font);
+  }
+
+  .giftTrackerSuprise {
+    margin: 3rem 0 2.5rem;
+  }
+}
+
+@media only screen and (--breakpoint-tablet-max) {
+  .giftTrackerSubDescription {
+    margin: 1.5rem 4.25rem;
+  }
+}
+
+@media only screen and (min-width: 86rem) {
+  .giftTrackerSubDescription {
+    margin: 1.5rem 21.25rem;
+  }
+}

@@ -1,0 +1,31 @@
+@import "@bbb-app/styles/variables.css";
+
+.text {
+  color: black;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-text-x-large);
+}
+
+.featureStyle {
+  padding: 20px;
+  margin: auto;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.doneBtn {
+  width: 50%;
+}
+
+.newCopy {
+  width: 523px;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .newCopy {
+    width: 291px;
+  }
+}

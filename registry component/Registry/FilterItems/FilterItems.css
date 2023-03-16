@@ -1,0 +1,113 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.filterItems,
+.filterItemsHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 2px solid var(--color-background);
+  align-items: center;
+  min-height: 4rem;
+}
+
+.collabFilter {
+  padding: var(--space-175) 0;
+}
+
+.filterItems button[aria-pressed="true"] {
+  border-color: #216dcb;
+  outline: 1px solid transparent;
+}
+
+.filterItems button[aria-pressed="true"]:focus {
+  outline-style: double;
+}
+
+.buttonwrapper {
+  composes: inline-block relative from global;
+}
+
+.buttonaction {
+  height: 50px;
+}
+
+.buttonLabel {
+  font: var(--theme-b1-font-medium) !important;
+  margin-left: 0 !important;
+  margin-right: 1rem;
+  margin-top: 0 !important;
+  padding: 11px;
+  border-color: var(--theme-input-border-color);
+}
+
+.sortBtn {
+  margin: 0.25rem 0.5rem 0 0;
+  width: 80px;
+  height: 30px;
+  padding: auto;
+  border-radius: 25px;
+  border: solid 1px var(--color-dark-grey-5);
+  font: var(--theme-b2-font-light);
+  color: var(--color-light-grey5);
+  background-color: var(--theme-color-white);
+}
+
+.removeBottomBorder {
+  border-bottom: none;
+  padding-bottom: 50px;
+}
+
+.TYMfilterItems {
+  & li {
+    overflow-wrap: normal;
+  }
+}
+
+.iconTooltip {
+  composes: inline-block relative from global;
+}
+
+@media print {
+  .filterItemsHeader {
+    padding-top: 1.5rem !important;
+  }
+
+  .filterItems,
+  :global(#shareLinkButton) {
+    display: none;
+  }
+}
+
+.dangerIcon {
+  composes: absolute from global;
+  top: var(--space-2);
+  z-index: var(--fixed-element-component-zindex);
+  margin: 0 var(--space-2);
+}
+
+.discontinuedLabel {
+  padding-left: var(--space-25) !important;
+}
+
+.sortBy {
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.sortByButtonNew {
+  border-radius: 25px !important;
+}
+
+@media screen and (--breakpoint-md) {
+  .filterItems,
+  .filterItemsHeader {
+    padding-top: var(--space-025) !important;
+  }
+}
+
+.bgColor {
+  padding-top: var(--space-125);
+}
+
+.containerGrey {
+  background-color: var(--color-background);
+}

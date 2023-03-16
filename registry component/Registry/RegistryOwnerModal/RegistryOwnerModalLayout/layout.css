@@ -1,0 +1,75 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --medium-margin: 30px;
+}
+
+.imageWrapperNew {
+  width: 134px !important;
+}
+
+.twoColumnLayoutNew {
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+@media print, screen and (--breakpoint-md) {
+  .twoColumnLayout {
+    display: flex;
+
+    & .imageWrapper {
+      margin-right: var(--medium-margin);
+      width: 114px;
+    }
+
+    & .detailWrapper {
+      width: 360px;
+
+      & .productDetailWrapper,
+      & .attributeWrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .twoColumnLayout {
+    display: flex;
+
+    & .imageWrapper {
+      margin-right: var(--medium-margin);
+      width: 114px;
+    }
+
+    & .detailWrapper {
+      width: 186px;
+
+      & .productDetailWrapper,
+      & .attributeWrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .twoColumnLayout {
+    display: flex;
+
+    & .imageWrapper {
+      margin-right: var(--medium-margin);
+      width: 114px;
+    }
+
+    & .detailWrapper {
+      width: 360px;
+
+      & .productDetailWrapper,
+      & .attributeWrapper {
+        width: 100%;
+      }
+    }
+  }
+}

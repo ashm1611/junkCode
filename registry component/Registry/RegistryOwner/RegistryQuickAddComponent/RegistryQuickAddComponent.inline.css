@@ -1,0 +1,7 @@
+@import "@bbb-app/styles/variables.css";
+
+@media only screen and (--breakpoint-md) {
+  .container {
+    min-height: 260px;
+  }
+}

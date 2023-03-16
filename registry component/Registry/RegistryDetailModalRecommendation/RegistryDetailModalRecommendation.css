@@ -1,0 +1,66 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.topRegistryItems {
+  font: var(--theme-b1-font-medium);
+}
+
+.accordianIconStyle {
+  color: var(--color-font-link);
+}
+
+.collapseStyle {
+  transform: rotate(180deg);
+}
+
+.barStyle {
+  margin-top: var(--space-4);
+}
+
+.registryOwnerModalRecomm {
+  & :global(#atr-cta) {
+    & button {
+      height: var(--line-height-2);
+      padding: var(--space-1);
+    }
+  }
+
+  & a {
+    @media only screen and (--breakpoint-xs) {
+      margin-right: var(--space-025);
+    }
+  }
+
+  & :global(#atr-actions) {
+    & a {
+      height: var(--line-height-2);
+    }
+  }
+
+  & :global(#item-price) {
+    & span {
+      font-size: var(--font-size-text-large);
+    }
+
+    @media only screen and (--breakpoint-xs) {
+      margin-right: var(--space-025);
+    }
+  }
+}
+
+.registryOwnerModalRecomm > div {
+  @media (min-width: 64rem) and (max-width: 1200px) {
+    width: auto;
+    margin-left: 0;
+  }
+
+  @media (width: 48rem) {
+    margin-left: -3%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .nextarrowAlignment {
+    margin-right: 30px;
+  }
+}

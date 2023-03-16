@@ -1,0 +1,124 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.storyContainer {
+  padding: 0;
+  background-color: var(--color-white);
+  border-radius: var(--space-1);
+}
+
+.arrowBtnClass {
+  margin-bottom: 266px;
+  display: flex;
+  background: transparent !important;
+}
+
+.stickyBackBtnPos {
+  right: 7px !important;
+  margin-top: 15px !important;
+}
+
+.verySmall {
+  width: 350px;
+  padding: 10px 0 0 !important;
+}
+
+.storyContent > div > div {
+  filter: none !important;
+}
+
+.arrowButton :global(.slick-track),
+.arrowButton :global(.slick-list) {
+  display: flex;
+  flex-shrink: 0;
+}
+
+:global(.slick-slider).arrowButton :global(.slick-slide) {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  text-align: -webkit-center;
+}
+
+.arrowButton :global(.slick-arrow) {
+  top: 42% !important;
+  right: 0;
+}
+
+.arrowButton:global(.slick-arrow.slick-disabled) {
+  opacity: 1;
+  cursor: default;
+}
+
+.arrowButton .slickNextArrow {
+  background-color: var(--color-white);
+  margin-top: -5px;
+}
+
+.arrowButton .slickPrevArrow {
+  background-color: var(--color-white);
+  margin-left: -14px;
+  margin-top: -5px;
+}
+
+.arrowButtonposition {
+  margin: 2em 0 2em 2.5em;
+  padding-top: 22px;
+}
+
+.imgDefault {
+  border: 2px solid var(--registry-story-tile-border);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.imgViewed {
+  border: 1px solid var(--color-dark-grey-5);
+  border-radius: 50%;
+  padding: var(--space-025);
+}
+
+.storyTitle {
+  font: var(--theme-b1-title-font-medium);
+  margin: var(--space-1) 0 var(--space-125);
+}
+
+img:hover {
+  filter: opacity(0.7);
+  background-color: var(--color-light-grey8);
+}
+
+.MobileStyles {
+  flex: 0 0 auto;
+  width: 68px;
+  margin: 0 8px;
+  text-align: center;
+}
+
+.storyMobContainer {
+  overflow-y: hidden;
+  overflow-x: Auto;
+  background-color: white;
+  padding-top: 16px;
+}
+
+@media screen and (--breakpoint-xs) {
+  .imgDefault {
+    padding: 2px;
+  }
+
+  .verySmall {
+    width: 287px;
+    margin: 4px 0 0 55px;
+  }
+
+  .storyTitle {
+    font: var(--theme-b3-font-medium);
+    font-weight: var(--font-weight-small);
+    margin: 5px 0 30px;
+  }
+
+  .arrowButtonposition {
+    margin: 0 0 2em 1em;
+  }
+}

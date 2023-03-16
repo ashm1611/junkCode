@@ -1,0 +1,340 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --message-mswp-modal-line-height: 1.14;
+}
+
+.flipFlopCardsContainer {
+  composes: relative from global;
+  height: calc(100vh - 150px);
+  background-color: var(--color-background);
+
+  & .tinderCategoryDropdown {
+    position: absolute;
+
+    & .btnClass {
+      background-color: var(--color-background);
+      margin: 0.25rem auto;
+      padding: 0;
+    }
+
+    & .btnClass:focus {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+.tinderCategoryDropdown {
+  & .btnClass {
+    & :global(.iconWrapperDefault) {
+      right: 10px;
+    }
+  }
+}
+
+.flipFlopTinderCategories {
+  margin: 0 auto;
+  width: 18rem;
+}
+
+.flipFlopCard {
+  composes: absolute from global;
+
+  & .tile {
+    padding: 0 var(--space-1) var(--space-1) var(--space-125);
+  }
+
+  &:last-child > .paper {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:nth-last-child(3) > .paper {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-white);
+      left: 10px;
+      top: 10px;
+      z-index: -1;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.flipFLopLabel {
+  width: 100%;
+  font-family: var(--theme-family-serif);
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.17;
+  letter-spacing: var(--theme-serif-letter-spacing);
+  text-align: center;
+  color: #050f28;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 15%;
+}
+
+.flipFLopTutorial {
+  composes: absolute from global;
+  width: 80%;
+  height: 75%;
+  left: 50%;
+  top: 50%;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+
+  & svg {
+    margin: 0 10px 0 5px;
+  }
+
+  & button {
+    border: none;
+    padding: 5px;
+    height: 26px;
+    padding-left: 90%;
+    padding-top: 10px;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  & .closeButton {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.TinderImage {
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.paper {
+  background-color: var(--color-white);
+  composes: relative from global;
+  border-radius: var(--border-radius);
+  width: 18rem;
+  height: 24rem;
+}
+
+.shrinkPaper {
+  width: 13rem;
+  height: 17rem;
+}
+
+.heading {
+  padding: 0;
+  margin-top: var(--space-1);
+}
+
+.price {
+  margin-top: var(--space-1);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+
+  & .flipFlopProductImage {
+    height: 195px;
+    width: 195px;
+    padding-top: 0;
+  }
+}
+
+.messageMSWPModal {
+  composes: mb3 from global;
+  text-align: center;
+  font: var(--theme-h1-serif-font);
+  color: var(--color-black-2);
+  line-height: var(--message-mswp-modal-line-height);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.textMSWPButton {
+  width: 100%;
+}
+
+.accessibilityTabPrimaryBtn {
+  width: 0;
+  padding: 0;
+  border: 0;
+  height: 0;
+
+  &:focus-within {
+    transition: 0.5s;
+    width: 100%;
+    height: 90%;
+
+    & .accessibiltyPrimaryBtn {
+      border: solid;
+    }
+  }
+}
+
+.accessibilityTabSecondaryBtn {
+  width: 0;
+  padding: 0;
+  border: 0;
+  height: 0;
+  margin-left: -1299px;
+
+  &:focus-within {
+    transition: 0.5s;
+    width: 100%;
+    height: 90%;
+
+    & .accessibiltyPrimaryBtn {
+      border: solid;
+    }
+  }
+}
+
+.accessibiltySecondaryBtn,
+.accessibiltySecondaryBtn:focus {
+  border-style: none;
+  padding: 0;
+  margin: 16px 22px 19px 23px;
+  width: 140px;
+  height: 50px;
+}
+
+.accessibiltyPrimaryBtn,
+.accessibiltyPrimaryBtn:focus {
+  border-style: none;
+  padding: 0;
+  margin: 17px -15px 19px 4px;
+  width: 140px;
+  border: none;
+}
+
+.toastViewRegistryLinkWrapper {
+  composes: justify-end from global;
+}
+
+.toastViewRegistryLinkWrapper {
+  margin-top: 0.5rem;
+  justify-content: flex-end;
+  justify-self: start;
+}
+
+.toastViewRegistryLink {
+  font: var(--theme-b1-lg-font-medium);
+  text-decoration: underline;
+}
+
+.toastContentWrapper {
+  composes: flex items-center from global;
+}
+
+.toastContentWrapper {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 19rem;
+}
+
+@media (--breakpoint-xxs-max) {
+  .toastContentWrapper {
+    min-width: 16rem;
+  }
+}
+
+.messageIcon {
+  fill: var(--color-light-red);
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.flipFlopModalContent {
+  text-align: center;
+  padding-top: 173px;
+}
+
+.flipFlopModalImg {
+  padding-bottom: 35px;
+}
+
+.flipFlopModalText {
+  composes: mb3 from global;
+  font: var(--theme-h1-serif-font);
+  color: var(--color-black-2);
+  font-weight: bold;
+  line-height: var(--message-mswp-modal-line-height);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.flipFlopChoice {
+  composes: absolute from global;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: var(--border-radius);
+}
+
+.flipFlopRightSwipe {
+  background-color: var(--color-success);
+}
+
+.flipFlopLeftSwipe {
+  background-color: var(--color-alert);
+}
+
+.flipFlopSwipeTile {
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+
+.flipFlopLeft {
+  transform: rotate(10.9deg);
+}
+
+.flipFlopRight {
+  transform: rotate(-12deg);
+}
+
+.flipFlopSwipeTileMsg {
+  font: var(--theme-h2-sans-font);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.flipFLopCSSDisplayNone {
+  display: none;
+}
+
+:global(.Toastify__toast-container) {
+  bottom: var(--space-4);
+}
+
+.landscapeMessageIcon {
+  left: 45%;
+  composes: absolute from global;
+}
+
+.landscapeMessageContainer {
+  width: 20rem;
+  left: 30%;
+  composes: absolute from global;
+}
+
+.smallActiveImage {
+  width: 2.5rem;
+}

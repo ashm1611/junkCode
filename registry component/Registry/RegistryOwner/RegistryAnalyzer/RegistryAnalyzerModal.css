@@ -1,0 +1,145 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --analyzer-error-msz-mt-mobile: 3rem;
+  --analyzer-error-msz-mt-desktop: 10rem;
+  --analyzer-error-msz-mb-desktop: 10rem;
+}
+
+/******************************************
+********** Analyzer Modal Styles **********
+*******************************************/
+
+/* `introWrapper` paragraph styles */
+.introWrapper {
+  font: var(--theme-b1-font-light);
+}
+
+/* `errorMszWrapper` when API fails */
+.errorMszWrapper {
+  font: var(--theme-b1-font-light);
+}
+
+/* `errorMszWrapper` and `loadingWrapper` */
+.errorMszWrapper,
+.loadingWrapper {
+  margin-top: var(--analyzer-error-msz-mt-mobile);
+}
+
+/* `scorecardWrapper` for each row to wrap price-range, bar and button */
+.scorecardWrapper {
+  margin-bottom: var(--space-3);
+
+  & .scorecardPrice {
+    font: var(--theme-h4-sans-font);
+    color: var(--theme-color-black);
+  }
+
+  & .addMoreBtnMob {
+    color: var(--color-font-brand);
+  }
+
+  & .addMoreBtn:hover {
+    color: var(--analyserBtn-hover-state);
+    text-decoration: none;
+  }
+}
+
+.scorecardWrapper:last-child {
+  margin-bottom: 0;
+}
+
+/* `imgGoodJob` image when bar-width is full */
+.imgGoodJob {
+  position: relative;
+  top: 18px;
+}
+
+/* `info icon` styles to make it relative when bar width is full on Mobile */
+.barFull button,
+.barEmpty button {
+  position: relative;
+}
+
+/* `barChartWrapper` to wrap the bar section */
+.barChartWrapper {
+  & .progressFill {
+    height: 60px;
+  }
+}
+
+/* `toolTipIcon` info icon which needs to be displayed on mobile */
+.toolTipIcon,
+.toolTipIcon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.toolTipIcon {
+  top: 18px;
+  right: -13px;
+}
+
+.barEmpty .toolTipIcon {
+  right: 0;
+}
+
+/* Content inside tooltip */
+.rowWrapperTooltip {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+/* Content inside tooltip */
+.innerWidthTooltip {
+  width: 100%;
+}
+
+.rowWrapperTooltip.remainingItemsTooltip {
+  margin-bottom: 0;
+}
+
+.leftContentTooltip {
+  font: var(--theme-b2-font-light);
+}
+
+.rightContentTooltip {
+  font: var(--theme-b2-font-medium);
+}
+
+.remainingItemsTooltip {
+  border-top: 1px solid var(--color-stroke-basic);
+
+  & .rightContentTooltip {
+    font: var(--theme-h4-sans-font);
+  }
+}
+
+@media screen and (--breakpoint-md) {
+  .introWrapper {
+    font: var(--theme-p2-lg-font-light);
+  }
+
+  .errorMszWrapper,
+  .loadingWrapper {
+    margin-top: var(--analyzer-error-msz-mt-desktop);
+    margin-bottom: var(--analyzer-error-msz-mb-desktop);
+  }
+
+  .scorecardWrapper {
+    margin-bottom: var(--space-25);
+  }
+
+  .barChartWrapper {
+    & .progressFill {
+      height: 45px;
+    }
+  }
+
+  .imgGoodJob {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+  }
+}

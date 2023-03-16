@@ -1,0 +1,14 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.emptyRecommendation {
+  background-color: var(--color-background);
+}
+
+.recommendationHeading {
+  border-bottom: 2px solid var(--color-primary-scale-3);
+}
+
+.socRecContent {
+  font-size: var(--theme-medium-font-size);
+}

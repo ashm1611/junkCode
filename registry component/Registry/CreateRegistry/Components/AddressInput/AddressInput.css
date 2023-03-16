@@ -1,0 +1,56 @@
+@import "@bbb-app/styles/variables.css";
+
+.editAddressHeading {
+  font: var(--theme-h2-sans-font);
+}
+
+.stateDropdown > button {
+  font: var(--theme-b1-font-medium);
+  border: var(--border-width-thin) solid var(--color-primary-scale-3);
+}
+
+.fieldStyle input.formError {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.privacyPolicy {
+  margin: 0 1px 0 5px;
+}
+
+.renderContent {
+  position: static;
+  left: initial;
+  top: initial;
+  white-space: normal;
+  color: var(--color-black);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: var(--font-size-text-medium);
+  font-weight: var(--font-weight-small);
+  min-height: var(--font-size-text-x-large);
+  margin-top: 5px;
+}
+
+.flexCell {
+  display: flex;
+  width: 80% !important;
+  height: 105px;
+}
+
+.checkboxDisclaimer {
+  margin-bottom: 53px !important;
+}
+
+@media (--breakpoint-sm-md-nav) {
+  .flexCell {
+    display: flex;
+    width: 100% !important;
+    height: 146px;
+  }
+
+  .checkboxDisclaimer {
+    margin-bottom: 95px !important;
+  }
+}

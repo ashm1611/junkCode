@@ -1,0 +1,50 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --registry-content-slots-container-border-desktop: 8px solid
+    var(--color-primary-scale-0);
+  --registry-content-slots-container-border-mobile: 6px solid
+    var(--color-primary-scale-0);
+  --registry-content-slots-margin-bottom: 60px;
+  --registry-content-slots-margin-top: 4rem;
+  --button-wrapper-width: 220px;
+  --button-wrapper-margin-right: 40px;
+  --button-wrapper-margin-top: 24px;
+}
+
+.registryContentSubHeading {
+  font: var(--theme-paragraph-font);
+  word-wrap: break-word;
+}
+
+.mainContainer {
+  border: var(--registry-content-slots-container-border-desktop);
+  padding: 50px 20px;
+  margin-bottom: var(--registry-content-slots-margin-bottom);
+  margin-top: var(--registry-content-slots-margin-top);
+}
+
+.headingContainer {
+  composes: center from global;
+}
+
+.callUs {
+  color: var(--color-font-brand);
+  font: var(--theme-b1-font-medium);
+}
+
+@media only screen and (--breakpoint-sm) {
+  .mainContainer {
+    border: var(--registry-content-slots-container-border-mobile);
+    margin-bottom: 45px;
+  }
+}
+
+.buttonWrapper {
+  & a {
+    width: var(--button-wrapper-width);
+    margin-top: var(--button-wrapper-margin-top);
+    margin-right: var(--space-2);
+  }
+}

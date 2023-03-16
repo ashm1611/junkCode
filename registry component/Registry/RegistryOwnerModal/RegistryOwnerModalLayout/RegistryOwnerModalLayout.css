@@ -1,0 +1,314 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --image-height: 114px;
+  --value-color: '#777';
+  --margin-14: 14px;
+  --color-delete: #1377c9;
+  --color-bbbaby-delete: #068488;
+  --border-color: #f6c0bf;
+  --border-bgColor: #fff1f2;
+  --fav-border-color: #656576;
+  --fav-bgColor: #d6d6d6;
+}
+
+.toggleBtn {
+  right: 0;
+
+  & > img {
+    cursor: pointer;
+  }
+}
+
+.toggleIcon {
+  font: var(--theme-b6-font-light);
+
+  & > svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+}
+
+.toggleContainer {
+  padding: 12px 0;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.commonAmount {
+  font-size: var(--font-size-text-medium);
+  font-weight: var(--font-weight-medium);
+}
+
+:global(.outerTooltipGG) {
+  &::after {
+    left: 81%;
+  }
+
+  &::before {
+    left: 77%;
+  }
+}
+
+.toolTipAlign {
+  left: 11% !important;
+}
+
+.productImage {
+  height: var(--image-height);
+  width: var(--image-height);
+}
+
+.productImageNew {
+  height: 134px;
+  width: 134px;
+  border-radius: 6px;
+}
+
+.newItemStatusBadge {
+  font: var(--theme-b2-font-light);
+  color: #767676;
+}
+
+.staticSectionNew {
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.colorSection {
+  display: flex;
+  justify-content: space-around;
+
+  & .section {
+    font: var(--theme-b2-lg-sans-font-medium);
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  & .title {
+    display: block;
+    margin-top: var(--margin-14);
+    font-weight: bold;
+    color: var(--color-grey1);
+  }
+
+  & .value {
+    font-weight: normal;
+    color: var(--value-color);
+  }
+}
+
+.viewProductDetailsLink {
+  float: left;
+}
+
+.viewRemoveRegistryLink {
+  float: right;
+}
+
+.writeAReview {
+  font: var(--theme-p2-font-medium) !important;
+  text-decoration: none !important;
+}
+
+.pdpLink {
+  margin-top: var(--space-125);
+}
+
+.groupGift {
+  font: var(--theme-p2-font-medium);
+  color: var(--color-info);
+  padding-right: 2px;
+}
+
+.greyLine {
+  width: 100%;
+  height: 1px;
+  opacity: 0.5;
+  background: var(--color-light-grey11);
+}
+
+.deleteIcon {
+  color: var(--color-delete);
+  margin-bottom: 3px;
+}
+
+.deletebabyIcon {
+  color: var(--color-bbbaby-delete);
+  margin-bottom: 3px;
+}
+
+.priceStyle {
+  margin-top: var(--space-025);
+}
+
+.priceStyleCashFund {
+  margin-top: var(--space-025);
+  font: var(--theme-l0-serif-font) !important;
+}
+
+.badgeStyle {
+  margin-bottom: 12px;
+}
+
+.favWrapper .favIconWhite {
+  background-color: var(--color-white);
+  color: var(--fav-border-color);
+  border: solid 2px var(--fav-bgColor);
+  height: 40px;
+  width: 40px;
+  padding: 0 7px;
+  position: absolute;
+  margin: var(--border-radius-thin);
+}
+
+.favWrapper .favIconBlack {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+  height: 40px;
+  width: 40px;
+  padding: 0 7px;
+  position: absolute;
+  margin: var(--border-radius-thin);
+}
+
+.favWrapper .babyFavIcon {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  padding: 0 var(--border-radius-medium) var(--border-width-thin);
+}
+
+.favSvg {
+  margin-top: var(--border-radius-thin);
+  margin-right: var(--focus-outline-offset);
+
+  &:hover {
+    fill: var(--color-white);
+  }
+}
+
+.unfavSvg {
+  margin-right: 4px;
+  margin-bottom: var(--focus-outline-offset);
+}
+
+.favWrapper .babyFavWhiteIcon {
+  padding: 0 var(--border-radius-medium) var(--border-width-thin);
+}
+
+.favContainer {
+  padding-top: 1rem;
+}
+
+.favContainer .favBBBbutton {
+  background-color: var(--color-white);
+  color: var(--primary-button-background-color);
+  border-color: var(--primary-button-background-color);
+
+  &:active,
+  &:focus {
+    background-color: var(--color-white);
+    color: var(--primary-button-background-color);
+    border-color: var(--primary-button-background-color);
+  }
+}
+
+.purchasedButton {
+  height: var(--space-125);
+  border-radius: 16.5px;
+  background-color: var(--primary-button-background-color);
+  border: solid 2px var(--primary-border-color-button);
+  font: var(--theme-b2-font-medium);
+  font-size: var(--font-size-text-small);
+  color: var(--theme-color-white);
+  text-align: center;
+  padding: 4px 22px;
+}
+
+.purchasebabycolor {
+  border: none;
+}
+
+.checkboxPurchased {
+  color: var(--theme-color-white);
+  margin: 2px;
+  height: 10px;
+}
+
+.fundedoverlay {
+  font: var(--theme-b1-lg-font-medium);
+  font-size: var(--font-size-text-small);
+  color: var(--theme-color-white);
+  text-align: center;
+  width: 104px;
+  height: var(--space-125);
+  border-radius: 16.5px;
+  padding: 4px 22px;
+}
+
+.alerticon {
+  margin-bottom: 2px;
+  margin-right: 3px;
+}
+
+.ItemStatusBadge {
+  width: 134px;
+  height: 22px;
+  font: var(--theme-b1-lg-font-medium);
+  font-size: var(--font-size-text-small);
+  border-radius: var(--space-125);
+  background: var(--border-bgColor);
+  border: 2px solid var(--border-color);
+  color: var(--color-black);
+  text-align: center;
+  padding: 4px 22px;
+}
+
+.oosMsgItemTile {
+  margin: 6px 0;
+}
+
+.oosIcon {
+  vertical-align: middle;
+}
+
+.oosMsg {
+  font: var(--theme-b2-font-light);
+}
+
+.pickUpCtaCss {
+  margin-top: 1px;
+}
+
+.ItemStatusbabyBadge {
+  width: 153px;
+  height: 22px;
+  transform: translateX(-5%);
+  padding: 0;
+}
+
+.storeAvailabiliyMessage {
+  font-family: Effra;
+  font-size: var(--font-size-text-medium);
+  line-height: 1.57;
+  color: #000;
+
+  & .twoHoursMessage {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-green-2);
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .toggleIcon {
+    font-size: var(--margin-14);
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  }
+}

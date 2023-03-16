@@ -1,0 +1,121 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --font-color: var(--theme-color-white);
+  --filter-bg-color: var(--color-primary-scale-1);
+  --clearall-color: var(--color-font-brand);
+  --font-light: 300;
+  --font-size: 14px;
+  --outline-color: var(--color-stroke-basic);
+}
+
+.base {
+  composes: relative flex sm-pb2 from global;
+  flex-wrap: wrap;
+  align-items: center;
+  color: var(--font-color);
+  font-weight: var(--font-light);
+  font-size: var(--font-size);
+
+  @media (--breakpoint-md) {
+    padding-bottom: var(--space-2);
+  }
+
+  @media (--breakpoint-lg) {
+    margin-top: var(--space-2);
+  }
+}
+
+.wrapper {
+  background-color: var(--filter-bg-color);
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-right: var(--space-2);
+  margin-top: var(--space-2);
+  vertical-align: middle;
+}
+
+.focused {
+  outline: 4px solid var(--outline-color);
+  outline-offset: 2px;
+}
+
+.last {
+  margin-right: 20px;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.close {
+  margin: 0 0 0 13px;
+  padding: 0;
+  composes: relative from global;
+  transform: rotate(45deg) translateY(2px);
+  font-size: 24px;
+  line-height: var(--font-size);
+}
+
+.newAppliedFilters {
+  height: 32px;
+  width: max-content;
+  padding: 4px 6px;
+  margin: 0 8px 8px 0;
+  border-radius: 15px;
+  border: solid 1px var(--color-dark-grey-5);
+  font: var(--theme-b2-font-light);
+  color: var(--theme-color-white);
+  background-color: var(--registry-filter-background);
+}
+
+.clearAll {
+  color: var(--clearall-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.clearAll,
+.close {
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+@media screen and (--breakpoint-md) {
+  .clearAll {
+    margin-top: var(--space-2);
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  .base {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .clearAll {
+    composes: mr2 from global;
+  }
+
+  .wrapper,
+  .clearAll {
+    white-space: nowrap;
+  }
+
+  .wrapper {
+    margin-top: var(--space-1);
+  }
+
+  .newAppliedFilters {
+    margin-bottom: 0;
+  }
+}

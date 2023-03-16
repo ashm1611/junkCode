@@ -1,0 +1,40 @@
+@import "@bbb-app/styles/variables.css";
+
+.landingMsgLayout {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.eyebrowText {
+  font: var(--theme-eyebrow-font);
+  color: var(--color-primary-brand);
+}
+
+.heading {
+  font: var(--theme-h1-lg-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.description {
+  font: var(--theme-paragraph-lg-font);
+  padding: 0 12%;
+}
+
+@media screen and (--breakpoint-sm) {
+  .landingMsgLayout {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .description {
+    font: var(--theme-body-font);
+    padding: 0;
+  }
+
+  .heading {
+    font: var(--theme-h1-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+    padding: 0 10%;
+  }
+}

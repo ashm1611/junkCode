@@ -1,0 +1,13 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.giftGiverName {
+  line-height: 20px;
+}
+
+@media print {
+  .giftGiverName:global(.pb1) {
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+}

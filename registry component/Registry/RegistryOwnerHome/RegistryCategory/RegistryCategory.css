@@ -1,0 +1,153 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+.storyContainer {
+  padding: 0;
+  border-radius: var(--space-1);
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.container {
+  display: flex;
+}
+
+.showMoreContainer {
+  text-align: right;
+  width: 68.5%;
+}
+
+.storyRemainingContainer {
+  padding: 0;
+  border-radius: var(--space-1);
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  transition: all 0.5s ease-in-out;
+  height: auto;
+}
+
+.seemore {
+  font: 700 16px/1.2 var(--theme-family-sans);
+  text-align: right;
+  color: var(--color-font-brand);
+}
+
+.storyRemainingContainer:target {
+  height: auto;
+}
+
+.heading {
+  font: 700 24px/1.25 var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  margin-bottom: 24px;
+}
+
+.headingCategory {
+  font: 700 24px/1.25 var(--theme-family-serif-subset);
+  color: var(--color-refresh-header);
+  margin-bottom: 24px;
+}
+
+.imgDefault {
+  border-radius: 50%;
+}
+
+img:hover {
+  filter: opacity(0.7);
+  background-color: var(--color-light-grey8);
+}
+
+.imageContainer {
+  margin-right: 10px;
+  margin-bottom: 23px;
+  margin-left: 10px;
+}
+
+.inlineBlock {
+  width: 155px;
+}
+
+.categoryText {
+  font-family: 'Effra';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+@media screen and (--breakpoint-sm-md-nav) {
+  .heading {
+    font-size: 16px;
+  }
+
+  .headingCategory {
+    font-size: 16px;
+  }
+
+  .showMoreContainer {
+    text-align: right;
+    width: 48%;
+  }
+
+  .storyContainer {
+    margin-left: 15px;
+  }
+
+  .container {
+    margin-left: 17px;
+  }
+
+  .storyRemainingContainer {
+    margin-left: 15px;
+  }
+
+  .inlineBlock {
+    width: 122px;
+  }
+
+  .seemore {
+    font-size: 13px;
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .imgDefault {
+    padding: 2px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .imgDefault {
+    padding: 2px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .showMoreContainer {
+    text-align: right;
+    width: 53%;
+  }
+
+  .inlineBlock {
+    width: 102px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 16/9) {
+  .showMoreContainer {
+    text-align: right;
+    width: 60%;
+  }
+
+  .inlineBlock {
+    width: 130px;
+  }
+}

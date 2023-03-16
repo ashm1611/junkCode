@@ -1,0 +1,597 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --border-radius: 63px;
+  --border-bbby-radius: 83px;
+  --overlay-width: 198px;
+  --overlay-pad: 9px 20px;
+  --border-color: #f6c0bf;
+  --border-bgColor: #fff1f2;
+  --overlay-cta-width: 222px;
+  --btn-width: 130px;
+  --background-bbb-color: #194f8b;
+  --background-bbby-color: #01686b;
+  --ellipsis-color: #696969;
+}
+
+.RLVOwnerTile:hover {
+  & :global(#NandDReplaceCTA) {
+    & button {
+      background-color: var(--secondary-button-background-hover);
+      color: var(--ghost-primary-font-selected);
+      border-color: var(--secondary-stroke-border-color-button-hover);
+    }
+  }
+}
+
+.RLVOwnerTile {
+  & :global(#NandDReplaceCTA) {
+    & button {
+      background-color: var(--color-primary-scale-5);
+      color: var(--secondary-text-button-color);
+      border-color: var(--secondary-border-color-button);
+    }
+  }
+}
+
+:global(#NandDReplaceLink) {
+  & button {
+    color: var(--secondary-text-button-color);
+    border: none;
+    width: 64px;
+    height: 20px;
+    background-color: white;
+    font-size: var(--font-size-text-medium);
+  }
+}
+
+.staticSection {
+  border-top: solid 2px var(--color-dark-grey-5);
+  width: 100%;
+  padding: var(--space-125) 0;
+  color: var(--color-black);
+}
+
+.newStaticSection {
+  border-top: solid 1px var(--color-dark-grey-5);
+  width: 100%;
+  padding: var(--space-125) 0;
+  color: var(--color-black);
+}
+
+.ItemStatusBadge {
+  composes: absolute from global;
+  top: 50%;
+  left: 50%;
+  width: var(--overlay-cta-width);
+  height: 40px;
+  background: var(--border-bgColor);
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--border-color);
+  padding: 9px;
+  border-radius: var(--font-size-text-extra-large);
+  font: var(--theme-b1-lg-font-medium);
+  cursor: default;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.newItemStatusBadge {
+  font: var(--theme-b2-font-light);
+  color: var(--color-grey6);
+}
+
+.oosMsgItemTile {
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.oosIcon {
+  vertical-align: top;
+}
+
+.oosMsg {
+  font: var(--theme-b2-font-light);
+  margin-left: 3px;
+}
+
+.alerticon {
+  margin-right: 3px;
+}
+
+.ellipsescontainer {
+  position: absolute;
+  right: 0;
+  padding-bottom: 20px;
+}
+
+.storeAvailabiliyMessage {
+  font: var(--theme-b2-font-medium);
+  line-height: 1.57;
+  color: #000;
+
+  & .twoHoursMessage {
+    font-weight: 600;
+    color: #008a00;
+  }
+}
+
+.ellipsescontainer .ellipsesicon {
+  right: 0;
+  border: solid 2px var(--color-dark-grey-5);
+  border-radius: var(--fav-button-border-radius);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--ellipsis-color);
+  background-color: var(--color-white);
+}
+
+.ellipsescontainer .removeIcon {
+  border: none;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  left: 24px;
+  bottom: 24px;
+}
+
+.ellipsescontainer .ellipsesicon:hover {
+  border: var(--primary-border-color-button);
+  background: var(--primary-button-background-color);
+  color: var(--color-white);
+}
+
+.ellipsessvg {
+  margin-left: 4px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ItemStatusBadge {
+    width: 190px;
+  }
+
+  :global(.fundedoverlay) {
+    width: 183px;
+  }
+}
+
+.topButtonSection {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  & > span {
+    font: var(--theme-b1-lg-font-medium);
+  }
+}
+
+.favButton {
+  width: 100%;
+  height: 100% !important;
+  outline: none;
+}
+
+.favoriteBanner {
+  display: block;
+
+  & > span {
+    display: block;
+    margin: 0 auto;
+    width: 112px;
+    height: var(--space-25);
+    border-radius: var(--fav-button-border-radius);
+
+    & > button {
+      text-decoration: none;
+    }
+  }
+}
+
+.newFavBanner {
+  display: block;
+  position: absolute;
+  bottom: 22%;
+  right: 16%;
+
+  & > span {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+
+    & > button {
+      text-decoration: none;
+
+      & > svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+.markedAsFav {
+  color: var(--theme-color-white);
+
+  & > span {
+    background-color: var(--color-black);
+    border: solid 2px var(--color-black);
+
+    & > button {
+      color: var(--theme-color-white);
+      font: var(--theme-label-font);
+    }
+  }
+}
+
+.markedAsFavBaby {
+  & > span {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+}
+
+.fav {
+  color: var(--color-dark-grey);
+
+  & > span {
+    background-color: var(--theme-color-white);
+    border: solid 2px var(--color-light-grey);
+
+    & > button {
+      color: var(--color-light-grey5);
+      font: var(--theme-label-font);
+    }
+  }
+
+  & > svg {
+    color: var(--color-dark-grey);
+  }
+}
+
+.ltlDslNotAvailable {
+  font: var(--theme-b1-lg-font-medium);
+}
+
+.ltlDslNotAvailableNew {
+  font: var(--theme-b2-font-light);
+}
+
+.newLTLStyling {
+  color: var(--color-grey6);
+  width: 70%;
+}
+
+.updateLink {
+  color: var(--primary-button-background-color);
+}
+
+.updateLinkFontSize {
+  font-size: var(--font-size-text-medium);
+}
+
+.purchasebaby {
+  & > span {
+    border-radius: var(--border-bbby-radius);
+  }
+}
+
+.addtocartBuyItNow {
+  & > button {
+    font: var(--theme-b2-font-medium);
+    color: var(--color-blue-6);
+  }
+}
+
+.tooltipPreventCss {
+  padding-top: 10px;
+  position: absolute;
+  bottom: -19px;
+}
+
+.rbyrPurchasedContainer {
+  composes: relative from global;
+
+  & .rbyrPurchased {
+    cursor: pointer;
+    font: var(--theme-b1-font-medium);
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: var(--font-size-text-medium);
+    }
+  }
+
+  &:hover > .showToolTip,
+  & :global(.showToolTip.show) {
+    display: block;
+    z-index: 1;
+  }
+
+  & .showToolTip {
+    top: 0;
+    left: 0;
+    transform: inherit;
+
+    & .customTooltipRBYR {
+      width: 233px;
+      padding: 16px;
+      height: auto;
+      transform: translate(0, -100%);
+      top: -8px;
+      left: auto;
+
+      &::after {
+        top: calc(100%);
+      }
+
+      &::before {
+        top: calc(100% + 1px);
+      }
+
+      & .toolTip {
+        width: 100%;
+        font: var(--theme-b2-font-medium);
+
+        & .heading {
+          font: var(--theme-b1-font-medium);
+        }
+
+        & .row {
+          vertical-align: middle;
+          margin-bottom: 0.5rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+
+        & .lineDark {
+          border: 1px solid #000;
+        }
+
+        & .lineGray {
+          border: 1px solid #d8d8d8;
+        }
+      }
+    }
+  }
+}
+
+.fundedoverlay {
+  composes: absolute from global;
+  top: 50%;
+  left: 50%;
+  width: var(--overlay-width);
+  height: 40px;
+  background: var(--border-bgColor);
+  transform: translate(-50%, -50%);
+  padding: var(--overlay-pad);
+  font: var(--theme-b1-lg-font-medium);
+  color: var(--theme-color-white);
+  cursor: default;
+  text-align: center;
+}
+
+.fundedbabycolor {
+  background-color: var(--background-bbby-color);
+  border-radius: var(--border-bbby-radius);
+}
+
+.fundedUScolor {
+  background-color: var(--background-bbb-color);
+  border: solid 2px var(--background-bbb-color);
+  border-radius: var(--border-radius);
+}
+
+.qtyStyle {
+  font-weight: var(--font-weight-medium);
+}
+
+.toolTipAlign {
+  left: -16% !important;
+}
+
+.qtyLargeFont {
+  font: var(--theme-b1-font-light);
+}
+
+.tileHeadingColor {
+  color: #39397e;
+}
+
+.progressBarTitle {
+  color: var(--color-info);
+}
+
+.mobileNewBase {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (--breakpoint-xs) {
+  .staticSection {
+    padding: 6px 0 0;
+  }
+
+  .newStaticSection {
+    padding: 0;
+    border: none;
+  }
+
+  .favoriteBanner {
+    & > span {
+      height: 33px;
+      width: 34px;
+      padding: 0 0 2px var(--space-025);
+    }
+  }
+
+  .newImgWrapper {
+    & img {
+      max-height: 134px;
+      max-width: 134px;
+    }
+  }
+
+  .newFavBanner {
+    top: 100px;
+    left: 100px;
+
+    & > span {
+      width: 26px;
+      height: 26px;
+
+      & > button {
+        text-decoration: none;
+
+        & > svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  .newImageContainer {
+    height: 134px;
+    width: 134px;
+    border-radius: 8px;
+  }
+
+  .favIcon {
+    margin-right: var(--space-025);
+  }
+
+  .toolTipAlign {
+    left: -32% !important;
+  }
+
+  .contentBase {
+    width: 100%;
+  }
+
+  .manageBtn {
+    width: var(--btn-width);
+  }
+
+  .ellipsesallign {
+    position: relative;
+    top: -10px;
+  }
+
+  .ellipsescontainer {
+    padding-bottom: 0;
+  }
+
+  .ellipsescontainer .ellipsesicon {
+    border: 0;
+    border-radius: 0;
+    right: 0;
+    height: 25px;
+    width: 30px;
+    background: none;
+  }
+
+  .ellipsescontainer .removeIcon {
+    left: 8px;
+    bottom: 0;
+  }
+
+  .ellipsescontainer .ellipsesicon:hover {
+    border: none;
+    background: none;
+    color: var(--primary-button-background-color);
+  }
+
+  .purchaseContainer {
+    height: 28px;
+    margin-right: 20px;
+  }
+
+  .shiporswapContainer {
+    height: 20px;
+  }
+
+  .ltlDslNotAvailable {
+    font-size: var(--font-size-text-small);
+  }
+
+  .FundedContainer {
+    height: 20px;
+    margin-right: 20px;
+  }
+
+  .ItemStatusBadge {
+    left: 31%;
+    width: 134px;
+    height: 21px;
+    font-size: var(--font-size-text-small);
+    padding: 0;
+  }
+
+  .ltlDslNotAvailableNew,
+  .updateLinkFontSize,
+  .newItemStatusBadge {
+    font-size: var(--font-size-text-small);
+  }
+
+  .newLTLStyling {
+    width: 100%;
+  }
+
+  :global(#NandDReplaceLink) {
+    & button {
+      width: 54px;
+      height: 16px !important;
+      font-size: var(--font-size-text-small);
+    }
+  }
+
+  .ItemStatusbabyBadge {
+    left: 32%;
+    width: 153px;
+    height: 22px;
+  }
+
+  .alerticon {
+    margin-bottom: 2px;
+  }
+
+  .fundedoverlay {
+    left: 22%;
+    width: 104px;
+    height: 20px;
+    border-radius: 16.5px;
+    font-size: var(--font-size-text-small);
+    padding: 0;
+  }
+
+  .storeAvailabiliyMessage {
+    font-size: var(--font-size-text-small);
+    line-height: 1.83;
+  }
+}
+
+@media (max-width: 330px) {
+  .fundedoverlay {
+    left: 28%;
+  }
+
+  .ItemStatusBadge {
+    left: 38%;
+  }
+
+  .ItemStatusbabyBadge {
+    left: 40%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .ellipsescontainer {
+    right: 12px;
+    top: 2px;
+    padding-bottom: 0;
+  }
+}

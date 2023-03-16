@@ -1,0 +1,45 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --collection-img-border: 8px;
+  --background-section-color: var(--color-background);
+}
+
+.collectionWrapper {
+  background: var(--background-section-color);
+}
+
+.quickPicksVisualFacets {
+  padding-right: 0;
+}
+
+.facetItemWrapper {
+  composes: grid-x grid-margin-x from global;
+  margin-top: 51px;
+}
+
+.skeletonCollection {
+  margin-top: 60px;
+}
+
+.skeletonCollectionsWrapper {
+  composes: grid-x grid-margin-x mt2 from global;
+}
+
+.skeletonCategoryCell {
+  composes: mx1 from global;
+
+  /* Row of 7 columns */
+  width: calc(14.28% - 1rem);
+}
+
+@media screen and (--breakpoint-sm) {
+  .skeletonCategoryCell {
+    width: calc(25% - 1rem);
+  }
+
+  .skeletonCollection {
+    margin-top: 33px;
+  }
+}

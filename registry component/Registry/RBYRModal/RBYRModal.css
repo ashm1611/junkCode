@@ -1,0 +1,111 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --blue-color: #b7cbda;
+  --color-primary-button: #003bde;
+  --inline-block: inline-block;
+  --flex: flex;
+  --center: center;
+  --flex-end: flex-end;
+  --block: block;
+}
+
+.rbyrModalTitle {
+  text-align: center;
+  font: var(--theme-h2-sans-font);
+}
+
+.rbyrModalSubTitle {
+  text-align: center;
+  font: var(--theme-p2-lg-font-light);
+}
+
+.featuresubTitle {
+  font: var(--theme-p1-font-medium);
+  text-align: center;
+}
+
+.featureSubTitleDesc {
+  font: var(--theme-paragraph-font);
+  text-align: center;
+}
+
+.doneButtonStyle {
+  margin: auto;
+}
+
+.line {
+  border-top: 2px solid #d6d6d6;
+}
+
+.optOutLink {
+  font-size: var(--theme-medium-font-size);
+  color: var(--color-blue-6);
+  font-weight: var(--font-weight-small);
+  text-decoration: underline;
+}
+
+.optOutLinkText {
+  opacity: 0.75;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-small);
+}
+
+.blueBannerPanel {
+  background: var(--blue-color);
+  border-radius: var(--font-size-text-xsmall);
+  padding: var(--space-3);
+
+  & .imagesSection {
+    display: var(--flex);
+    justify-content: var(--flex-end);
+    text-align: var(--center);
+
+    & .middleImage {
+      margin: 11% 5%;
+    }
+  }
+
+  & .featuresubTitle {
+    font-size: var(--font-size-text-large);
+    margin: var(--space-2) 0 0;
+  }
+}
+
+.popupPanel.blueBannerPanel {
+  padding: 0;
+}
+
+@media all and (--breakpoint-md-lg) {
+  .blueBannerPanel {
+    & .imagesSection {
+      & .middleImage {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media all and (--breakpoint-sm) {
+  .blueBannerPanel {
+    border-radius: 0;
+    text-align: center;
+    padding: var(--space-3) var(--space-2);
+
+    & .imagesSection {
+      margin: var(--space-4) 0 0;
+      justify-content: var(--center);
+      display: var(--block);
+
+      & .middleImage {
+        margin: var(--space-3) 0;
+      }
+    }
+  }
+
+  .blueBannerPanel.popupPanel {
+    & .imagesSection {
+      margin-top: var(--space-2);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '@bbb-app/styles/variables.css';
+
+.totalAmount {
+  color: var(--color-green-2);
+  display: block;
+  text-align: right;
+  margin-top: var(--space-025);
+}
+
+.bottomAmount {
+  float: right;
+}
+
+.fullFilledAmount {
+  float: left;
+}
+
+.commonColor {
+  color: var(--color-create-signin-header) !important;
+}
+
+.progressBarColor {
+  background-color: var(--registry-story-tile-border) !important;
+}
+
+.progressContainer {
+  height: 10px;
+  border-radius: var(--theme-border-radius);
+  background-color: var(--theme-color-white);
+  box-shadow: inset 0 0 0 var(--border-width-thin) var(--color-dark-grey-5);
+  margin: 6px 0 2px;
+}
+
+.progressBar {
+  border-radius: var(--theme-border-radius);
+  background-color: var(--color-green-2);
+  height: 100%;
+}
+
+.progressBarTile {
+  height: 100%;
+  border-radius: 21px;
+  background-color: var(--color-green-2);
+}
+
+.progressBarTileSmall {
+  height: 93%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: var(--color-green-2);
+}
+
+.progressContainerTile {
+  height: 21px;
+  border-radius: 20.5px;
+  background-color: var(--theme-color-white);
+  box-shadow: inset 0 0 0 var(--border-width-thin) var(--color-dark-grey-5);
+  margin: 6px 6px 2px 0;
+}
+
+.progressContainerNew {
+  height: 4px;
+  background-color: #d6d6d6;
+  border-radius: 20.5px;
+  box-shadow: inset 0 0 0 var(--border-width-thin) var(--color-dark-grey-5);
+  margin: 6px 6px 2px 0;
+}

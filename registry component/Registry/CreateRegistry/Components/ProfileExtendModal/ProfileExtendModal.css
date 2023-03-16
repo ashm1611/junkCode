@@ -1,0 +1,18 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.accountDetectedHeading {
+  font: var(--theme-p1-font-medium);
+  text-transform: inherit !important;
+}
+
+.accountDetectedBodyText {
+  font: var(--theme-b1-font-light);
+  margin-top: 0;
+}
+
+@media screen and (--breakpoint-md) {
+  .accountDetectedHeading {
+    font: var(--theme-h2-sans-font);
+  }
+}

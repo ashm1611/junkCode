@@ -1,0 +1,159 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --lines-to-show: 2;
+  --custom-width: 24.2%;
+}
+
+.incentiveTile:nth-of-type(4n + 4) {
+  padding-right: 0;
+}
+
+.ownerPageTile.incentiveTile {
+  padding-top: 0;
+}
+
+.base {
+  composes: relative from global;
+  font: var(--theme-body-font);
+  padding: var(--space-2);
+  background-color: var(--theme-color-white);
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  & .viewDetails {
+    margin-top: 3px;
+    height: var(--line-height-2);
+    align-items: baseline;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  & .incentiveName {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    margin-bottom: 56px;
+
+    /* prettier-ignore */
+    height: calc(var(--theme-medium-font-size) * var(--line-height-xx-large) * var(--lines-to-show));
+
+    /* Fallback for non-webkit */
+
+    font-size: var(--theme-medium-font-size);
+    line-height: var(--line-height-xx-large);
+    -webkit-line-clamp: var(--lines-to-show);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  .incentiveTile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ownerPageTile.incentiveTile:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.incentiveText {
+  font: var(--theme-paragraph-font);
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.incentiveModalTitle {
+  font: var(--theme-h3-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.incentiveSubHeader {
+  font: var(--theme-h4-serif-font);
+  letter-spacing: var(--theme-serif-letter-spacing);
+}
+
+.incentiveCTA {
+  width: 100%;
+}
+
+.incentiveContainer {
+  & .shippingPromoCaption {
+    font-size: var(--theme-medium-font-size);
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+
+  & .startPoint,
+  & .endPoint {
+    font-size: var(--theme-small-font-size);
+    line-height: var(--line-height-normal);
+    display: inline-block;
+  }
+
+  & .graphContainer {
+    background-color: var(--color-stroke-basic);
+    height: 10px;
+    display: inline-block;
+    border-radius: var(--border-radius-medium);
+    width: calc(100% - 70px);
+
+    &:hover > .showToolTip {
+      display: block;
+      z-index: 1;
+    }
+  }
+
+  & .graphStatus {
+    position: absolute;
+    background-color: var(--color-success);
+    border-radius: var(--border-radius-medium);
+    left: 0;
+    bottom: 0;
+    height: 100%;
+  }
+
+  & .graphStatusBlue {
+    position: absolute;
+    background-color: #04f;
+    border-radius: var(--border-radius-medium);
+    left: 0;
+    bottom: 0;
+    height: 100%;
+  }
+}
+
+.customTooltipIncentives {
+  top: -137px;
+  height: 135px;
+  transform: translateX(-50%);
+  font: var(--theme-b2-font-light);
+  border-radius: 6px;
+  padding: 8px 0 8px 12px;
+  text-align: left;
+  width: 178px;
+
+  &::after {
+    top: 133px;
+  }
+
+  &::before {
+    top: 134px;
+  }
+}
+
+.toolTip {
+  font: var(--theme-b1-font-medium);
+}

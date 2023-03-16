@@ -1,0 +1,23 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.ErrorMessage {
+  composes: flex flex-column items-center justify-center pr1 pb1 mt4 from global;
+  width: 100%;
+}
+
+.header {
+  composes: flex flex-column items-center justify-center from global;
+  width: 100%;
+}
+
+.title {
+  composes: mb2 from global;
+  color: var(--theme-color-black);
+}
+
+.description {
+  composes: mb2 from global;
+  text-align: center;
+  max-width: 480px;
+}

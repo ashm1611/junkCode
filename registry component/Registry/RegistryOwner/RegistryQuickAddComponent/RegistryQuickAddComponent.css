@@ -1,0 +1,130 @@
+@import '@bbb-app/styles/variables.css';
+
+.container {
+  border-top: var(--border-width-thin) var(--border-style)
+    var(--color-very-pale-grey);
+}
+
+.closeBtn {
+  composes: absolute from global;
+  right: 0;
+  border: none;
+}
+
+.variationBWrapper {
+  flex: 0 0 auto;
+  width: 55%;
+}
+
+.variationBMainWrapper {
+  overflow-y: hidden;
+  overflow-x: Auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.arrowButton :global(.slick-track),
+.arrowButton :global(.slick-list) {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.arrowButtonposition {
+  margin: 2em 3em;
+}
+
+:global(.slick-slider).arrowButton :global(.slick-slide) {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.arrowButton :global(.slick-arrow) {
+  top: 42% !important;
+}
+
+.quickViewStyle {
+  justify-content: space-evenly;
+}
+
+.pageContainerNew {
+  margin: 0 9px;
+  border: none;
+  padding: 0;
+}
+
+@media (max-width: 1023px) {
+  .quickViewStyle {
+    justify-content: start;
+  }
+
+  .pageContainerNew {
+    margin-left: 8px;
+  }
+}
+
+.pageHeadingNew {
+  color: var(--global-header-base-color);
+  width: 100%;
+  font: var(--theme-h3-lg-serif-font-light);
+}
+
+.countItem {
+  font: var(--theme-body-font);
+  font-weight: normal;
+  font-size: var(--font-size-text-large);
+  padding-left: 4px;
+  color: var(--registry-item-count);
+}
+
+.customContainer {
+  padding-left: 50px;
+}
+
+.customContainerMob {
+  padding-left: 5px;
+}
+
+.arrowButton .slickNextArrow {
+  background-color: var(--color-white);
+  margin-top: -5px;
+}
+
+.arrowButton .slickPrevArrow {
+  background-color: var(--color-white);
+  margin-top: -5px;
+}
+
+@media screen and (--breakpoint-sm-md-nav) {
+  .newRegVariationBWrapper {
+    flex: 0 0 auto;
+    width: 40%;
+  }
+
+  .pageContainerNew {
+    max-height: 420px;
+  }
+}
+
+@media screen and (--breakpoint-sm-md) {
+  .newRegVariationBWrapper {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .pageContainerNew {
+    max-height: 434px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .newRegVariationBWrapper {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media screen and (--breakpoint-xs) {
+  .pageHeadingNew {
+    font-size: 16px;
+  }
+}

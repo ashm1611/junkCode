@@ -1,0 +1,181 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --background-section-color: var(--color-background);
+  --button-margin-bottom: 88px;
+  --min-button-width: 220px;
+  --bg-width: 40%;
+  --image-width: 60%;
+  --bg-width-sm: 100%;
+  --image-width-sm: 100%;
+}
+
+.heroContentWrapper {
+  composes: flex flex-column justify-center absolute px4 from global;
+  width: var(--bg-width);
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.heroContentWrapper h2 {
+  font: var(--theme-h3-lg-sans-font);
+}
+
+.heroContentWrapper p {
+  font: var(--theme-p2-lg-font-light);
+  margin: 1rem 0;
+}
+
+.heroContentBg {
+  composes: relative from global;
+  width: var(--bg-width);
+  z-index: 1;
+}
+
+.heroWrapper {
+  background: var(--background-section-color);
+  font: var(--theme-paragraph-font);
+}
+
+.heroImage {
+  composes: relative from global;
+  z-index: 1;
+  width: var(--image-width);
+
+  & img {
+    width: 100%;
+  }
+
+  & .aspectRatio {
+    padding-top: calc(440 / 768 * 100%);
+    height: 0;
+    position: relative;
+  }
+
+  & .wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.accountSignIn {
+  composes: my2 center from global;
+  font: var(--theme-b1-font-light);
+
+  & a {
+    color: var(--color-font-brand);
+  }
+
+  & button {
+    color: var(--color-font-brand);
+    font: var(--theme-b1-font-medium);
+  }
+
+  & button:hover {
+    text-decoration: underline;
+  }
+}
+
+.customerSupportCTAPanel {
+  composes: flex flex-wrap flex-column from global;
+}
+
+.registryBuildCTAPanel {
+  composes: relative from global;
+  height: 100%;
+
+  /* Styles for Referred Content from CMS */
+  & :global(.imgWrapper) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & section {
+    position: relative;
+    font: var(--theme-paragraph-font);
+    width: 40%;
+    padding: 4rem 0 0 2rem;
+  }
+
+  & h3 {
+    font: var(--theme-h3-lg-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+  }
+
+  & p {
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+.registryBuildCTAPanelButtonsWrapper {
+  composes: flex relative pl3 from global;
+  margin-bottom: var(--button-margin-bottom);
+}
+
+.button {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-right: 1rem;
+  min-width: var(--min-button-width);
+}
+
+@media screen and (--breakpoint-sm) {
+  .heroWrapper {
+    background: transparent;
+  }
+
+  .heroContentWrapper {
+    position: static;
+    top: 100%;
+    text-align: center;
+    width: var(--bg-width-sm);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .heroContentBg {
+    width: var(--bg-width-sm);
+  }
+
+  .heroImage {
+    width: var(--image-width-sm);
+  }
+
+  .registryBuildCTAPanel {
+    font: var(--theme-h3-serif-font);
+    letter-spacing: var(--theme-serif-letter-spacing);
+
+    & section {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    & p {
+      display: none;
+    }
+  }
+
+  .registryBuildCTAPanelButtonsWrapper {
+    flex-flow: column;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .button {
+    margin: 0 auto 1rem;
+  }
+}

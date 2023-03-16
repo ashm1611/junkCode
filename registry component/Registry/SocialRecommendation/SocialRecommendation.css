@@ -1,0 +1,70 @@
+@import "@bbb-app/styles/variables.css";
+@import "theme";
+
+.recommendationContainer {
+  background-color: var(--color-background);
+}
+
+.recommendationHeading {
+  border-bottom: 2px solid var(--color-primary-scale-3);
+}
+
+.formLabel {
+  font: var(--theme-b1-font-light);
+  margin-bottom: 10px;
+}
+
+.heading {
+  font: var(--theme-p1-font-medium);
+  margin-bottom: 1.5rem;
+}
+
+.inviteBtn {
+  min-width: 14rem;
+}
+
+.socialRecommedationInviteBanner {
+  background-color: transparent;
+  padding-bottom: var(--space-125);
+}
+
+.FNFRecommendationHeading {
+  font: var(--theme-h1-serif-font);
+  font-size: var(--font-size-text-xx-large);
+  color: var(--refresh-color-fsb-header);
+}
+
+.FNFContainer {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='black' stroke-width='1' stroke-dasharray='6%2c 8' stroke-dashoffset='3' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: var(--space-1);
+}
+
+.FNFHeading {
+  font: var(--theme-h1-serif-font);
+  font-size: var(--font-size-text-xx-large);
+  color: var(--refresh-color-fsb-header);
+}
+
+.FNFSubHeading {
+  font: var(--theme-p2-lg-font-light);
+  margin: auto;
+}
+
+@media all and (min-width: 375px) and (max-width: 812px) {
+  .FNFContainer {
+    padding: var(--space-3) var(--space-15);
+  }
+
+  .FNFRecommendationHeading {
+    font-size: var(--h5);
+  }
+
+  .FNFHeading {
+    font-size: var(--font-size-text-xxx-medium);
+  }
+
+  .FNFSubHeading {
+    font-size: var(--font-size-text-medium);
+    padding: 0 var(--space-075) var(--space-15);
+  }
+}

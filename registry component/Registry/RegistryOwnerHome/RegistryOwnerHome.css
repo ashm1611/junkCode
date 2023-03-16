@@ -1,0 +1,14 @@
+@import "@bbb-app/styles/variables.css";
+
+.tipsSetBG,
+:global(.slotCardSetBG) {
+  background-color: var(--color-background);
+}
+
+:global(.baseAppContainer) :global(.Filters__Filters___HrJ9_) {
+  margin-top: 0;
+}
+
+:global(.Filters__Filters___HrJ9_) :global(h3) {
+  color: #000;
+}

@@ -1,0 +1,37 @@
+@import '@bbb-app/styles/variables.css';
+
+.rbHeading {
+  font: var(--theme-h3-lg-serif-font-light);
+  margin: 6px 0;
+  color: var(--global-header-base-color);
+}
+
+.rbSubHeading {
+  font: var(--theme-body-font);
+  margin: 12px 0 2px;
+  color: var(--theme-color-black);
+  display: inline-flex;
+}
+
+.rbItem {
+  display: flex;
+  width: 125px;
+  height: 125px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bRadius {
+  border-radius: 17px;
+}
+
+.inlineFlex {
+  display: inline-flex;
+  margin: 0 4px;
+}
+
+@media screen and (--breakpoint-xs) {
+  .rbHeading {
+    font-size: 16px;
+  }
+}

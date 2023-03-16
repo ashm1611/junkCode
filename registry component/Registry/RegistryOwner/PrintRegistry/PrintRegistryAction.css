@@ -1,0 +1,247 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --color-light-border-grey: #e4e4e4;
+  --create-registry-heading-font-lg: var(--theme-h2-sans-font);
+  --badge-max-width: 80%;
+  --badge-weight-medium: 15px;
+  --badge-weight-large: -18px;
+  --no-margin: 0;
+  --color-registry-black: #222;
+}
+
+.maincontainer {
+  max-width: var(--badge-max-width);
+  margin: auto;
+}
+
+.flexcontainer {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  margin: 25px auto;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flexcontainer:nth-child(1) {
+  order: 1;
+}
+
+.flexcontainer div:nth-child(2) {
+  order: 2;
+}
+
+.flexcontainer:nth-child(3) {
+  order: 2;
+}
+
+.divspace {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+}
+
+.logo {
+  width: 210px;
+  height: 60px;
+}
+
+.tableheadborder {
+  border-top: 2px solid var(--color-dark-grey-2);
+  border-bottom: 2px solid var(--color-dark-grey-2);
+}
+
+.tableHeaders {
+  font-family: var(--theme-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--badge-weight-medium);
+}
+
+.productalign {
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  font-family: var(--theme-family-sans);
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-small);
+}
+
+.breakWord {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.userName {
+  font-size: 2rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.regDetailsDL :global(dt),
+.regDetailsDL :global(dd) {
+  display: inline-block;
+}
+
+.details {
+  composes: inline-block from global;
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.detailsValue {
+  color: var(--color-font-dark);
+  font-weight: var(--font-weight-small);
+  margin: 0 5px;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.detailsValueOn {
+  color: var(--color-font-dark);
+  font-weight: var(--font-weight-small);
+  padding-top: 0.5rem;
+}
+
+.giftspace {
+  composes: relative from global;
+}
+
+tbody {
+  text-align: center;
+}
+
+.giftContainer {
+  border-radius: var(--border-radius-thin);
+  composes: inline-block from global;
+
+  & :global(span) {
+    display: block;
+  }
+
+  & :global(p) {
+    margin: var(--no-margin);
+  }
+}
+
+.giftsLabel {
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-small);
+}
+
+.giftsNumber {
+  color: var(--color-registry-black);
+  font-size: var(--font-size-text-xxx-large);
+  font-weight: var(--font-weight-medium);
+}
+
+.giftWrapper {
+  border-radius: 4px;
+  border: 2px solid var(--color-very-pale-grey);
+  padding: 0;
+  width: 233px;
+  height: 106px;
+}
+
+.productname {
+  text-align: left;
+}
+
+.giftRegistered {
+  composes: relative from global;
+
+  &::after {
+    content: " ";
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--color-primary-scale-3);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.barcodeWrapper {
+  display: block;
+  justify-content: center;
+  border-top: 1px solid var(--color-light-border-grey);
+  padding-top: 1.6rem;
+}
+
+.imageText {
+  font-size: var(--theme-small-font-size);
+  color: var(--color-grey3);
+}
+
+.divheading {
+  font-family: var(--theme-family-sans);
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.productImage img {
+  margin-left: -36px;
+}
+
+@media print {
+  td {
+    padding: 7px;
+    font-family: var(--theme-family-sans);
+    font-size: 10px;
+    font-weight: var(--font-weight-small);
+  }
+
+  .maincontainer {
+    max-width: 100%;
+    margin: auto;
+    padding-right: 1rem;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .productname {
+    text-align: left;
+  }
+
+  .tableHeaders {
+    font-family: var(--theme-family-sans);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .productImage img {
+    margin-left: var(--badge-weight-large);
+    width: 100px;
+  }
+}
+
+.printRegistry {
+  display: none;
+}
+
+.totalItem {
+  font: var(--theme-b1-lg-font-light);
+}
+
+.totalPrice {
+  font: var(--theme-h4-sans-font);
+}
+
+.itemsheading {
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.pickUpStore {
+  font-size: var(--theme-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+.pickUpAddressTimings {
+  composes: inline-block from global;
+}

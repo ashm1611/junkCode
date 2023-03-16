@@ -1,0 +1,85 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+.filterList {
+  text-align: left;
+  color: var(--color-light-grey4);
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.base {
+  text-align: left;
+  color: #000;
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.mgRight {
+  margin-right: 10px;
+}
+
+.filterList {
+  text-align: left;
+  color: var(--color-light-grey4);
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.dropdown {
+  position: absolute;
+  max-height: 500px;
+  max-width: 320px;
+  min-width: 288px;
+  font: var(--theme-paragraph-font);
+  background-color: var(--color-white);
+  box-shadow: 12px 13px 22px 0 rgba(0, 0, 0, 0.2);
+  padding: var(--space-1) var(--space-2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 4px;
+  border: solid 2px var(--color-primary-scale-3);
+  margin-top: 5px;
+  z-index: 401;
+  white-space: normal;
+
+  &.right {
+    right: 0;
+  }
+
+  & ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.sortDropdown {
+  min-width: 175px;
+}
+
+/* Filter mobile modal styling */
+.dropdownMobile {
+  position: fixed;
+  max-height: none;
+  max-width: none;
+  margin-top: 0;
+
+  & li button {
+    text-align: left;
+  }
+
+  &:global(.modalSelection) li + li {
+    border: 0;
+  }
+}

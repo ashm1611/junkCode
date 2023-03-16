@@ -1,0 +1,193 @@
+@import '@bbb-app/styles/variables.css';
+
+.layoutContainer {
+  background: linear-gradient(
+    to right,
+    var(--color-primary-scale-5) 0,
+    var(--color-primary-scale-5) 33%,
+    var(--color-light-grey4) 33%,
+    var(--color-light-grey4) 100%
+  );
+}
+
+.leftNavWrapper {
+  background-color: var(--color-primary-scale-5);
+}
+
+.rightWrapper {
+  padding-left: var(--space-3);
+  background-color: var(--color-light-grey4);
+}
+
+.pubOrPrivWrapper {
+  display: inline-flex;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 12px;
+  background-color: var(--color-light-grey8);
+  height: 22px;
+  width: 96px;
+  border-radius: 3px;
+}
+
+.shareRegWrapper {
+  margin: 16px 70px;
+}
+
+.displayName {
+  font: var(--theme-b5-font-medium);
+  margin: var(--space-1) 0;
+  color: var(--color-font-account-signin);
+}
+
+.btnDisabled {
+  pointer-events: none;
+}
+
+.displayDate {
+  font: var(--theme-b1-font-light);
+  padding-right: var(--space-1);
+  margin-right: var(--space-1);
+  border-right: 1px solid var(--color-primary-scale-4);
+}
+
+.displayDateWrapper {
+  display: inline-flex;
+  margin: var(--space-1) 0 0;
+}
+
+.pubActive {
+  background-color: #0a8002;
+  border-radius: 3px;
+}
+
+.pubOrPrivBasic {
+  padding: 2px;
+  width: 48px;
+}
+
+.privActive {
+  background-color: var(--welcome-blue-color4);
+  border-radius: 3px;
+}
+
+.imageParent {
+  width: 116px;
+  margin: 12px auto;
+}
+
+.displayNameWrapper {
+  text-align: center;
+}
+
+.selectedTabFont {
+  font: var(--theme-p2-font-medium);
+  color: var(--color-global-nav-background);
+}
+
+.tabFont {
+  font: var(--theme-p2-font-light);
+  color: var(--color-navy-blue);
+}
+
+.selectedTab {
+  border-left: 6px solid var(--color-global-nav-background);
+}
+
+.registryTabs {
+  padding: 0.25rem 0 0.3rem 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.botomBorder {
+  border-bottom: 1px solid #ddd;
+}
+
+.tabsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.listWrapper {
+  display: flex;
+  overflow-y: scroll;
+}
+
+.menuOpt {
+  padding: 0 12px;
+}
+
+.leftnav {
+  margin-left: var(--space-03);
+  margin-top: 2em;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+@media only screen and (--breakpoint-sm) {
+  .pubOrPrivWrapper {
+    display: flex;
+  }
+
+  .displayNameWrapper {
+    text-align: left;
+  }
+
+  .registryTabs {
+    padding: 0 var(--space-075) var(--space-1);
+    margin: var(--space-025) 0;
+  }
+
+  .imageParent {
+    width: 94px;
+  }
+
+  .link {
+    width: max-content;
+  }
+
+  .selectedTab {
+    border-left: none;
+    border-bottom: 4px solid var(--color-global-nav-background);
+  }
+
+  .leftnav {
+    margin: 0;
+  }
+
+  .leftNavWrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (--breakpoint-xs) {
+  .displayNameWrapper {
+    text-align: left;
+    margin-top: var(--space-2);
+  }
+
+  .rightWrapper {
+    padding: 0;
+  }
+}
+
+@media only screen and (--breakpoint-sm-md-nav) {
+  .leftNavWrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (--breakpoint-md-lg-nav) {
+  .leftNavWrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (--breakpoint-lg-md-min) {
+  .leftNavWrapper {
+    width: 22% !important;
+  }
+}

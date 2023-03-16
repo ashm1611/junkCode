@@ -1,0 +1,37 @@
+@import "@bbb-app/styles/variables.css";
+
+.subheading {
+  font: var(--theme-b1-font-light);
+}
+
+.skeltonStyles {
+  margin-left: -64px;
+}
+
+.skeltonStyles > div:first-child {
+  margin: 30px 0 30px 84px;
+}
+
+.rclModalMinHeight {
+  min-height: 500px;
+}
+
+@media only screen and (--breakpoint-xs-max) {
+  .skeltonStyles {
+    margin: unset;
+  }
+
+  .skeltonStyles > div:first-child {
+    margin: 30px 0 30px 24px;
+  }
+}
+
+@media only screen and (--breakpoint-xxs-min-xs-max) {
+  .skeltonStyles {
+    margin: unset;
+  }
+
+  .skeltonStyles > div:first-child {
+    margin: 30px 0 30px 24px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --medium-margin: 30px;
+}
+
+@media print, screen and (--breakpoint-md) {
+  .twoColumnLayout {
+    display: flex;
+
+    & .imageWrapper {
+      margin-right: var(--medium-margin);
+      width: 335px;
+    }
+
+    & .detailWrapper {
+      width: 392px;
+
+      & .productDetailWrapper,
+      & .attributeWrapper {
+        width: 100%;
+      }
+    }
+  }
+}

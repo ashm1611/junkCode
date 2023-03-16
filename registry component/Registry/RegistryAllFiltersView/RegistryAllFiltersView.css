@@ -1,0 +1,175 @@
+@import 'theme';
+@import '@bbb-app/styles/variables.css';
+
+:root {
+  --plus: '\FF0B';
+  --header-min-height: 60px;
+  --y-padding: 1rem;
+  --view-results-height: 50px;
+  --clearall-height: 20px;
+  --footer-height-mobile: calc(
+    var(--view-results-height) + var(--y-padding) * 2
+  );
+  --footer-height: calc(
+    var(--footer-height-mobile) + var(--y-padding) + var(--clearall-height)
+  );
+}
+
+.slideOutWrapper {
+  composes: flex justify-between flex-column from global;
+  height: 100%;
+}
+
+.link {
+  font: var(--theme-b2-font-medium);
+  color: var(--color-font-link);
+  margin-right: 1.5rem;
+}
+
+.borderBottom {
+  border: 1px solid var(--color-primary-scale-3);
+  padding: 0 1rem;
+}
+
+.sortFont > button {
+  font-size: 16px !important;
+}
+
+/** Header  */
+.header {
+  composes: py2 pr2 pl2 flex justify-between from global;
+  min-height: var(--header-min-height);
+  width: 100%;
+  background: var(--theme-color-white);
+  border-color: var(--border-color);
+}
+
+.header__heading {
+  margin-bottom: 0;
+  font: var(--theme-h3-lg-sans-font);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header__closeButton {
+  color: var(--color-black);
+}
+
+.iconStyles {
+  height: 12px;
+  width: 12px;
+  color: var(--color-black);
+}
+
+/** Body - accoridan, filters list */
+.slideOutFiltersList {
+  composes: p2 border-box from global;
+  height: auto;
+  margin-bottom: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: -30px;
+  -webkit-overflow-scrolling: touch;
+  border-color: var(--border-color);
+  position: relative;
+}
+
+.accordion {
+  flex: 2;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.accordion__item {
+  composes: border-top from global;
+  border-color: var(--border-color);
+}
+
+.accordion__title {
+  composes: relative from global;
+
+  &:focus {
+    color: var(--a11y-focus-highlight);
+  }
+}
+
+.accordion__title__wrapper {
+  composes: relative px0 py2 m0 left-align from global;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion__title__wrapper::after {
+  /* styling for plus icon */
+  content: var(--plus);
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  color: var(--color-blue-6);
+}
+
+.accordion__title[aria-selected~='true'] {
+  & .accordion__title__wrapper::after {
+    /* styling to create a minus sign - positioned to match plus when toggled */
+    content: '';
+    width: 12px;
+    height: 2px;
+    background-color: var(--color-blue-6);
+    color: var(--color-blue-6);
+    top: 46%;
+    right: 2px;
+  }
+}
+
+.accordion__title_New {
+  composes: relative from global;
+}
+
+.accordion__title__wrapper_New {
+  composes: relative px0 py2 m0 left-align from global;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion__title__wrapper_New::after {
+  /* styling for plus icon */
+  content: var(--plus);
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  color: var(--color-black);
+  bottom: 27%;
+}
+
+.accordion__title_New[aria-selected~='true'] {
+  & .accordion__title__wrapper_New::after {
+    /* styling to create a minus sign - positioned to match plus when toggled */
+    content: '';
+    width: 10px;
+    height: 2px;
+    background-color: #000;
+    color: #000;
+    top: 46%;
+    right: 5px;
+  }
+}
+
+/** Footer */
+.footer {
+  composes: px3 py2 border-top from global;
+  width: 100%;
+  border-color: #fff;
+  background-color: var(--theme-color-white);
+}
+
+.viewResults {
+  height: var(--view-results-height);
+}

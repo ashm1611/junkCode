@@ -1,0 +1,204 @@
+@import "theme";
+@import "@bbb-app/styles/variables.css";
+
+:root {
+  --min-width: 150px;
+  --max-width: 150px;
+  --attribute-font-weight: 600;
+  --badge-max-width: 75%;
+  --button-spacing: 10px;
+  --quick-view-btn-height: 36px;
+  --quick-view-btn-max-width: 85%;
+  --footer-border: solid 2px #ebebeb;
+  --swatch-height: 26px;
+  --tile-padding: 1rem;
+}
+
+.base {
+  padding: 0;
+}
+
+.wrapper {
+  padding: var(--tile-padding);
+  padding-top: 0.5rem;
+}
+
+.isDisabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.headerSpacer {
+  min-height: 30px;
+}
+
+.attributes {
+  composes: list-reset mx0 mt1 mb2 from global;
+  color: var(--color-info);
+  font-weight: var(--attribute-font-weight);
+}
+
+.attribute {
+  composes: py1 from global;
+  font: var(--theme-b1-lg-font-medium);
+}
+
+/**
+ * These styles are needed to combat the HTML and
+ * inline styles present in the attribute data.
+ */
+.attribute > * {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+.base > .badge {
+  left: 0;
+  max-width: var(--badge-max-width);
+  position: absolute;
+  top: 0;
+}
+
+.price {
+  composes: mt2 from global;
+}
+
+.swatches {
+  composes: mt2 from global;
+}
+
+.title {
+  composes: mt2 from global;
+  font: var(--theme-body-font);
+}
+
+.primaryCtaButton {
+  composes: mb1 from global;
+  font: var(--theme-b1-font-medium);
+  flex-grow: 1;
+}
+
+.primaryCtaButtonWrapper {
+  visibility: inherit;
+}
+
+.quickViewWrapper {
+  composes: absolute bottom-0 mb1 xs-hide sm-hide md-hide fullWidth from global;
+  height: var(--quick-view-btn-height);
+}
+
+.quickViewButton {
+  composes: block mx-auto from global;
+  height: var(--quick-view-btn-height);
+  max-width: var(--quick-view-btn-max-width);
+  opacity: 0;
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.thumbnailWrapper {
+  composes: relative from global;
+  padding-top: 100%;
+  background-color: var(--color-primary-scale-4);
+
+  &:hover,
+  &:focus,
+  &:active {
+    & .quickViewButton {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.qty {
+  composes: mr1 from global;
+
+  /* The dropdown does not properly calculate its width */
+  min-width: 70px;
+}
+
+.ctaGroup {
+  composes: flex flex-wrap justify-between from global;
+  padding: 0 0.5rem;
+  margin-top: auto;
+
+  & > * {
+    flex: 1 0 auto;
+    margin: 0.5rem;
+  }
+}
+
+.footer {
+  composes: flex items-center from global;
+  border-top: var(--footer-border);
+  padding: var(--tile-padding);
+  margin-top: auto;
+}
+
+.weRecommend {
+  composes: mx-auto from global;
+}
+
+.variantsGroup {
+  composes: flex flex-column items-start mt2 from global;
+}
+
+.attributeGroupWrapper {
+  composes: flex items-start from global;
+  flex: 2;
+}
+
+.colorGroup {
+  composes: flex justify-between items-start content-center from global;
+  width: 100%;
+  vertical-align: middle;
+  line-height: normal;
+
+  & .attributeGroupTitle {
+    line-height: var(--swatch-height);
+  }
+
+  & span {
+    display: inline-block;
+    font: var(--theme-paragraph-font);
+    line-height: var(--swatch-height);
+  }
+}
+
+.sizeMenu {
+  width: 100%;
+}
+
+.sizeGroup {
+  composes: flex justify-between items-start content-center mt2 from global;
+  width: 100%;
+
+  & span {
+    display: inline-block;
+    font: var(--theme-paragraph-font);
+  }
+}
+
+.attributeGroupTitle {
+  composes: mr1 from global;
+  font: var(--theme-b1-font-medium);
+}
+
+.checkboxWrapper {
+  composes: absolute top-0 right-0 from global;
+}
+
+@media screen and (--breakpoint-sm) {
+  .thumbnailWrapper {
+    background-color: var(--theme-color-white);
+  }
+
+  .primaryCtaButton {
+    padding: var(--space-1) 0;
+  }
+}
